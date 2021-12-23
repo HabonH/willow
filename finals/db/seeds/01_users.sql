@@ -1,30 +1,10 @@
--- Users table seeds here (Example)
-INSERT INTO users (name, email, password) VALUES ('Alice', 'alice12@gmail.com', 'password123');
-INSERT INTO users (name, email, password) VALUES ('Kira Johnson', 'meow2021@gmail.com', 'pawsword123');
-INSERT INTO users (name, email, password) VALUES ('Martha Donaldson', 'md23@gmail.com', 'password123');
-INSERT INTO users (name, email, password) VALUES ('Julie', 'julia123@gmail.com', 'pawsword123');
-INSERT INTO users (name, email, password) VALUES ('Ahmed Khan', 'alice12@gmail.com', 'password123');
-INSERT INTO users (name, email, password) VALUES ('Anthony Davis', 'davis@gmail.com', 'pawsword123');
-INSERT INTO users (name, email, password) VALUES ('Zaynab', 'zaynab@gmail.com', 'password123');
-INSERT INTO users (name, email, password) VALUES ('Michael Smith', 'msmith1999@gmail.com', 'pawsword123');
-INSERT INTO users (name, email, password) VALUES ('Jamal Davids', 'jamal@gmail.com', 'password123');
-​
+-- Users seeds
+INSERT INTO users (email, password, organization_name, phone, therapist) 
+VALUES 
+('alice12@gmail.com', 'password123', Sunnyside Elementary School, 437-555-2353, Jordan Smith),
+('meow2021@gmail.com', 'pawsword123', Riverside Elementary School, 647-555-2376, Lina Ali),
+('md23@gmail.com', 'password123', Spring Gardens School, 416-555-7698, Anthony Jones),
+('julia123@gmail.com', 'pawsword123', Elk Creek Middle School, 905-555-3235, Shaun Chi),
+('alice12@gmail.com', 'password123', Waterford Heights, 905-555-1378, Eve Rogers);
 
--- Users table seeds here (Example)
--- INSERT INTO users (name, email, password) VALUES ('Alice', 'alice12@gmail.com', 'password123');
--- INSERT INTO users (name, email, password) VALUES ('Kira', 'meow2021@gmail.com', 'pawsword');
-
--- -- Drop and recreate Users table
-​
--- DROP TABLE IF EXISTS users CASCADE;
-​
-​
--- CREATE TABLE users (
---   id SERIAL PRIMARY KEY NOT NULL,
---   name VARCHAR(255) NOT NULL,
---   email VARCHAR(255) NOT NULL,
---   password VARCHAR(255) NOT NULL
--- );
-​
-​
 
