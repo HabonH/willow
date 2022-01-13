@@ -38,3 +38,4 @@ app.use("/therapists", therapistsRouter(db));
 app.use("/choices", choicesRouter(db));
 
 module.exports = app;
+exports.db = db;
