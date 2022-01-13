@@ -1,4 +1,4 @@
-# Scheduler project breakdown
+# Finals project breakdown
 
 ## Components
 

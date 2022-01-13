@@ -3,10 +3,13 @@ const router = express.Router();
 
 /* GET users listing. */
 const journalRouter = (db) => {
-  router.get("/", function (req, res, next) {
-    const queryString = "SELECT * FROM journals;";
+  router.get("/:studentID", function (req, res, next) {
+    const studentID = req.params.studentID;
+    const queryString = `SELECT * FROM journals
+    WHERE student_id = $1;`;
+    const queryParams = [studentID];
     return db
-      .query(queryString)
+      .query(queryString, queryParams)
       .then((data) => res.json(data.rows))
       .catch((err) => console.error(err));
   });
