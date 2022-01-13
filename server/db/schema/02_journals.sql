@@ -9,7 +9,6 @@ CREATE TABLE journals (
   title VARCHAR(255),
   entry TEXT,
   date DATE DEFAULT CURRENT_DATE,
-  student_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
-  choices_id INTEGER
+  student_id INTEGER REFERENCES students(id) ON DELETE CASCADE,
 );
 

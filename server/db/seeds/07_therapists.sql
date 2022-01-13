@@ -1,8 +1,8 @@
-INSERT INTO therapists (name, phone, student_id)
+INSERT INTO therapists (name, phone, organization_name)
 VALUES 
-(Fatimah Ali, 647-555-3464, 3),
-(Anthony Richard, 416-555-6325, 5),
-(Sung Hoon, 416-555-2345, 2),
-(Eva Martinez, 416-555-1958, 4),
-(Sarah Jones, 416-555-5928, 1);
+(Fatimah Ali, 647-555-3464, "Family Medical Team"),
+(Anthony Richard, 416-555-6325, "Grassroots Therapy"),
+(Sung Hoon, 416-555-2345, "Rubber Ducky Group"),
+(Eva Martinez, 416-555-1958, "OneHealth Therapy"),
+(Sarah Jones, 416-555-5928, "TwoHealth Therapy");
 
