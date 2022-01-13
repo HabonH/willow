@@ -4,7 +4,11 @@ const router = express.Router();
 /* GET home page. */
 const emojisRouter = (db) => {
   router.get("/", function (req, res, next) {
-    res.send("This is the emojis route.");
+    const queryString = "SELECT * FROM emojis;";
+    return db
+      .query(queryString)
+      .then((data) => res.json(data.rows))
+      .catch((err) => console.error(err));
   });
   return router;
 };
