@@ -7,7 +7,7 @@ const journalRouter = (db) => {
     const queryString = "SELECT * FROM journals;";
     return db
       .query(queryString)
-      .then((data) => res.json(data))
+      .then((data) => res.json(data.rows))
       .catch((err) => console.error(err));
   });
 
