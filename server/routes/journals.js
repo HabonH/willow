@@ -4,7 +4,11 @@ const router = express.Router();
 /* GET users listing. */
 const journalRouter = (db) => {
   router.get("/", function (req, res, next) {
-    res.send("Here is the journals route");
+    const queryString = "SELECT * FROM journals;";
+    return db
+      .query(queryString)
+      .then((data) => res.json(data))
+      .catch((err) => console.error(err));
   });
 
   return router;
