@@ -6,14 +6,22 @@ const AuthForm = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(user);
+    auth();
+  };
+  const auth = async () => {
+    try {
+      const res = await axios.get("http://localhost:3002/login", {
+        auth: { username: user.email, password: user.password },
+      });
+      console.log(res.data);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   const emailHandler = (e) => {
     setUser((prev) => {
-      // I used user here instead of email because I think that's the key
-      // basic auth is expecting? Not sure though.
-      return { ...prev, user: e.target.value };
+      return { ...prev, email: e.target.value };
     });
   };
 
