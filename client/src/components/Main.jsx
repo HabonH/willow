@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Dashboard from "./dashboard/Dashboard";
 
 import Sidebar from "./Sidebar/Sidebar";
 
@@ -13,6 +14,7 @@ const Main = () => {
   return (
     <div>
       <h1>Main App</h1>
+      {view === "home" && <Dashboard />}
       <Sidebar getView={getView} />
     </div>
   );

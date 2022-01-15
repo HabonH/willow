@@ -1,13 +1,15 @@
 .sidebar-container {
-  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: -1.5rem;
+  width: min-content;
+  position: absolute;
 }
 
 .sidebar-icons {
   list-style-type: none;
+  width: min-content;
 }
 
 li {
