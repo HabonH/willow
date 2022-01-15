@@ -4,6 +4,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
+var cookieSession = require("cookie-session");
 const jwt = require("jsonwebtoken");
 
 // this will be how we connect the server to our DB
@@ -27,10 +28,16 @@ const readCookieRouter = require("./routes/readCookie");
 const app = express();
 
 app.use(cors());
+app.use(
+  cookieSession({
+    name: "session",
+    keys: ["test"],
+  })
+);
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser("82e4e438a0705fabf61f9854e3b575af"));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);

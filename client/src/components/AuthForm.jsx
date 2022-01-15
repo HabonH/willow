@@ -1,8 +1,6 @@
 import { useState, createContext } from "react";
 import axios from "axios";
 
-import { getSuggestedQuery } from "@testing-library/react";
-
 const AuthForm = (props) => {
   const [user, setUser] = useState({});
 
@@ -12,6 +10,9 @@ const AuthForm = (props) => {
         auth: { username: user.email, password: user.password },
       });
       console.log(res);
+      if (res) {
+        localStorage.setItem("user", user.email);
+      }
     } catch (e) {
       console.log(e);
     }
