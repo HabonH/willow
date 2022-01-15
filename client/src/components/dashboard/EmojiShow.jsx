@@ -16,7 +16,14 @@ const EmojiShow = (props) => {
       <div className="emoji-show-body">
         <p className="emoji-show-affirmation">{affirmation}</p>
       </div>
-      <button className="exit-show">x</button>
+      <button
+        className="exit-show"
+        onClick={() => {
+          return props.exitShow();
+        }}
+      >
+        x
+      </button>
     </div>
   );
 };

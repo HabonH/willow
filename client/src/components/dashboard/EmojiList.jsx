@@ -21,6 +21,10 @@ const EmojiList = () => {
     setShow(true);
   };
 
+  const exitShow = () => {
+    setShow(false);
+  };
+
   const parsedEmojis = emojis.map((emoji) => {
     return (
       <EmojiItem
@@ -36,7 +40,7 @@ const EmojiList = () => {
     <>
       {show ? (
         <div className="emoji-card">
-          <EmojiShow emoji={selectedEmoji} />
+          <EmojiShow emoji={selectedEmoji} exitShow={exitShow} />
         </div>
       ) : (
         <div className="emoji-card-grid"> {parsedEmojis} </div>
