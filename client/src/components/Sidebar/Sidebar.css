@@ -1,13 +1,18 @@
 .sidebar-container {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: -1.5rem;
+  width: min-content;
+  position: fixed;
+  left: 0;
+  top: 3rem;
 }
 
 .sidebar-icons {
   list-style-type: none;
+  width: min-content;
 }
 
 li {

@@ -1,5 +1,9 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import CalmCorner from "./calm-corner/CalmCorner";
+=======
+import Dashboard from "./dashboard/Dashboard";
+>>>>>>> main
 
 import Sidebar from "./Sidebar/Sidebar";
 
@@ -14,6 +18,7 @@ const Main = () => {
   return (
     <div>
       <h1>Main App</h1>
+      {view === "home" && <Dashboard />}
       <Sidebar getView={getView} />
       <CalmCorner />
     </div>

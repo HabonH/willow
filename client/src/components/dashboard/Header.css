@@ -1,0 +1,16 @@
+.header {
+  height: 10rem;
+  width: 80%;
+  border-right: 5px solid darkblue;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: -2rem;
+}
+
+.content {
+  padding-left: 7rem;
+  padding-right: 1rem;
+}
