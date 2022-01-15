@@ -1,7 +1,5 @@
 import React from "react";
 
-function CalmCorner() {
+export default function CalmCorner() {
   return <div></div>;
 }
-
-export default CalmCorner;
