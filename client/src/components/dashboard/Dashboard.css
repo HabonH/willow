@@ -15,8 +15,8 @@
   padding-right: 1rem;
 }
 
-.emoji-card {
-  height: 10rem;
+.emoji-card-grid {
+  height: max-content;
   width: 85%;
   border-left: 5px solid darkblue;
   border-radius: 10px;
@@ -29,6 +29,18 @@
   padding: 1rem;
 }
 
+.emoji-card {
+  position: relative;
+  height: max-content;
+  width: 85%;
+  border-left: 5px solid darkblue;
+  border-radius: 10px;
+  margin-left: 6rem;
+  margin-top: 1rem;
+  margin-right: -2rem;
+  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  padding: 1rem;
+}
 .emoji {
   width: min-content;
   height: min-content;
@@ -42,4 +54,43 @@
 .emoji:hover {
   cursor: pointer;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
+}
+
+.emoji-show-header {
+  display: flex;
+  align-items: center;
+  margin-top: -0.5rem;
+}
+
+.emoji-show-header-content {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+
+.emoji-show-description {
+  font-size: 0.75rem;
+}
+
+.emoji-show-body {
+  padding-inline: 1rem;
+}
+
+.emoji-show-affirmation {
+  margin-top: 1rem;
+}
+
+.exit-show {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.exit-show:hover {
+  cursor: pointer;
 }

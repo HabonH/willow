@@ -1,6 +1,15 @@
 const EmojiItem = (props) => {
-  const { name, affirmation, description, icon } = props;
-  return <article className="emoji">{icon}</article>;
+  const { icon, getEmoji, id } = props;
+
+  const clickHandler = () => {
+    getEmoji(id);
+  };
+
+  return (
+    <article className="emoji" onClick={clickHandler}>
+      {icon}
+    </article>
+  );
 };
 
 export default EmojiItem;
