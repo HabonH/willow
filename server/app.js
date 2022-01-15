@@ -21,6 +21,7 @@ const therapistsRouter = require("./routes/therapists");
 const choicesRouter = require("./routes/choices");
 const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
+const readCookieRouter = require("./routes/readCookie");
 
 const app = express();
 
@@ -28,7 +29,7 @@ app.use(cors());
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser("82e4e438a0705fabf61f9854e3b575af"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
@@ -40,5 +41,6 @@ app.use("/therapists", therapistsRouter(db));
 app.use("/choices", choicesRouter(db));
 app.use("/register", registerRouter(db));
 app.use("/login", loginRouter(db));
+app.use("/readCookie", readCookieRouter());
 module.exports = app;
 exports.db = db;

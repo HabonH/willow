@@ -13,7 +13,7 @@ const AuthForm = () => {
       const res = await axios.get("http://localhost:3002/login", {
         auth: { username: user.email, password: user.password },
       });
-      console.log(res.data);
+      return console.log(res);
     } catch (e) {
       console.log(e);
     }

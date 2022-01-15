@@ -15,16 +15,31 @@ const auth = basicAuth({
 /* GET users listing. */
 const loginRouter = (db) => {
   router.get("/", auth, function (req, res, next) {
+    const options = {
+      httpOnly: true,
+      signed: true,
+    };
+
     if (req.auth.user === "alice12@gmail.com") {
-      res.send("alice12@gmail.com");
+      res
+        .cookie("name", "alice12@gmail.com", options)
+        .send({ screen: "alice12@gmail.com" });
     } else if (req.auth.user === "meow2021@gmail.com") {
-      res.send("meow2021@gmail.com");
+      res
+        .cookie("name", "meow2021@gmail.com", options)
+        .send({ screen: "meow2021@gmail.com" });
     } else if (req.auth.user === "md23@gmail.com") {
-      res.send("md23@gmail.com");
+      res
+        .cookie("name", "md23@gmail.com", options)
+        .send({ screen: "md23@gmail.com" });
     } else if (req.auth.user === "julia123@gmail.com") {
-      res.send("julia123@gmail.com");
+      res
+        .cookie("name", "julia123@gmail.com", options)
+        .send({ screen: "julia123@gmail.com" });
     } else if (req.auth.user === "tina12@gmail.com") {
-      res.send("tina12@gmail.com");
+      res
+        .cookie("name", "tina12@gmail.com", options)
+        .send({ screen: "tina12@gmail.com" });
     }
   });
 
