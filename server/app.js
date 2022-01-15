@@ -4,7 +4,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
-var cookieSession = require("cookie-session");
+const cookieSession = require("cookie-session");
 const jwt = require("jsonwebtoken");
 
 // this will be how we connect the server to our DB
