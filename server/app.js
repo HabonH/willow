@@ -4,7 +4,14 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
+const basicAuth = require("express-basic-auth");
 
+const auth = basicAuth({
+  users: {
+    admin: "123",
+    user: "456",
+  },
+});
 // this will be how we connect the server to our DB
 // and then we pass the db variable to our route functions
 const { Pool } = require("pg");
