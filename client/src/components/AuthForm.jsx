@@ -1,7 +1,10 @@
 import { useState, createContext } from "react";
+import { useNavigate } from "react-router-dom";
+
 import axios from "axios";
 
 const AuthForm = (props) => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({});
 
   const auth = async () => {
@@ -9,9 +12,9 @@ const AuthForm = (props) => {
       const res = await axios.get("http://localhost:3002/login", {
         auth: { username: user.email, password: user.password },
       });
-      console.log(res);
       if (res) {
         localStorage.setItem("user", user.email);
+        navigate("/main");
       }
     } catch (e) {
       console.log(e);
