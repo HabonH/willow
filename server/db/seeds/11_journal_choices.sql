@@ -1,4 +1,4 @@
-INSERT INTO journal_choice (journal_id, choice_id)
+INSERT INTO journal_choices (journal_id, choice_id)
 VALUES 
 (1,1),
 (1,2),
