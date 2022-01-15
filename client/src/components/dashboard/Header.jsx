@@ -6,7 +6,7 @@ const Header = () => {
           Another beautiful day! Keep up the great work.
         </h3>
         <h4>
-          Journal Entries: <stron>10</stron>
+          Journal Entries: <strong>10</strong>
         </h4>
       </div>
     </div>
