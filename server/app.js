@@ -4,6 +4,7 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 const cors = require("cors");
+const jwt = require("jsonwebtoken");
 
 // this will be how we connect the server to our DB
 // and then we pass the db variable to our route functions

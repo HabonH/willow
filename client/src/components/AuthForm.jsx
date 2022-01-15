@@ -1,22 +1,25 @@
-import { useState } from "react";
+import { useState, createContext } from "react";
 import axios from "axios";
 
-const AuthForm = () => {
+import { getSuggestedQuery } from "@testing-library/react";
+
+const AuthForm = (props) => {
   const [user, setUser] = useState({});
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-    auth();
-  };
   const auth = async () => {
     try {
       const res = await axios.get("http://localhost:3002/login", {
         auth: { username: user.email, password: user.password },
       });
-      return console.log(res);
+      console.log(res);
     } catch (e) {
       console.log(e);
     }
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    auth();
   };
 
   const emailHandler = (e) => {
