@@ -1,6 +1,21 @@
+import { useState } from "react";
+
+import Sidebar from "./Sidebar/Sidebar";
+
 const Main = () => {
+  const [view, setView] = useState("home");
+
   const user = localStorage.getItem("user");
-  return <h1>Main App</h1>;
+
+  const getView = (view) => {
+    setView(view);
+  };
+  return (
+    <div>
+      <h1>Main App</h1>
+      <Sidebar getView={getView} />
+    </div>
+  );
 };
 
 export default Main;
