@@ -1,4 +1,5 @@
 import { useState } from "react";
+import CalmCorner from "./calm-corner/CalmCorner";
 
 import Sidebar from "./Sidebar/Sidebar";
 
@@ -14,6 +15,7 @@ const Main = () => {
     <div>
       <h1>Main App</h1>
       <Sidebar getView={getView} />
+      <CalmCorner />
     </div>
   );
 };
