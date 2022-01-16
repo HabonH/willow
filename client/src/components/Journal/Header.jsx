@@ -1,7 +1,11 @@
-//should hold the add journal button component
+import AddJournal from "../dashboard/Addjournal/AddJournal";
 
 const Header = () => {
-  return <div className='header'>Add Journal entry</div>;
+  return (
+    <div className='journal-header'>
+      <AddJournal />
+    </div>
+  );
 };
 
 export default Header;
