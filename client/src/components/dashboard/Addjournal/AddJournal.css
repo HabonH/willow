@@ -23,6 +23,8 @@
   position: absolute;
   top: 1rem;
   left: 1.75rem;
+  pointer-events: none;
+  border-radius: 0.5rem;
 }
 
 .plus::after {
@@ -34,6 +36,8 @@
   top: 1rem;
   left: 1.75rem;
   transform: rotate(90deg);
+  pointer-events: none;
+  border-radius: 0.5rem;
 }
 
 .add-journal-button:hover {
@@ -158,4 +162,47 @@ svg {
   background-color: #e0ecf8;
   z-index: 100;
   cursor: pointer;
+}
+
+.choice-title {
+  text-align: center;
+}
+
+.choice-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding-right: 2rem;
+}
+
+.choice-item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: #b3cce4;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3rem;
+}
+
+.choice-item:hover {
+  background-color: #8fbce7;
+  cursor: pointer;
+}
+
+.choice-image {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.25rem;
+}
+
+.choice-name {
+  color: white;
+  text-shadow: 0px 1px 5px rgb(0, 0, 0);
 }
