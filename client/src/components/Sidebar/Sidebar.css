@@ -26,11 +26,12 @@ li {
   align-items: center;
   border-radius: 50%;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  background-color: white;
 }
 
 li:hover {
   cursor: pointer;
-  background-color: rgb(190, 190, 190);
+  background-color: #b3cce4;
 }
 
 img {
