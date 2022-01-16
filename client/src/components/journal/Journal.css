@@ -1,7 +1,7 @@
 .header {
   height: 10rem;
   width: 80%;
-  border-right: 5px solid darkblue;
+  border-right: 8px solid #b2cae2;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
   display: flex;
@@ -18,11 +18,36 @@
   position: relative;
   height: max-content;
   width: 85%;
-  border-left: 5px solid darkblue;
+  border-left: 8px solid #b2cae2;
   border-radius: 10px;
   margin-left: 6rem;
   margin-top: 1rem;
   margin-right: -2rem;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
   padding: 1rem;
+}
+
+.title-content {
+  padding-bottom: 5px;
+  color: #1070bb;
+}
+
+.row {
+  width: 300px;
+  margin-bottom: 5px;
+  padding-bottom: 13px;
+  max-height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  content: "";
+  position: relative;
+}
+.row:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(transparent 30px, white);
 }
