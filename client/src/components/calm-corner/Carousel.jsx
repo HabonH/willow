@@ -17,10 +17,10 @@ function Carousel() {
 
   return (
     <div className="carousel">
-      <div
-        className="carouselInner"
+      <div className="carouselInner"
         style={{ backgroundImage: `url(${data[index].img})` }}
       >
+        {/* <img className="carouselInner"src={data[index].img} /> */}
         <div
           className="left"
           onClick={() => {
