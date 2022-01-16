@@ -7,6 +7,7 @@ const JournalListItem = (props) => {
     <article>
       <div>{title}</div>
       <div>{entry}</div>
+      <div>{moment(date).startOf("minute").fromNow()}</div>
       <div>{scale}</div>
     </article>
   );
