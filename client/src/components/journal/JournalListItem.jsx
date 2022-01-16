@@ -5,8 +5,10 @@ const JournalListItem = (props) => {
 
   return (
     <article className='content'>
-      <div>{title}</div>
-      <div>{entry}</div>
+      <section className='row'>
+        <div className='title-content'>{title}</div>
+        <div>{entry}</div>
+      </section>
       <div>{moment(date).startOf("minute").fromNow()}</div>
     </article>
   );
