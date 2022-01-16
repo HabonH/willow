@@ -5,7 +5,15 @@ import Scale from "./Scale.jsx";
 
 const AddJournal = () => {
   const [view, setView] = useState("add");
+
   const [history, setHistory] = useState([]);
+
+  const [data, setData] = useState({
+    scale: null,
+    choices: [],
+    title: "",
+    description: "",
+  });
 
   const addClickHandler = () => {
     history.push(view);
@@ -18,8 +26,13 @@ const AddJournal = () => {
       prev.pop();
       return [...prev];
     });
-    console.log(history);
     setView(history.slice(-1)[0]);
+  };
+
+  const getValue = (value) => {
+    setData((prev) => {
+      return { ...prev, scale: value };
+    });
   };
 
   return (
@@ -32,7 +45,7 @@ const AddJournal = () => {
           </button>
         </>
       )}
-      {view === "scale" && <Scale back={back} />}
+      {view === "scale" && <Scale back={back} getValue={getValue} />}
     </Card>
   );
 };
