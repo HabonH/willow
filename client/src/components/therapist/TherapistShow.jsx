@@ -12,12 +12,12 @@ const TherapistShow = (props) => {
           />
         </section>
         <section className='therapist-details-contact'>
-          <div className='title-content'>{name}</div>
+          <div className='therapist-title-content'>{name}</div>
           <div>This is where we will have a brief intro for each therapist</div>
         </section>
       </article>
 
-      <div className='title-content '>
+      <div className='therapist-title-content '>
         <h4>Organization:</h4>
         <div className='therapist-info'>{organization_name}</div>
         <h4>Phone:</h4>

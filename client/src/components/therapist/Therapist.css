@@ -1,4 +1,4 @@
-.header {
+.therapist-header {
   height: 10rem;
   width: 80%;
   border-right: 8px solid #b2cae2;
@@ -10,7 +10,7 @@
   margin-left: -2rem;
 }
 
-.content {
+.therapist-content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,7 +18,7 @@
   height: 3rem;
 }
 
-.title-content {
+.therapist-title-content {
   padding-top: 2rem;
   padding-bottom: 1rem;
   color: #35373b;
@@ -26,7 +26,7 @@
   font-size: 1.2rem;
 }
 
-.card {
+.therapist-card {
   position: relative;
   height: max-content;
   width: 85%;
@@ -39,7 +39,7 @@
   padding: 1rem;
 }
 
-div .card:hover {
+div .therapist-card:hover {
   cursor: pointer;
   -webkit-mask-image: linear-gradient(to bottom, #bae2e9 50%, transparent 200%);
 }
