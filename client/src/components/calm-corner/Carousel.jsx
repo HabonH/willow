@@ -8,7 +8,7 @@ function Carousel() {
   const [index, setIndex] = useState(0);
   const [data, setData] = useState([{img: "./img1.jpeg", affirmations: "You have what it takes to succeed."}]);
 
-  const URL = "http://localhost:3002/calm-images";
+  const URL = "http://localhost:3002/calming_images";
   useEffect(() => {
     axios.get(URL).then((response) => {
       setData(response.data.rows);
