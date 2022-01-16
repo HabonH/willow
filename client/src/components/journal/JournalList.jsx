@@ -49,7 +49,7 @@ const JournalList = () => {
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
         </div>
       ) : (
-        <div>{parsedJournals}</div>
+        <div className='journal-holder'>{parsedJournals}</div>
       )}
     </>
   );
