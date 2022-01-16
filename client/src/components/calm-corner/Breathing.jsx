@@ -1,24 +1,24 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import lottie from "lottie-web";
+import breathing from "./lotties/lf20_dvi6jfgw.json";
 import "./Breathing.css";
-import Card from "../UI/Card";
-import "../UI/Card.css";
+
 function Breathing() {
-  
+  const container = useRef(null);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: breathing,
+    });
+  }, []);
+
   return (
     <div>
-      <Card>
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player
-          src="https://assets3.lottiefiles.com/packages/lf20_dvi6jfgw.json"
-          background="transparent"
-          speed="1"
-          style="width: 300px; height: 300px;"
-          hover
-          loop
-          controls
-          autoplay
-        ></lottie-player>
-      </Card>
+      <div id="container" ref={container}> hELLO</div>
     </div>
   );
 }

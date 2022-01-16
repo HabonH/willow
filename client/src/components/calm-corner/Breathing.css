@@ -1,4 +1,6 @@
 .div {
   font-size: 39%;
   width: 100vw;
+  display: flex;
+  justify-content: center;
 }
