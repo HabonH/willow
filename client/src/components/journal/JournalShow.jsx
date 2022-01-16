@@ -1,4 +1,4 @@
-const EmojiShow = (props) => {
+const JournalShow = (props) => {
   const { title, entry, date } = props.journal[0];
 
   return (
@@ -17,4 +17,4 @@ const EmojiShow = (props) => {
   );
 };
 
-export default EmojiShow;
+export default JournalShow;
