@@ -2,6 +2,7 @@ import { useState } from "react";
 import Dashboard from "./dashboard/Dashboard";
 
 import Sidebar from "./Sidebar/Sidebar";
+import JournalList from "./Journal/JournalList";
 
 import "./Main.css";
 const Main = () => {
@@ -13,10 +14,11 @@ const Main = () => {
     setView(view);
   };
   return (
-    <div className="app-container">
+    <div className='app-container'>
       <h1>Main App</h1>
       {view === "home" && <Dashboard />}
       <Sidebar getView={getView} />
+      <JournalList />
     </div>
   );
 };
