@@ -2,7 +2,7 @@ import { useState } from "react";
 import Dashboard from "./dashboard/Dashboard";
 
 import Sidebar from "./Sidebar/Sidebar";
-import JournalList from "./Journal/JournalList";
+import Journal from "./Journal/Journal";
 
 import "./Main.css";
 const Main = () => {
@@ -17,7 +17,7 @@ const Main = () => {
     <div className='app-container'>
       <h1>Main App</h1>
       {view === "home" && <Dashboard />}
-      {view === "journal" && <JournalList />}
+      {view === "journal" && <Journal />}
       <Sidebar getView={getView} />
     </div>
   );
