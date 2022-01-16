@@ -3,8 +3,8 @@ const EmojiShow = (props) => {
 
   return (
     <div className='journal-show'>
-      <div className='title-content'>{title}</div>
-      <div className='content'>{entry}</div>
+      <div className='journal-title'>{title}</div>
+      <div className='journal-entry'>{entry}</div>
       <button
         className='exit-show'
         onClick={() => {

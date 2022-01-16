@@ -23,7 +23,7 @@
   position: relative;
   height: max-content;
   width: 85%;
-  border-left: 8px solid #b2cae2;
+  border-left: 8px solid #b1c9e2;
   border-radius: 10px;
   margin-left: 6rem;
   margin-top: 1rem;
@@ -38,9 +38,11 @@ div .card:hover {
 }
 
 .journal-show {
+  background-color: white;
+  border-left: 18px solid #b1c9e2;
   position: relative;
-  height: 90%;
-  width: 85%;
+  height: 60vh;
+  width: 55vw;
   border-radius: 10px;
   margin-left: 6rem;
   margin-top: 1rem;
@@ -49,7 +51,29 @@ div .card:hover {
   padding: 1rem;
 }
 
+.journal-title {
+  margin-left: 3rem;
+  font-size: x-large;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+.journal-entry {
+  margin-left: 2rem;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  padding: 1rem;
+  height: 25rem;
+  overflow-y: scroll;
+}
+/* hide the scroll bar */
+.journal-entry::-webkit-scrollbar {
+  display: none;
+}
+
 .row-container {
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
   height: 150px;
+  margin-bottom: 0.5rem;
 }
