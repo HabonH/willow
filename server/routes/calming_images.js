@@ -7,7 +7,7 @@ const calmingImagesRouter = (db) => {
     const queryString = "SELECT * FROM calming_images;";
     return db
       .query(queryString)
-      .then((data) => res.json(data.rows))
+      .then((data) => res.json(data))
       .catch((err) => console.error(err));
   });
   return router;
