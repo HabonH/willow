@@ -1,6 +1,6 @@
 import EmojiList from "./EmojiList";
 import Header from "./Header";
-import AddJournal from "./AddJournal";
+import AddJournal from "./Addjournal/AddJournal";
 
 import "./Dashboard.css";
 
