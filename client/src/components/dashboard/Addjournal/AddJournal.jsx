@@ -5,11 +5,21 @@ import Scale from "./Scale.jsx";
 
 const AddJournal = () => {
   const [view, setView] = useState("add");
-  const history = [];
+  const [history, setHistory] = useState([]);
+
   const addClickHandler = () => {
     history.push(view);
     setView("scale");
     console.log(history);
+  };
+
+  const back = () => {
+    setHistory((prev) => {
+      prev.pop();
+      return [...prev];
+    });
+    console.log(history);
+    setView(history.slice(-1)[0]);
   };
 
   return (
@@ -22,7 +32,7 @@ const AddJournal = () => {
           </button>
         </>
       )}
-      {view === "scale" && <Scale />}
+      {view === "scale" && <Scale back={back} />}
     </Card>
   );
 };

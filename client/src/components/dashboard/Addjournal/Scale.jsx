@@ -1,8 +1,13 @@
 const Scale = (props) => {
+  const { back } = props;
   return (
     <>
       <h3 className="scale-title">How do you feel today?</h3>
-      <img src={require("./icons/arrow.png")} className="back-arrow" />
+      <img
+        src={require("./icons/arrow.png")}
+        className="back-arrow"
+        onClick={back}
+      />
       <div className="scale-container">
         <label>
           <img src={require("./icons/sad.png")} className="scale-face" />
