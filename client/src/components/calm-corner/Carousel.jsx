@@ -7,24 +7,24 @@ import axios from "axios";
 
 
 function Carousel() {
-  const URL = "http://localhost:3002/calming_images";
+  const URL = "http://localhost:3002/calm-images";
   const [currentIMG, setCurrentIMG] = useState(0);
+  const [data, setData] = useState(images);
+  
+  
   useEffect(() => {
-    let email = localStorage.getItem("user");
     axios
-    .get(URL)
-    .then((result) => {
-
-      console.log("Result --->", result);
+    .get(URL).then((response) => {
+      // setCurrentIMG(response.data)
+      setData(response.data.rows);
     })
-
   }, [])
 
   return (
     <div className="carousel">
       <div
         className="carouselInner"
-        style={{ backgroundImage: `url(${images[currentIMG].img})` }}
+        style={{ backgroundImage: `url(${data[currentIMG].img})` }}
       >
         <div
           className="left"
@@ -35,11 +35,11 @@ function Carousel() {
           <ArrowBackIosIcon style={{fontSize: 30}}/>
         </div>
         <div className="center">
-          <h1>{images[currentIMG].affirmation}</h1>
+          {/* <h1>{images[currentIMG].affirmation}</h1> */}
         </div>
 
         <div className="right"  onClick={() => {
-            currentIMG < images.length -1 && setCurrentIMG(currentIMG + 1);
+            currentIMG < data.length -1 && setCurrentIMG(currentIMG - 1);
           }}>
           <ArrowForwardIosIcon style={{fontSize: 30}} />
         </div>
