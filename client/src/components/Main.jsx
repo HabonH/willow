@@ -17,8 +17,8 @@ const Main = () => {
     <div className='app-container'>
       <h1>Main App</h1>
       {view === "home" && <Dashboard />}
+      {view === "journal" && <JournalList />}
       <Sidebar getView={getView} />
-      <JournalList />
     </div>
   );
 };
