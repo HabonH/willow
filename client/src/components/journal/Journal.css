@@ -14,6 +14,11 @@
   padding-left: 1rem;
 }
 
+.title-content {
+  padding-bottom: 5px;
+  color: #1070bb;
+}
+
 .card {
   position: relative;
   height: max-content;
@@ -27,27 +32,24 @@
   padding: 1rem;
 }
 
-.title-content {
-  padding-bottom: 5px;
-  color: #1070bb;
+div .card:hover {
+  cursor: pointer;
+  -webkit-mask-image: linear-gradient(to bottom, #bae2e9 50%, transparent 200%);
 }
 
-.row {
-  width: 300px;
-  margin-bottom: 5px;
-  padding-bottom: 13px;
-  max-height: 100px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  content: "";
+.journal-show {
   position: relative;
+  height: 90%;
+  width: 85%;
+  border-radius: 10px;
+  margin-left: 6rem;
+  margin-top: 1rem;
+  margin-right: -2rem;
+  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  padding: 1rem;
 }
-.row:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background: linear-gradient(transparent 30px, white);
+
+.row-container {
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  height: 150px;
 }
