@@ -3,7 +3,7 @@ import Header from "./Header";
 
 const JournalListItem = (props) => {
   return (
-    <div className='dashboard-container' m>
+    <div className='main-journal-container' m>
       <Header />
       <JournalList />
     </div>
