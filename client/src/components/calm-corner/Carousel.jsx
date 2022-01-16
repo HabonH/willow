@@ -5,38 +5,37 @@ import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import axios from "axios";
 
 function Carousel() {
+  const [index, setIndex] = useState(0);
+  const [data, setData] = useState(index);
+
   const URL = "http://localhost:3002/calm-images";
   useEffect(() => {
     axios.get(URL).then((response) => {
       setData(response.data.rows);
-      console.log(response.data.rows);
     });
   }, []);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [data, setData] = useState(null);
 
   return (
     <div className="carousel">
       <div
         className="carouselInner"
-        style={{ backgroundImage: `url(${data[currentIndex].img})` }}
+        style={{ backgroundImage: `url(${data[index].img})` }}
       >
         <div
           className="left"
           onClick={() => {
-            currentIndex > 0 && setCurrentIndex(currentIndex - 1);
+            index > 0 && setIndex(index - 1);
           }}
         >
           <ArrowBackIosIcon style={{ fontSize: 30 }} />
         </div>
         <div className="center">
-          <h1>{data[currentIndex].affirmations}</h1>
+          <h1>{data[index].affirmations}</h1>
         </div>
         <div
           className="right"
           onClick={() => {
-            currentIndex < data.length - 1 && setCurrentIndex(currentIndex + 1);
+            index < data.length - 1 && setIndex(index + 1);
           }}
         >
           <ArrowForwardIosIcon style={{ fontSize: 30 }} />
