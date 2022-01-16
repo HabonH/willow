@@ -1,11 +1,12 @@
 import JournalListItem from "./JournalListItem";
-// import Journalhow from "./JournalShow";
+import JournalShow from "./JournalShow";
 import "./Journal.css";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const JournalList = () => {
+  const [show, setShow] = useState(false);
   const [selectedJournal, setSelectedJournal] = useState(null);
   const [journals, setJournals] = useState([]);
   console.log(journals);
@@ -19,8 +20,12 @@ const JournalList = () => {
   const getJournal = (id) => {
     const filteredJournal = journals.filter((entry) => entry.id === id);
     setSelectedJournal(filteredJournal);
+    setShow(true);
   };
 
+  const exitShow = () => {
+    setShow(false);
+  };
   const parsedJournals = journals.map((journal) => {
     return (
       <div className='card'>
@@ -39,7 +44,13 @@ const JournalList = () => {
 
   return (
     <>
-      <div>{parsedJournals}</div>
+      {show ? (
+        <div>
+          <JournalShow journal={selectedJournal} exitShow={exitShow} />
+        </div>
+      ) : (
+        <div>{parsedJournals}</div>
+      )}
     </>
   );
 };
