@@ -1,6 +1,7 @@
 import EmojiList from "./EmojiList";
 import Header from "./Header";
-import AddJournal from "./AddJournal";
+import AddJournal from "./Addjournal/AddJournal";
+import Card from "../UI/Card";
 
 import "./Dashboard.css";
 
@@ -9,7 +10,9 @@ const Dashboard = () => {
     <div className="dashboard-container">
       <Header />
       <EmojiList />
-      <AddJournal />
+      <Card>
+        <AddJournal />
+      </Card>
     </div>
   );
 };
