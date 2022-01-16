@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const JournalList = () => {
+  const [selectedJournal, setSelectedJournal] = useState(null);
   const [journals, setJournals] = useState([]);
   console.log(journals);
   useEffect(() => {
@@ -15,10 +16,10 @@ const JournalList = () => {
     });
   }, []);
 
-  // const getJournal = (id) => {
-  //   const filteredJournal = journals.filter((entry) => entry.id === id);
-  //   setSelectedJournal(filteredJournal);
-  // };
+  const getJournal = (id) => {
+    const filteredJournal = journals.filter((entry) => entry.id === id);
+    setSelectedJournal(filteredJournal);
+  };
 
   const parsedJournals = journals.map((journal) => {
     return (
@@ -30,6 +31,7 @@ const JournalList = () => {
           entry={journal.entry}
           date={journal.date}
           scale={journal.scale}
+          getJournal={getJournal}
         />
       </div>
     );

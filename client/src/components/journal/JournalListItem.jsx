@@ -1,10 +1,13 @@
 import moment from "moment";
 
 const JournalListItem = (props) => {
-  const { title, entry, scale, date } = props;
+  const { id, title, entry, scale, date, getJournal } = props;
 
+  const clickHandler = () => {
+    getJournal(id);
+  };
   return (
-    <article className='content'>
+    <article className='content' onClick={clickHandler}>
       <section className='row'>
         <div className='title-content'>{title}</div>
         <div>{entry}</div>
