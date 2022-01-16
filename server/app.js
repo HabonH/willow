@@ -44,7 +44,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/journals", journalRouter(db));
 app.use("/emojis", emojisRouter(db));
-app.use("/calm-images", calmingImagesRouter(db));
+app.use("/calming_images", calmingImagesRouter(db));
 app.use("/therapists", therapistsRouter(db));
 app.use("/choices", choicesRouter(db));
 app.use("/register", registerRouter(db));

@@ -3,6 +3,8 @@ import CalmCorner from "./calm-corner/CalmCorner";
 import Dashboard from "./dashboard/Dashboard";
 
 import Sidebar from "./Sidebar/Sidebar";
+import Journal from "./Journal/Journal";
+import Therapist from "./Therapist/Therapist";
 
 import "./Main.css";
 const Main = () => {
@@ -15,12 +17,17 @@ const Main = () => {
   };
   return (
     <div
-      className="app-container"
+      className='app-container'
       style={{ "background-color": "#E0ECF8", height: "100vh" }}
     >
       
       {view === "home" && <Dashboard />}
+<<<<<<< HEAD
       {view === "calm" && <CalmCorner />}
+=======
+      {view === "journal" && <Journal />}
+      {view === "therapist" && <Therapist />}
+>>>>>>> main
       <Sidebar getView={getView} />
     </div>
   );
