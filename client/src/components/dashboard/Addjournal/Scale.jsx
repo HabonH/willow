@@ -27,7 +27,7 @@ const Scale = (props) => {
           </svg>
           <img src={require("./icons/sad.png")} className="scale-face" />
           <input
-            className="sad "
+            className="sad radio"
             type="radio"
             name="scale-choice"
             onClick={() => {
@@ -49,7 +49,7 @@ const Scale = (props) => {
           </svg>
           <img src={require("./icons/lil-sad.png")} className="scale-face" />
           <input
-            className="lil-sad"
+            className="lil-sad radio"
             type="radio"
             name="scale-choice"
             onClick={() => {
@@ -71,7 +71,7 @@ const Scale = (props) => {
           </svg>
           <img src={require("./icons/neutral.png")} className="scale-face" />
           <input
-            className="neutral"
+            className="neutral radio"
             type="radio"
             name="scale-choice"
             onClick={() => {
@@ -93,7 +93,7 @@ const Scale = (props) => {
           </svg>
           <img src={require("./icons/lil-happy.png")} className="scale-face" />
           <input
-            className="lil-happy"
+            className="lil-happy radio"
             type="radio"
             name="scale-choice"
             onClick={() => {
@@ -115,7 +115,7 @@ const Scale = (props) => {
           </svg>
           <img src={require("./icons/happy.png")} className="scale-face" />
           <input
-            className="happy"
+            className="happy radio"
             type="radio"
             name="scale-choice"
             onClick={() => {

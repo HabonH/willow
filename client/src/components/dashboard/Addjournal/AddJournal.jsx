@@ -50,7 +50,7 @@ const AddJournal = () => {
   };
 
   return (
-    <Card>
+    <>
       {view === "add" && (
         <>
           <h2 className="journal-title">Write in Your Journal</h2>
@@ -70,7 +70,7 @@ const AddJournal = () => {
         />
       )}
       {view === "journal" && <JournalText />}
-    </Card>
+    </>
   );
 };
 
