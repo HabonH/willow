@@ -17,7 +17,9 @@ const TherapistList = () => {
   }, []);
 
   const getTherapist = (id) => {
-    const filteredTherapist = therapists.filter((entry) => entry.id === id);
+    const filteredTherapist = therapists.filter(
+      (therapist) => therapist.id === id
+    );
     setSelectedTherapist(filteredTherapist);
     setShow(true);
   };
@@ -31,10 +33,9 @@ const TherapistList = () => {
         <TherapistListItem
           key={therapist.id}
           id={therapist.id}
-          title={therapist.title}
-          entry={therapist.entry}
-          date={therapist.date}
-          scale={therapist.scale}
+          name={therapist.name}
+          phone={therapist.phone}
+          organization_name={therapist.organization_name}
           getTherapist={getTherapist}
         />
       </div>
@@ -45,7 +46,7 @@ const TherapistList = () => {
     <>
       {show ? (
         <div>
-          <TherapistShow journal={selectedTherapist} exitShow={exitShow} />
+          <TherapistShow Therapist={selectedTherapist} exitShow={exitShow} />
         </div>
       ) : (
         <div>{parsedTherapists}</div>
