@@ -1,5 +1,9 @@
 const Header = () => {
-  return <div className='therapist-header'>This is the therapist header</div>;
+  return (
+    <div className='therapist-header'>
+      Add instructions to book an interview
+    </div>
+  );
 };
 
 export default Header;

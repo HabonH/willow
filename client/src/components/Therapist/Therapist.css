@@ -27,6 +27,7 @@
 }
 
 .therapist-card {
+  background-color: white;
   position: relative;
   height: max-content;
   width: 85%;
