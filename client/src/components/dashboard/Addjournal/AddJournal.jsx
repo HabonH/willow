@@ -3,6 +3,7 @@ import { useState } from "react";
 import Card from "../../UI/Card.jsx";
 import Scale from "./Scale.jsx";
 import ChoiceList from "./ChoiceList.jsx";
+import JournalText from "./JournalText.jsx";
 
 import "./AddJournal.css";
 
@@ -68,6 +69,7 @@ const AddJournal = () => {
           back={back}
         />
       )}
+      {view === "journal" && <JournalText />}
     </Card>
   );
 };

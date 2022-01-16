@@ -3,6 +3,7 @@ import EmojiShow from "./EmojiShow";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Card from "../UI/Card";
 
 const EmojiList = () => {
   const [emojis, setEmojis] = useState([]);
@@ -39,11 +40,13 @@ const EmojiList = () => {
   return (
     <>
       {show ? (
-        <div className="emoji-card">
+        <Card>
           <EmojiShow emoji={selectedEmoji} exitShow={exitShow} />
-        </div>
+        </Card>
       ) : (
-        <div className="emoji-card-grid"> {parsedEmojis} </div>
+        <Card>
+          <div className="emoji-card-grid"> {parsedEmojis} </div>
+        </Card>
       )}
     </>
   );
