@@ -3,6 +3,7 @@ import Dashboard from "./dashboard/Dashboard";
 
 import Sidebar from "./Sidebar/Sidebar";
 import Journal from "./Journal/Journal";
+import Therapist from "./Therapist/Therapist";
 
 import "./Main.css";
 const Main = () => {
@@ -21,6 +22,7 @@ const Main = () => {
       <h1>Main App</h1>
       {view === "home" && <Dashboard />}
       {view === "journal" && <Journal />}
+      {view === "therapist" && <Therapist />}
       <Sidebar getView={getView} />
     </div>
   );

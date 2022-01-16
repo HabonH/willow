@@ -1,11 +1,11 @@
-import TherapistlList from "./TherapistlList";
+import TherapistList from "./TherapistList";
 import Header from "./Header";
 
 const TherapistListItem = (props) => {
   return (
     <div className='container' m>
       <Header />
-      <TherapistlList />
+      <TherapistList />
     </div>
   );
 };

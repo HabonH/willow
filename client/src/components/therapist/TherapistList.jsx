@@ -29,16 +29,14 @@ const TherapistList = () => {
   };
   const parsedTherapists = therapists.map((therapist) => {
     return (
-      <div className='card'>
-        <TherapistListItem
-          key={therapist.id}
-          id={therapist.id}
-          name={therapist.name}
-          phone={therapist.phone}
-          organization_name={therapist.organization_name}
-          getTherapist={getTherapist}
-        />
-      </div>
+      <TherapistListItem
+        key={therapist.id}
+        id={therapist.id}
+        name={therapist.name}
+        phone={therapist.phone}
+        organization_name={therapist.organization_name}
+        getTherapist={getTherapist}
+      />
     );
   });
 
@@ -46,7 +44,7 @@ const TherapistList = () => {
     <>
       {show ? (
         <div>
-          <TherapistShow Therapist={selectedTherapist} exitShow={exitShow} />
+          <TherapistShow therapist={selectedTherapist} exitShow={exitShow} />
         </div>
       ) : (
         <div>{parsedTherapists}</div>
