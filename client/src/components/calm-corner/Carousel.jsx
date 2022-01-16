@@ -1,11 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 import { images } from "./CarouselData";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import axios from "axios";
 
-function CarouselIMG() {
+
+function Carousel() {
+  const URL = "http://localhost:3002/calming_images";
   const [currentIMG, setCurrentIMG] = useState(0);
+  useEffect(() => {
+    let email = localStorage.getItem("user");
+    axios
+    .get(URL)
+    .then((result) => {
+
+      console.log("Result --->", result);
+    })
+
+  }, [])
 
   return (
     <div className="carousel">
@@ -35,4 +48,4 @@ function CarouselIMG() {
   );
 }
 
-export default CarouselIMG;
+export default Carousel;
