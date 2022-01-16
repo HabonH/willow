@@ -1,7 +1,10 @@
 import { useState } from "react";
+
 import Card from "../../UI/Card.jsx";
-import "./AddJournal.css";
 import Scale from "./Scale.jsx";
+import Choices from "./Choices.jsx";
+
+import "./AddJournal.css";
 
 const AddJournal = () => {
   const [view, setView] = useState("add");
@@ -10,7 +13,7 @@ const AddJournal = () => {
 
   const [data, setData] = useState({
     scale: null,
-    choices: [],
+    choices: "",
     title: "",
     description: "",
   });
@@ -18,7 +21,6 @@ const AddJournal = () => {
   const addClickHandler = () => {
     history.push(view);
     setView("scale");
-    console.log(history);
   };
 
   const back = () => {
@@ -35,17 +37,27 @@ const AddJournal = () => {
     });
   };
 
+  const getView = () => {
+    setView("choices");
+  };
+
   return (
     <Card>
       {view === "add" && (
         <>
           <h2 className="journal-title">Write in Your Journal</h2>
-          <button className="add-journal-button" onClick={addClickHandler}>
-            +
-          </button>
+          <div className="plus">
+            <button
+              className="add-journal-button"
+              onClick={addClickHandler}
+            ></button>
+          </div>
         </>
       )}
-      {view === "scale" && <Scale back={back} getValue={getValue} />}
+      {view === "scale" && (
+        <Scale back={back} getValue={getValue} getView={getView} />
+      )}
+      {view === "choices" && <Choices />}
     </Card>
   );
 };

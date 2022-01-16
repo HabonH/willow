@@ -1,16 +1,39 @@
 .add-journal-button {
-  width: 8rem;
-  aspect-ratio: 1;
+  width: 100%;
+  height: 100%;
   background-color: #b3cce4;
   font-size: 5rem;
-  font-family: "Courier New", Courier, monospace;
   border-radius: 50%;
-  display: block;
-  margin: 0 auto;
   color: white;
   border: none;
-  text-align: center;
-  vertical-align: center;
+}
+
+.plus {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.plus::before {
+  content: "";
+  width: 0.5rem;
+  height: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 1rem;
+  left: 1.75rem;
+}
+
+.plus::after {
+  content: "";
+  width: 0.5rem;
+  height: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 1rem;
+  left: 1.75rem;
+  transform: rotate(90deg);
 }
 
 .add-journal-button:hover {
@@ -64,6 +87,10 @@ input:last-child {
   position: relative;
 }
 
+.scale-face:hover {
+  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+}
+
 svg {
   display: none;
 }
@@ -74,7 +101,7 @@ svg {
   top: 3rem;
   left: 2rem;
   fill: #27bb27;
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
 }
 
 .selected2 {
@@ -83,7 +110,7 @@ svg {
   top: 3rem;
   left: 6.5rem;
   fill: #27bb27;
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
 }
 
 .selected3 {
@@ -92,7 +119,7 @@ svg {
   top: 3rem;
   left: 10.9rem;
   fill: #27bb27;
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
 }
 
 .selected4 {
@@ -101,7 +128,7 @@ svg {
   top: 3rem;
   left: 15.5rem;
   fill: #27bb27;
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
 }
 
 .selected5 {
@@ -110,7 +137,7 @@ svg {
   top: 3rem;
   left: 20rem;
   fill: #27bb27;
-  filter: drop-shadow(1px 1px 2px black);
+  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
 }
 
 .scale-face:hover {
