@@ -50,6 +50,7 @@ input {
   -moz-appearance: none;
   appearance: none;
   position: absolute;
+  z-index: -1;
 }
 
 input:last-child {
@@ -60,8 +61,74 @@ input:last-child {
   width: 4rem;
   height: 4rem;
   margin-inline: 0.25rem;
+  position: relative;
+}
+
+svg {
+  display: none;
+}
+
+.selected1 {
+  position: absolute;
+  display: block;
+  top: 3rem;
+  left: 2rem;
+  fill: #27bb27;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.selected2 {
+  position: absolute;
+  display: block;
+  top: 3rem;
+  left: 6.5rem;
+  fill: #27bb27;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.selected3 {
+  position: absolute;
+  display: block;
+  top: 3rem;
+  left: 10.9rem;
+  fill: #27bb27;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.selected4 {
+  position: absolute;
+  display: block;
+  top: 3rem;
+  left: 15.5rem;
+  fill: #27bb27;
+  filter: drop-shadow(1px 1px 2px black);
+}
+
+.selected5 {
+  position: absolute;
+  display: block;
+  top: 3rem;
+  left: 20rem;
+  fill: #27bb27;
+  filter: drop-shadow(1px 1px 2px black);
 }
 
 .scale-face:hover {
+  cursor: pointer;
+}
+
+.continue {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: #b3cce4;
+  z-index: 100;
+}
+
+.continue:hover {
+  background-color: #e0ecf8;
+  z-index: 100;
   cursor: pointer;
 }
