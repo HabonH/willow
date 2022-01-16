@@ -8,7 +8,7 @@ const JournalListItem = (props) => {
   };
   return (
     <article className='content' onClick={clickHandler}>
-      <section className='row'>
+      <section className='row-container'>
         <div className='title-content'>{title}</div>
         <div>{entry}</div>
       </section>
