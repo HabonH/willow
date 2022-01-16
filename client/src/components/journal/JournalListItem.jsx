@@ -1,10 +1,13 @@
+import moment from "moment";
+
 const JournalListItem = (props) => {
-  const { title, description } = props;
+  const { title, entry, scale, date } = props;
 
   return (
-    <article className='journal'>
-      <div>title</div>
-      <div>description</div>
+    <article>
+      <div>{title}</div>
+      <div>{entry}</div>
+      <div>{scale}</div>
     </article>
   );
 };
