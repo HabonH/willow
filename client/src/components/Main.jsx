@@ -14,7 +14,14 @@ const Main = () => {
     setView(view);
   };
   return (
+<<<<<<< HEAD
     <div className='app-container'>
+=======
+    <div
+      className="app-container"
+      style={{ "background-color": "#E0ECF8", height: "100vh" }}
+    >
+>>>>>>> main
       <h1>Main App</h1>
       {view === "home" && <Dashboard />}
       {view === "journal" && <Journal />}
