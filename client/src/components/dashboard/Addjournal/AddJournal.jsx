@@ -53,7 +53,7 @@ const AddJournal = () => {
     <>
       {view === "add" && (
         <>
-          <h2 className="journal-title">Write in Your Journal</h2>
+          <h2 className="journal-title-card">Write in Your Journal</h2>
           <div className="plus">
             <button className="add-journal-button" onClick={getView}></button>
           </div>
