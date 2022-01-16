@@ -3,11 +3,13 @@ const router = express.Router();
 
 /* GET users listing. */
 const journalRouter = (db) => {
-  router.get("/", function (req, res, next) {
-    const studentEmail = req.signedCookies.name;
-    const queryString = `SELECT * FROM students
-    WHERE email = $1
-    JOIN journals ON student_id = students.id;`;
+  router.get("/user/:email", function (req, res, next) {
+    console.log("REQ PARAMS", req.params);
+    let studentEmail = req.params.email;
+    // const studentEmail = req.signedCookies.name;
+    const queryString = `SELECT journals.* FROM students
+    JOIN journals ON journals.student_id = students.id
+    WHERE students.email = $1;`;
     const queryParams = [studentEmail];
     return db
       .query(queryString, queryParams)
