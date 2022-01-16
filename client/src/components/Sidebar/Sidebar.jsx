@@ -19,29 +19,17 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar-container">
       <ul className="sidebar-icons">
-        <li>
-          <img
-            src={require("./sidebar_icons/home.png")}
-            onClick={homeHandler}
-          />
+        <li onClick={homeHandler}>
+          <img src={require("./sidebar_icons/home.png")} />
         </li>
-        <li>
-          <img
-            src={require("./sidebar_icons/journal.png")}
-            onClick={journalHandler}
-          />
+        <li onClick={journalHandler}>
+          <img src={require("./sidebar_icons/journal.png")} />
         </li>
-        <li>
-          <img
-            src={require("./sidebar_icons/calm.png")}
-            onClick={calmHandler}
-          />
+        <li onClick={calmHandler}>
+          <img src={require("./sidebar_icons/calm.png")} />
         </li>
-        <li>
-          <img
-            src={require("./sidebar_icons/therapist.png")}
-            onClick={therapistHandler}
-          />
+        <li onClick={therapistHandler}>
+          <img src={require("./sidebar_icons/therapist.png")} />
         </li>
       </ul>
     </div>
