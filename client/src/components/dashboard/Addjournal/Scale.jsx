@@ -126,7 +126,16 @@ const Scale = (props) => {
           />
         </label>
       </div>
-      {choiceMade && <button className="continue">Continue</button>}
+      {choiceMade && (
+        <button
+          className="continue"
+          onClick={() => {
+            props.getView();
+          }}
+        >
+          Continue
+        </button>
+      )}
     </>
   );
 };
