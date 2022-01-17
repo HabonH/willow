@@ -7,7 +7,6 @@ import JournalText from "./JournalText.jsx";
 import FinalView from "./FinalView.jsx";
 
 import "./AddJournal.css";
-import { useEffect } from "react";
 
 const AddJournal = () => {
   const [view, setView] = useState("add");

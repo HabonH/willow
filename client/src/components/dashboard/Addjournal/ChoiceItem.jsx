@@ -1,5 +1,5 @@
 const ChoiceItem = (props) => {
-  const { image, name, id, getChoice, getChoiceMade } = props;
+  const { image, name, getChoice, getChoiceMade } = props;
 
   const clickHandler = () => {
     getChoice(name);
