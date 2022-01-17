@@ -1,4 +1,7 @@
 import { useState } from "react";
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "../../ThemeMUI/Theme";
 
 const Scale = (props) => {
   const [choiceMade, setChoiceMade] = useState(false);
@@ -148,14 +151,17 @@ const Scale = (props) => {
         </label>
       </div>
       {choiceMade && (
-        <button
-          className="continue"
-          onClick={() => {
-            props.getView();
-          }}
-        >
-          Continue
-        </button>
+        <ThemeProvider theme={Theme}>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => {
+              props.getView();
+            }}
+          >
+            Continue
+          </Button>
+        </ThemeProvider>
       )}
     </>
   );
