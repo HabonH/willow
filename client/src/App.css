@@ -85,3 +85,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+body {
+  background-color: #e0ecf8;
+}
