@@ -251,3 +251,40 @@ svg {
   text-align: center;
   margin-right: 1rem;
 }
+
+.close-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: #b3cce4;
+  position: absolute;
+  right: 2rem;
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  background-color: #e0ecf8;
+}
+
+.close-button::before {
+  content: "";
+  width: 1.15rem;
+  height: 0.25rem;
+  background-color: white;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.45rem;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.close-button::after {
+  content: "";
+  width: 1.15rem;
+  height: 0.25rem;
+  background-color: white;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.45rem;
+  transform: rotate(135deg);
+  pointer-events: none;
+}

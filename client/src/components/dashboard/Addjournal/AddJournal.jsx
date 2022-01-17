@@ -65,6 +65,10 @@ const AddJournal = () => {
     save(saveData);
   };
 
+  const close = () => {
+    setView("add");
+  };
+
   const save = (data) => {
     const userID = localStorage.getItem("userID");
     console.log(userID);
@@ -93,7 +97,7 @@ const AddJournal = () => {
         />
       )}
       {view === "journal" && <JournalText getTextData={getTextData} />}
-      {view === "final" && <FinalView />}
+      {view === "final" && <FinalView close={close} />}
     </>
   );
 };
