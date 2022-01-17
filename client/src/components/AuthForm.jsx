@@ -13,7 +13,9 @@ const AuthForm = (props) => {
         auth: { username: user.email, password: user.password },
       });
       if (res) {
-        localStorage.setItem("user", user.email);
+        console.log(res.data);
+        localStorage.setItem("user", res.data.email);
+        localStorage.setItem("userID", res.data.id);
         navigate("/main");
       }
     } catch (e) {
