@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import "./Breathing.css";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import PauseIcon from '@mui/icons-material/Pause';
+import PauseIcon from "@mui/icons-material/Pause";
+import "./Breathing.css";
 
 function Breathing() {
   const [animation, setAnimation] = useState(false);
@@ -39,7 +39,6 @@ function Breathing() {
               <PlayArrowIcon />
             </button>
           )}
-          {/* <button className="button-play" onClick={handlePlay}>{animation === true ? 'Pause' : 'Play'}</button> */}
         </div>
       </div>
     </>
