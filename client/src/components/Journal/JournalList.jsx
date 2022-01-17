@@ -28,7 +28,7 @@ const JournalList = () => {
   };
   const parsedJournals = journals.map((journal) => {
     return (
-      <div className='card'>
+      <div className="card">
         <JournalListItem
           key={journal.id}
           id={journal.id}
@@ -49,7 +49,7 @@ const JournalList = () => {
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
         </div>
       ) : (
-        <div className='journal-holder'>{parsedJournals}</div>
+        <div className="journal-holder">{parsedJournals}</div>
       )}
     </>
   );

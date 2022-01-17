@@ -47,9 +47,14 @@
   align-items: center;
 }
 
+.emoji-show-icon {
+  font-size: 3rem;
+  margin: -0.5rem;
+}
+
 .emoji:hover {
   cursor: pointer;
-  text-shadow: 0px 0px 5px rgb(0, 0, 0);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.459);
 }
 
 .emoji-show-header {
