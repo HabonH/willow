@@ -1,15 +1,11 @@
 const TherapistShow = (props) => {
-  const { name, phone, organization_name } = props.therapist[0];
+  const { name, phone, email, img, organization_name } = props.therapist[0];
 
   return (
     <div className='therapist-show'>
       <article className='therapist-details'>
         <section className='therapist-details-personal'>
-          <img
-            className='therapist-show-profile-pic'
-            src='https://images.unsplash.com/photo-1628258475456-0224b1e4225a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGhpamFifGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
-            alt='profile'
-          />
+          <img className='therapist-show-profile-pic' src={img} alt='profile' />
         </section>
         <section className='therapist-details-contact'>
           <div className='therapist-title-content'>{name}</div>
@@ -23,7 +19,7 @@ const TherapistShow = (props) => {
         <h4>Phone:</h4>
         <div className='therapist-info'>{phone}</div>
         <h4>Email:</h4>
-        <div className='therapist-info'>{name}@gmail.com</div>
+        <div className='therapist-info'>{email}</div>
         <button className='button'>Book</button>
       </div>
 

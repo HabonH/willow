@@ -34,6 +34,8 @@ const TherapistList = () => {
         id={therapist.id}
         name={therapist.name}
         phone={therapist.phone}
+        email={therapist.email}
+        img={therapist.img}
         organization_name={therapist.organization_name}
         getTherapist={getTherapist}
       />
