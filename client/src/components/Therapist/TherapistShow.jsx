@@ -21,7 +21,13 @@ const TherapistShow = (props) => {
         <div className='therapist-info'>{phone}</div>
         <h4>Email:</h4>
         <div className='therapist-info'>{email}</div>
-        <button className='button'>Book</button>
+        <a
+          href='https://calendly.com/final-therapist/therapy-sessions'
+          class='button'
+        >
+          Book
+        </a>
+        {/* <button className='button'>Book</button> */}
       </div>
 
       <button
