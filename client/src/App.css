@@ -70,6 +70,20 @@ select {
   font: inherit;
 }
 
+/* modal styles */
+.modal .button {
+  margin-top: 1rem;
+}
+.modal .btn {
+  border: none !important;
+  background-color: transparent !important;
+  color: #35373b;
+}
+.modal-dialog {
+  padding-bottom: 5rem;
+  padding-left: 5rem;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
