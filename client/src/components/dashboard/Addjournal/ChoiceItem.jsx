@@ -9,7 +9,7 @@ const ChoiceItem = (props) => {
   return (
     <div className="choice-item" onClick={clickHandler}>
       <p className="choice-name">{name}</p>
-      <img src={image} className="choice-image" />
+      <img src={image} className="choice-image" alt="choices" />
     </div>
   );
 };

@@ -13,6 +13,7 @@ const Scale = (props) => {
         src={require("./icons/arrow.png")}
         className="back-arrow"
         onClick={back}
+        alt="back button"
       />
       <div className="scale-container">
         <label>
@@ -25,9 +26,13 @@ const Scale = (props) => {
           >
             <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
           </svg>
-          <img src={require("./icons/sad.png")} className="scale-face" />
+          <img
+            alt="sad face"
+            src={require("./icons/sad.png")}
+            className="scale-face"
+          />
           <input
-            className="sad radio"
+            className="very sad radio"
             type="radio"
             name="scale-choice"
             onClick={() => {
@@ -47,7 +52,11 @@ const Scale = (props) => {
           >
             <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
           </svg>
-          <img src={require("./icons/lil-sad.png")} className="scale-face" />
+          <img
+            alt="sad face"
+            src={require("./icons/lil-sad.png")}
+            className="scale-face"
+          />
           <input
             className="lil-sad radio"
             type="radio"
@@ -69,7 +78,11 @@ const Scale = (props) => {
           >
             <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
           </svg>
-          <img src={require("./icons/neutral.png")} className="scale-face" />
+          <img
+            alt="neutral face"
+            src={require("./icons/neutral.png")}
+            className="scale-face"
+          />
           <input
             className="neutral radio"
             type="radio"
@@ -91,7 +104,11 @@ const Scale = (props) => {
           >
             <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
           </svg>
-          <img src={require("./icons/lil-happy.png")} className="scale-face" />
+          <img
+            alt="happy face"
+            src={require("./icons/lil-happy.png")}
+            className="scale-face"
+          />
           <input
             className="lil-happy radio"
             type="radio"
@@ -113,7 +130,11 @@ const Scale = (props) => {
           >
             <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
           </svg>
-          <img src={require("./icons/happy.png")} className="scale-face" />
+          <img
+            alt="very happy face"
+            src={require("./icons/happy.png")}
+            className="scale-face"
+          />
           <input
             className="happy radio"
             type="radio"
