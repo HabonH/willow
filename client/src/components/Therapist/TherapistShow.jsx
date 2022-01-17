@@ -1,5 +1,6 @@
 const TherapistShow = (props) => {
-  const { name, phone, email, img, organization_name } = props.therapist[0];
+  const { name, phone, email, img, description, organization_name } =
+    props.therapist[0];
 
   return (
     <div className='therapist-show'>
@@ -9,7 +10,7 @@ const TherapistShow = (props) => {
         </section>
         <section className='therapist-details-contact'>
           <div className='therapist-title-content'>{name}</div>
-          <div>This is where we will have a brief intro for each therapist</div>
+          <div>{description}</div>
         </section>
       </article>
 
