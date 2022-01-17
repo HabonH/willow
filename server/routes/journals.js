@@ -19,6 +19,20 @@ const journalRouter = (db) => {
       .catch((err) => console.error(err));
   });
 
+  router.post("/:userID", (req, res) => {
+    const userID = req.params.userID;
+    const data = req.body;
+
+    const queryString = `INSERT INTO journals (scale, title, entry, student_id)
+    VALUES
+    ($1, $2, $3, $4);`;
+    const queryParams = [data.scale, data.title, data.description, userID];
+
+    return db.query(queryString, queryParams).catch((err) => {
+      console.log(err);
+    });
+  });
+
   return router;
 };
 module.exports = journalRouter;
