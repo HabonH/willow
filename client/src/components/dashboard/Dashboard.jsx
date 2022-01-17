@@ -6,12 +6,16 @@ import Card from "../UI/Card";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const getJournalData = (data) => {
+    console.log(data);
+  };
+
   return (
-    <div className="dashboard-container">
+    <div className='dashboard-container'>
       <Header />
       <EmojiList />
       <Card>
-        <AddJournal />
+        <AddJournal getJournalData={getJournalData} />
       </Card>
     </div>
   );
