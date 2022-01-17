@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "./ThemeMUI/Theme";
+import Button from "@mui/material/Button";
+
+import Nav from "./Homepage/Nav";
 
 import axios from "axios";
 
@@ -41,11 +46,30 @@ const AuthForm = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
-      <input placeholder="email" onChange={emailHandler} type="email" />
-      <input placeholder="password" onChange={passHandler} type="password" />
-      <button type="submit">Login</button>
-    </form>
+    <div className="home-container">
+      <ThemeProvider theme={Theme}>
+        <Nav />
+        <div className="form-container">
+          <form onSubmit={submitHandler} className="login-form">
+            <input
+              placeholder="Email"
+              onChange={emailHandler}
+              type="email"
+              className="login-input"
+            />
+            <input
+              placeholder="Password"
+              onChange={passHandler}
+              type="password"
+              className="login-input"
+            />
+            <Button variant="contained" color="primary" type="submit">
+              Login
+            </Button>
+          </form>
+        </div>
+      </ThemeProvider>
+    </div>
   );
 };
 

@@ -200,7 +200,34 @@
   }
 }
 
-/* @media (max-width: 650px) {
-  .hero-left-column {
-  }
-} */
+/* AUTH FORM STYLING */
+
+.form-container {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: -1px 0 2rem 0.5px rgba(0, 0, 0, 0.103);
+}
+
+.login-input {
+  margin-bottom: 1rem;
+  line-height: 2;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+}
+
+.login-input:focus {
+  outline: none;
+}
