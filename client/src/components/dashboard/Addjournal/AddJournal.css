@@ -189,11 +189,16 @@ svg {
   justify-content: center;
   padding: 0.25rem 0.5rem;
   border-radius: 3rem;
+  margin: 0.05rem;
 }
 
 .choice-item:hover {
   background-color: #8fbce7;
   cursor: pointer;
+}
+
+.choice-item-selected {
+  border: 1px solid rgb(34, 34, 34);
 }
 
 .choice-image {
@@ -239,6 +244,18 @@ svg {
 
 .journal-text:focus {
   outline: none;
+}
+
+.journal-submit-button {
+  background-color: #b3cce4;
+  border-radius: 3rem;
+  margin: 0.05rem;
+  border: none;
+}
+
+.journal-submit-button:hover {
+  cursor: pointer;
+  background-color: #c3d3e2;
 }
 
 .final-view-title {
