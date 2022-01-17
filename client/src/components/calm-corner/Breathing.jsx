@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import "./Breathing.css";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import PauseIcon from '@mui/icons-material/Pause';
 
 function Breathing() {
   const [animation, setAnimation] = useState(false);
   const breatheClass = classNames("unanimated", { breathe: animation });
 
   const handlePlay = () => {
-    if (animation === true){
-      setAnimation(false)
+    if (animation === true) {
+      setAnimation(false);
     } else {
-      setAnimation(true)
+      setAnimation(true);
     }
   };
 
@@ -26,8 +28,18 @@ function Breathing() {
         <div className="breathe-container">
           <div className={breatheClass}></div>
         </div>
+
         <div className="button-container">
-          <button className="button-play" onClick={handlePlay}>Pause</button>
+          {animation === true ? (
+            <button className="button play" onClick={handlePlay}>
+              <PauseIcon />
+            </button>
+          ) : (
+            <button className="button pause" onClick={handlePlay}>
+              <PlayArrowIcon />
+            </button>
+          )}
+          {/* <button className="button-play" onClick={handlePlay}>{animation === true ? 'Pause' : 'Play'}</button> */}
         </div>
       </div>
     </>
