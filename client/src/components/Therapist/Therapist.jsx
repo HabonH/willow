@@ -3,7 +3,7 @@ import Header from "./Header";
 
 const TherapistListItem = (props) => {
   return (
-    <div className='container' m>
+    <div className="main-therapist-container">
       <Header />
       <TherapistList />
     </div>

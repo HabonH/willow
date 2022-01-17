@@ -7,7 +7,7 @@ const JournalListItem = (props) => {
     getJournal(id);
   };
   return (
-    <article className='content' onClick={clickHandler}>
+    <article onClick={clickHandler}>
       <section className='row-container'>
         <div className='title-content'>{title}</div>
         <div>{entry}</div>
