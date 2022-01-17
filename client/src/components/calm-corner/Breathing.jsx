@@ -1,25 +1,22 @@
-import React, { useEffect, useRef } from "react";
-import lottie from "lottie-web";
-import breathing from "./lotties/lf20_dvi6jfgw.json";
+import React from "react";
 import "./Breathing.css";
+import Card from "../UI/Card";
 
 function Breathing() {
-  const container = useRef(null);
-
-  useEffect(() => {
-    lottie.loadAnimation({
-      container: container.current,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: breathing,
-    });
-  }, []);
-
   return (
-    <div>
-      <div id="container" ref={container}> hELLO</div>
-    </div>
+    <>
+      <Card>
+        <div className="instructions">
+          <span>Breathing Exercise </span>
+          <p>Inhale slowly through the nose as the circle expands,</p>
+          <p> and breathe out through the mouth as it contracts. </p>
+          <p>Repeat as much as you need, to feel calm.</p>
+        </div>
+        <div className="breathe-container">
+          <div className="breathe"></div>
+        </div>
+      </Card>
+    </>
   );
 }
 
