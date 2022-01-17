@@ -5,7 +5,10 @@ import "./Journal.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const JournalList = () => {
+const JournalList = (props) => {
+  console.log(props.journalData);
+  const { journalData } = props;
+
   const [show, setShow] = useState(false);
   const [selectedJournal, setSelectedJournal] = useState(null);
   const [journals, setJournals] = useState([]);
@@ -15,7 +18,7 @@ const JournalList = () => {
     axios.get(`http://localhost:3002/journals/user/${email}`).then((result) => {
       setJournals(result.data);
     });
-  }, []);
+  }, [journalData]);
 
   const getJournal = (id) => {
     const filteredJournal = journals.filter((entry) => entry.id === id);
@@ -28,7 +31,7 @@ const JournalList = () => {
   };
   const parsedJournals = journals.map((journal) => {
     return (
-      <div className="card">
+      <div className='card'>
         <JournalListItem
           key={journal.id}
           id={journal.id}
@@ -49,7 +52,7 @@ const JournalList = () => {
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
         </div>
       ) : (
-        <div className="journal-holder">{parsedJournals}</div>
+        <div className='journal-holder'>{parsedJournals}</div>
       )}
     </>
   );

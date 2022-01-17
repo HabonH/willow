@@ -33,8 +33,7 @@ const TherapistList = () => {
         key={therapist.id}
         id={therapist.id}
         name={therapist.name}
-        phone={therapist.phone}
-        organization_name={therapist.organization_name}
+        img={therapist.img}
         getTherapist={getTherapist}
       />
     );

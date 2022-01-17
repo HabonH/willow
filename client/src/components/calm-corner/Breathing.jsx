@@ -7,11 +7,6 @@ function Breathing() {
   const [ animation, setAnimation ] = useState(false)
   const breatheClass = classNames("unanimated", {"breathe": animation})
 
-  const playButton = () => {
-    if(setAnimation(true)){
-      setAnimation(false)
-    }
-  }
   return (
     <>
         <div id="breathe-card">

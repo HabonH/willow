@@ -6,7 +6,9 @@ import axios from "axios";
 
 function Carousel() {
   const [index, setIndex] = useState(0);
-  const [data, setData] = useState([{img: "./img1.jpeg", affirmations: "You have what it takes to succeed."}]);
+  const [data, setData] = useState([
+    { img: "./img1.jpeg", affirmations: "You have what it takes to succeed." },
+  ]);
 
   const URL = "http://localhost:3002/calming_images";
   useEffect(() => {
@@ -17,7 +19,8 @@ function Carousel() {
 
   return (
     <div className="carousel">
-      <div className="carouselInner"
+      <div
+        className="carouselInner"
         style={{ backgroundImage: `url(${data[index].img})` }}
       >
         <div
@@ -29,15 +32,15 @@ function Carousel() {
           <ArrowBackIosIcon style={{ fontSize: 30 }} />
         </div>
         <div className="center">
-          <h1>{data[index].affirmations}</h1>
+          <h1 className="affirmation-text">{data[index].affirmations}</h1>
         </div>
         <div
           className="right"
           onClick={() => {
-            if (index === data.length - 1){
-              setIndex(0)
+            if (index === data.length - 1) {
+              setIndex(0);
             } else {
-              setIndex(index + 1)           
+              setIndex(index + 1);
             }
           }}
         >
