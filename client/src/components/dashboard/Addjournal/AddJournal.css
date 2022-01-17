@@ -292,6 +292,7 @@ svg {
   left: 0.45rem;
   transform: rotate(45deg);
   pointer-events: none;
+  border-radius: 5px;
 }
 
 .close-button::after {
@@ -304,4 +305,5 @@ svg {
   left: 0.45rem;
   transform: rotate(135deg);
   pointer-events: none;
+  border-radius: 5px;
 }
