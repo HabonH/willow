@@ -47,7 +47,7 @@ const TherapistList = () => {
           <TherapistShow therapist={selectedTherapist} exitShow={exitShow} />
         </div>
       ) : (
-        <div>{parsedTherapists}</div>
+        <div className='therapist-holder'>{parsedTherapists}</div>
       )}
     </>
   );

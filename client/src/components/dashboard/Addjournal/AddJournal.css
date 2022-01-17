@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 
-.journal-title {
+.journal-title-card {
   text-align: center;
 }
 
@@ -189,11 +189,16 @@ svg {
   justify-content: center;
   padding: 0.25rem 0.5rem;
   border-radius: 3rem;
+  margin: 0.05rem;
 }
 
 .choice-item:hover {
   background-color: #8fbce7;
   cursor: pointer;
+}
+
+.choice-item-selected {
+  border: 1px solid rgb(34, 34, 34);
 }
 
 .choice-image {
@@ -209,21 +214,94 @@ svg {
 
 .journal-form {
   display: flex;
+  width: 100%;
   flex-direction: column;
-  align-items: center;
   padding: 0.5rem 0;
+  padding-right: 1rem;
 }
 
 .journal-text-title {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  display: block;
+  margin: 0.5rem auto;
+  width: 100%;
   border: none;
   border-bottom: 2px solid #b3cce4;
 }
 
+.journal-text-title:focus {
+  outline: none;
+}
+
 .journal-text {
-  width: 19rem;
-  min-height: 2rem;
-  max-height: fit-content;
+  width: 100%;
+  min-height: 10rem;
+  height: max-content;
   border: 1px solid #b3cce4;
+  overflow: hidden;
+  resize: none;
+}
+
+.journal-text:focus {
+  outline: none;
+}
+
+.journal-submit-button {
+  background-color: #b3cce4;
+  border-radius: 3rem;
+  margin: 0.05rem;
+  border: none;
+}
+
+.journal-submit-button:hover {
+  cursor: pointer;
+  background-color: #c3d3e2;
+}
+
+.final-view-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.final-view-text {
+  text-align: center;
+  margin-right: 1rem;
+}
+
+.close-button {
+  width: 2rem;
+  height: 2rem;
+  background-color: #b3cce4;
+  position: absolute;
+  right: 2rem;
+  border-radius: 50%;
+}
+
+.close-button:hover {
+  background-color: #e0ecf8;
+}
+
+.close-button::before {
+  content: "";
+  width: 1.15rem;
+  height: 0.25rem;
+  background-color: white;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.45rem;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+.close-button::after {
+  content: "";
+  width: 1.15rem;
+  height: 0.25rem;
+  background-color: white;
+  position: absolute;
+  top: 0.9rem;
+  left: 0.45rem;
+  transform: rotate(135deg);
+  pointer-events: none;
 }

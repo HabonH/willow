@@ -16,15 +16,15 @@ const auth = basicAuth({
 const loginRouter = (db) => {
   router.get("/", auth, function (req, res, next) {
     if (req.auth.user === "alice12@gmail.com") {
-      res.send("alice12@gmail.com");
+      res.send({ id: "1", email: "alice12@gmail.com" });
     } else if (req.auth.user === "meow2021@gmail.com") {
-      res.send("meow2021@gmail.com");
+      res.send({ id: "2", email: "meow2021@gmail.com" });
     } else if (req.auth.user === "md23@gmail.com") {
-      res.send("md23@gmail.com");
+      res.send({ id: "3", email: "md23@gmail.com" });
     } else if (req.auth.user === "julia123@gmail.com") {
-      res.send("julia123@gmail.com");
+      res.send({ id: "4", email: "julia123@gmail.com" });
     } else if (req.auth.user === "tina12@gmail.com") {
-      res.send("tina12@gmail.com");
+      res.send({ id: "5", email: "tina12@gmail.com" });
     }
   });
 

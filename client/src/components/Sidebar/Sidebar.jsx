@@ -20,16 +20,25 @@ const Sidebar = (props) => {
     <div className="sidebar-container">
       <ul className="sidebar-icons">
         <li onClick={homeHandler}>
-          <img src={require("./sidebar_icons/home.png")} />
+          <img alt="home button" src={require("./sidebar_icons/home.png")} />
         </li>
         <li onClick={journalHandler}>
-          <img src={require("./sidebar_icons/journal.png")} />
+          <img
+            alt="journals button"
+            src={require("./sidebar_icons/journal.png")}
+          />
         </li>
         <li onClick={calmHandler}>
-          <img src={require("./sidebar_icons/calm.png")} />
+          <img
+            alt="calm corner button"
+            src={require("./sidebar_icons/calm.png")}
+          />
         </li>
         <li onClick={therapistHandler}>
-          <img src={require("./sidebar_icons/therapist.png")} />
+          <img
+            alt="therapists button"
+            src={require("./sidebar_icons/therapist.png")}
+          />
         </li>
       </ul>
     </div>

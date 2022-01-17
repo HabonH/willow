@@ -1,7 +1,7 @@
 const Header = () => {
   return (
-    <div className="header">
-      <div className="content">
+    <div className="header-dashboard">
+      <div className="dashboard-content">
         <h3 className="affirmation">
           Another beautiful day! Keep up the great work.
         </h3>

@@ -1,4 +1,4 @@
-.header {
+.header-dashboard {
   height: 10rem;
   width: 80%;
   border-right: 10px solid #b3cce4;
@@ -11,7 +11,7 @@
   background-color: rgb(255, 255, 255);
 }
 
-.content {
+.dashboard-content {
   padding-left: 7rem;
   padding-right: 1rem;
 }

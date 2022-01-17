@@ -9,7 +9,7 @@ const JournalList = () => {
   const [show, setShow] = useState(false);
   const [selectedJournal, setSelectedJournal] = useState(null);
   const [journals, setJournals] = useState([]);
-  console.log(journals);
+
   useEffect(() => {
     let email = localStorage.getItem("user");
     axios.get(`http://localhost:3002/journals/user/${email}`).then((result) => {
