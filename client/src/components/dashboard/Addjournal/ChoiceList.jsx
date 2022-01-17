@@ -1,6 +1,9 @@
 import axios from "axios";
 
 import { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "../../ThemeMUI/Theme";
 
 import ChoiceItem from "./ChoiceItem";
 
@@ -45,14 +48,19 @@ const ChoiceList = (props) => {
       />
       <div className="choice-grid">{mappedChoices}</div>
       {choiceMade && (
-        <button
-          className="continue"
-          onClick={() => {
-            props.getView();
-          }}
-        >
-          Continue
-        </button>
+        <ThemeProvider theme={Theme}>
+          <div className="flex-container">
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                props.getView();
+              }}
+            >
+              Continue
+            </Button>
+          </div>
+        </ThemeProvider>
       )}
     </>
   );

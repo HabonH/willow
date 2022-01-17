@@ -10,7 +10,10 @@
   margin-left: -2rem;
   background-color: rgb(255, 255, 255);
 }
-
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
 .dashboard-content {
   padding-left: 7rem;
   padding-right: 1rem;

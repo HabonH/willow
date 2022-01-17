@@ -152,15 +152,17 @@ const Scale = (props) => {
       </div>
       {choiceMade && (
         <ThemeProvider theme={Theme}>
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => {
-              props.getView();
-            }}
-          >
-            Continue
-          </Button>
+          <div className="flex-container">
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                props.getView();
+              }}
+            >
+              Continue
+            </Button>
+          </div>
         </ThemeProvider>
       )}
     </>
