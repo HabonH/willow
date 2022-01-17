@@ -17,6 +17,7 @@ const JournalText = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    props.getTextData(text);
   };
 
   return (

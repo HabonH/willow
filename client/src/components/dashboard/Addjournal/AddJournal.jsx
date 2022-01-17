@@ -1,19 +1,20 @@
 import { useState } from "react";
+import axios from "axios";
 
-import Card from "../../UI/Card.jsx";
 import Scale from "./Scale.jsx";
 import ChoiceList from "./ChoiceList.jsx";
 import JournalText from "./JournalText.jsx";
 
 import "./AddJournal.css";
+import { useEffect } from "react";
 
 const AddJournal = () => {
   const [view, setView] = useState("add");
 
   const [data, setData] = useState({
     scale: null,
-    choices: "",
-    title: "",
+    choice: "",
+    title: "untitled",
     description: "",
   });
 
@@ -49,6 +50,26 @@ const AddJournal = () => {
     });
   };
 
+  const getTextData = (textObj) => {
+    if (!textObj.title) {
+      setData((prev) => {
+        return { ...prev, description: textObj.textArea };
+      });
+    }
+    const saveData = {
+      ...data,
+      title: textObj.title,
+      description: textObj.textArea,
+    };
+    save(saveData);
+  };
+
+  const save = (data) => {
+    const userID = localStorage.getItem("userID");
+    console.log(userID);
+    axios.post(`http://localhost:3002/journals/${userID}`, data).then(() => {});
+  };
+
   return (
     <>
       {view === "add" && (
@@ -69,7 +90,7 @@ const AddJournal = () => {
           back={back}
         />
       )}
-      {view === "journal" && <JournalText />}
+      {view === "journal" && <JournalText getTextData={getTextData} />}
     </>
   );
 };
