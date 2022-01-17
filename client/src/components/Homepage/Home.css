@@ -78,6 +78,7 @@
   top: 0;
   right: -5rem;
   overflow: hidden;
+  box-shadow: -1px 0 2rem 0.5px rgba(0, 0, 0, 0.103);
 }
 
 .happy-teen {
