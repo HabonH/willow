@@ -5,7 +5,7 @@ import Card from "../UI/Card";
 function Breathing() {
   return (
     <>
-      <Card>
+      <Card className="breathe-card">
         <div className="instructions">
           <span>Breathing Exercise </span>
           <p>Inhale slowly through the nose as the circle expands,</p>

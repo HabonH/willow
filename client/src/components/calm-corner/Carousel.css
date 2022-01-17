@@ -1,14 +1,17 @@
 .carousel {
   width: 100vw;
-  height: 12rem;
+  height: 10rem;
   background-color: transparent;
   border-radius: 2rem;
   margin: 1rem;
   margin-left: -0.5rem;
+  margin-bottom: -2rem;
 }
-
+.card-default {
+  height: 109px;
+}
 .carouselInner {
-  height: 12rem;
+  height: 9.5rem;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
