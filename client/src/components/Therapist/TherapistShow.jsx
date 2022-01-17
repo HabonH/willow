@@ -23,6 +23,8 @@ const TherapistShow = (props) => {
         <div className='therapist-info'>{email}</div>
         <a
           href='https://calendly.com/final-therapist/therapy-sessions'
+          target='_blank'
+          rel='noopener noreferrer'
           class='button'
         >
           Book
