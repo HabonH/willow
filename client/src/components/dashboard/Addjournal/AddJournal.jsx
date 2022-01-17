@@ -72,7 +72,9 @@ const AddJournal = () => {
   const save = (data) => {
     const userID = localStorage.getItem("userID");
     console.log(userID);
-    axios.post(`http://localhost:3002/journals/${userID}`, data);
+    axios
+      .post(`http://localhost:3002/journals/${userID}`, data)
+      .catch((err) => console.log(err));
     setView("final");
   };
 
