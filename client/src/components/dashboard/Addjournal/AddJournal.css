@@ -240,3 +240,14 @@ svg {
 .journal-text:focus {
   outline: none;
 }
+
+.final-view-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.final-view-text {
+  text-align: center;
+  margin-right: 1rem;
+}

@@ -4,6 +4,7 @@ import axios from "axios";
 import Scale from "./Scale.jsx";
 import ChoiceList from "./ChoiceList.jsx";
 import JournalText from "./JournalText.jsx";
+import FinalView from "./FinalView.jsx";
 
 import "./AddJournal.css";
 import { useEffect } from "react";
@@ -67,7 +68,8 @@ const AddJournal = () => {
   const save = (data) => {
     const userID = localStorage.getItem("userID");
     console.log(userID);
-    axios.post(`http://localhost:3002/journals/${userID}`, data).then(() => {});
+    axios.post(`http://localhost:3002/journals/${userID}`, data);
+    setView("final");
   };
 
   return (
@@ -91,6 +93,7 @@ const AddJournal = () => {
         />
       )}
       {view === "journal" && <JournalText getTextData={getTextData} />}
+      {view === "final" && <FinalView />}
     </>
   );
 };
