@@ -1,7 +1,6 @@
 import { useState } from "react";
 import CalmCorner from "./calm-corner/CalmCorner";
 import Dashboard from "./dashboard/Dashboard";
-
 import Sidebar from "./Sidebar/Sidebar";
 import Journal from "./Journal/Journal";
 import Therapist from "./Therapist/Therapist";

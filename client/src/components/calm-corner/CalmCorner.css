@@ -1,5 +1,6 @@
 .CalmCorner {
   margin-left: -2rem;
+  overflow: scroll;
 }
 
 body {
