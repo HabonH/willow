@@ -16,7 +16,6 @@ const Main = () => {
   };
   return (
     <div className="app-container">
-      <h1>Main App</h1>
       {view === "home" && <Dashboard />}
       {view === "calm" && <CalmCorner />}
       {view === "journal" && <Journal />}

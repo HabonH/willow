@@ -34,12 +34,13 @@
   height: 100%;
   display: grid;
   place-items: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
   text-align-last: center;
 }
 
-h1 {
+.affirmation-text {
   font-size: 0.75rem;
   background-color: rgb(255, 255, 255, 0.5);
   padding: 20px;

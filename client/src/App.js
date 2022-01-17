@@ -1,4 +1,4 @@
-import Home from "./components/Home";
+import Home from "./components/Homepage/Home";
 import AuthForm from "./components/AuthForm";
 import Main from "./components/Main";
 
