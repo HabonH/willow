@@ -41,6 +41,7 @@ const ChoiceList = (props) => {
         src={require("./icons/arrow.png")}
         className="back-arrow"
         onClick={props.back}
+        alt="back button"
       />
       <div className="choice-grid">{mappedChoices}</div>
       {choiceMade && (
