@@ -5,7 +5,7 @@
   border-left: 10px solid #b3cce4;
   border-radius: 10px;
   margin-left: -2rem;
-  /* margin-top: 1rem; */
+  margin-top: 1rem;
   margin-bottom: 2rem;
   margin-right: 6rem;
   box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
@@ -88,6 +88,10 @@ div .card:hover {
 }
 .journal-holder::-webkit-scrollbar {
   display: none;
+}
+
+.main-journal-container {
+  height: 80vh;
 }
 
 .row-container {
