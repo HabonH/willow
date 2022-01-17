@@ -1,5 +1,5 @@
 const JournalListItem = (props) => {
-  const { id, name, getTherapist } = props;
+  const { id, name, img, getTherapist } = props;
 
   const clickHandler = () => {
     getTherapist(id);
@@ -7,11 +7,7 @@ const JournalListItem = (props) => {
   return (
     <article className='therapist-card '>
       <section className='therapist-content'>
-        <img
-          className='therapist-profile-pic'
-          src='https://images.unsplash.com/photo-1628258475456-0224b1e4225a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzR8fGhpamFifGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60'
-          alt='profile'
-        />
+        <img className='therapist-profile-pic' src={img} alt='profile' />
         <div className='therapist-title-content'>{name}</div>
       </section>
       <section>
