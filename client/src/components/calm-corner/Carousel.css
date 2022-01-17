@@ -5,8 +5,11 @@
   border-radius: 2rem;
   margin: 1rem;
   margin-left: -0.5rem;
+  margin-bottom: -2rem;
 }
-
+.card-default {
+  height: 109px;
+}
 .carouselInner {
   height: 9.5rem;
   width: 100vw;
