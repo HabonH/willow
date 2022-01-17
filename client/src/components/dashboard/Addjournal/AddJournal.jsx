@@ -98,7 +98,9 @@ const AddJournal = () => {
           back={back}
         />
       )}
-      {view === "journal" && <JournalText getTextData={getTextData} />}
+      {view === "journal" && (
+        <JournalText getTextData={getTextData} back={back} />
+      )}
       {view === "final" && <FinalView close={close} />}
     </>
   );

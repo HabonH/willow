@@ -23,6 +23,12 @@ const JournalText = (props) => {
   return (
     <>
       <h3 className="choice-title">What happened?</h3>
+      <img
+        src={require("./icons/arrow.png")}
+        className="back-arrow"
+        onClick={props.back}
+        alt="back button"
+      />
       <form className="journal-form" onSubmit={submitHandler}>
         <label>
           <input
