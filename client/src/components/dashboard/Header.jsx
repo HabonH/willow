@@ -1,13 +1,15 @@
-const Header = () => {
+const Header = (props) => {
+  const { journalCount } = props;
   return (
     <div className="header-dashboard">
       <div className="dashboard-content">
-        <h3 className="affirmation">
+        <h3 className="header-affirmation">
           Another beautiful day! Keep up the great work.
         </h3>
-        <h4>
-          Journal Entries: <strong>10</strong>
-        </h4>
+        <p>
+          Journal Entries:{" "}
+          <strong className="journal-count">{journalCount}</strong>
+        </p>
       </div>
     </div>
   );

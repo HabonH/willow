@@ -14,7 +14,7 @@ const Dashboard = () => {
   useEffect(() => {
     const userID = localStorage.getItem("userID");
     axios.get(`http://localhost:3002/journals-count/${userID}`).then((res) => {
-      console.log(res.data);
+      setJournalCount(res.data[0].count);
     });
   }, []);
 
@@ -25,7 +25,7 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <Header />
+      <Header journalCount={journalCount} />
       <EmojiList />
       <Card>
         <AddJournal getJournalData={getJournalData} />
