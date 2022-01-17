@@ -1,0 +1,20 @@
+.navbar {
+  width: 100%;
+  height: 5rem;
+  background-color: #b3cce4;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: space-between;
+  top: 0;
+  z-index: 999999;
+}
+
+.app-name {
+  margin: 1rem;
+  color: white;
+}
+
+.buttons-container {
+  margin: 1rem;
+}
