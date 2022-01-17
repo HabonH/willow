@@ -1,5 +1,9 @@
+import classNames from "classnames";
+
 const ChoiceItem = (props) => {
   const { image, name, getChoice, getChoiceMade } = props;
+
+  const choiceClass = classNames();
 
   const clickHandler = () => {
     getChoice(name);
