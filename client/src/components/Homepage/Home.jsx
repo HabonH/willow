@@ -1,12 +1,15 @@
 import "./Home.css";
-import Button from "@mui/material/Button";
+import Theme from "../ThemeMUI/Theme";
+import { ThemeProvider } from "@mui/material/styles";
 
 import Nav from "./Nav";
 
 const Home = () => {
   return (
     <div className="home-container">
-      <Nav />
+      <ThemeProvider theme={Theme}>
+        <Nav />
+      </ThemeProvider>
       <div className="hero">
         <div className="get-started-container">
           <h2 className="hero-title">Health & Wellness For Kids</h2>

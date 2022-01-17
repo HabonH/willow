@@ -8,7 +8,9 @@ const Nav = () => {
       <div className="buttons-container">
         <Stack spacing={3} direction="row">
           <Button variant="contained">Login</Button>
-          <Button variant="outlined">Register</Button>
+          <Button variant="contained" color="white">
+            Register
+          </Button>
         </Stack>
       </div>
     </nav>
