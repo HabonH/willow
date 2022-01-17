@@ -2,7 +2,7 @@
   position: relative;
   height: max-content;
   width: 85%;
-  border-right: 10px solid #b3cce4;
+  border-left: 10px solid #b3cce4;
   border-radius: 10px;
   margin-left: -2rem;
   /* margin-top: 1rem; */
@@ -33,7 +33,6 @@
   margin-right: -2rem;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
   padding: 1rem;
-  background-color: white;
 }
 
 div .card:hover {
