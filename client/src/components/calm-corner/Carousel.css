@@ -1,6 +1,6 @@
 .carousel {
   width: 100vw;
-  height: 12rem;
+  height: 10rem;
   background-color: transparent;
   border-radius: 2rem;
   margin: 1rem;
@@ -8,7 +8,7 @@
 }
 
 .carouselInner {
-  height: 12rem;
+  height: 9.5rem;
   width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
