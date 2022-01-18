@@ -208,12 +208,12 @@ svg {
 }
 
 .choice-item:hover {
-  background-color: #8fbce7;
+  background-color: #3f6aa1;
   cursor: pointer;
 }
 
 .choice-item-selected {
-  background-color: #8fbce7;
+  background-color: #3f6aa1;
 }
 
 .choice-image {
