@@ -110,11 +110,16 @@
   text-align: center;
   color: #2d5588;
   height: 90vh;
-  background-image: url("./assets/boy-in-classroom.jpeg");
+  background-image: url("./assets/boy-in-classroom.png");
   background-repeat: no-repeat;
-  /* background-size: 100%; */
-  background-position-y: 50%;
-  background-position-x: -100%;
+  background-position-y: 10rem;
+  background-position-x: 0;
+  position: relative;
+}
+
+.app-info-title {
+  font-size: 4rem;
+  color: #1070bb;
 }
 
 .mockup-container {
@@ -137,7 +142,6 @@
 .info-bubbles-container {
   height: 40rem;
   width: 100%;
-  border: 3px solid red;
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -175,7 +179,7 @@
   border-radius: 0.75rem;
   position: absolute;
   left: -10rem;
-  top: 12rem;
+  top: 18rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 
