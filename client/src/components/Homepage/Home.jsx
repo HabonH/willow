@@ -5,6 +5,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../ThemeMUI/Theme";
 import Nav from "./Nav";
 import Hero from "./Hero";
+import Section from "./Section";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <ThemeProvider theme={Theme}>
         <Nav />
         <Hero />
+        <Section />
       </ThemeProvider>
     </div>
   );
