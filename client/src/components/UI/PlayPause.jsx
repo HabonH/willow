@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import classNames from "classnames";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-import "./Breathing.css";
+import "./PlayPause.css";
 
-function Breathing() {
+function PlayPause() {
   const [animation, setAnimation] = useState(false);
-  const breatheClass = classNames("unanimated", { breathe: animation });
 
   const handlePlay = () => {
     if (animation === false) {
@@ -18,17 +16,6 @@ function Breathing() {
 
   return (
     <>
-        <div id="breathe-card">
-          <div className="instructions">
-            <span>Breathing Exercise </span>
-            <p>Inhale slowly through the nose as the circle expands,</p>
-            <p> and breathe out through the mouth as it contracts. </p>
-            <p>Repeat as much as you need, to feel calm.</p>
-          </div>
-          <div className="breathe-container">
-            <div className={breatheClass}></div>
-          </div>
-
           <div className="button-container">
             {animation === true ? (
               <button className="button play" onClick={handlePlay}>
@@ -40,10 +27,9 @@ function Breathing() {
               </button>
             )}
           </div>
-        </div>
   
     </>
   );
 }
 
-export default Breathing;
+export default PlayPause;

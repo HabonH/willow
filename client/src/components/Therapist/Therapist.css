@@ -9,14 +9,12 @@
   justify-content: center;
   align-items: center;
   margin-left: -2rem;
-  margin-bottom: 1rem;
 }
 
 .therapist-content {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 1rem;
   height: 3rem;
 }
 
@@ -24,14 +22,14 @@
   padding-top: 2rem;
   padding-bottom: 1rem;
   color: #35373b;
-  font-weight: 400;
-  font-size: 1.2rem;
 }
 
 .therapist-card {
+  display: flex;
+  align-items: center;
   background-color: white;
   position: relative;
-  height: max-content;
+  height: 9rem;
   width: 85%;
   border-left: 8px solid #b1c9e2;
   border-radius: 10px;
@@ -112,13 +110,13 @@ div .therapist-card:hover {
 }
 
 .main-therapist-container {
-  height: 90vh;
+  height: 80vh;
 }
 
 .therapist-holder {
-  height: 80%;
+  height: 90vh;
   overflow-y: scroll;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 }
 
 .therapist-holder::-webkit-scrollbar {
@@ -134,9 +132,6 @@ div .therapist-card:hover {
   box-sizing: border-box;
   color: #35373b;
   display: inline-flex;
-  font-family: Inter, sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
   height: 1rem;
   justify-content: center;
   line-height: 24px;
