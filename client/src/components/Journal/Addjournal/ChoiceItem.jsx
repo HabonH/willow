@@ -3,6 +3,8 @@ import classNames from "classnames";
 const ChoiceItem = (props) => {
   const { image, name, getChoice, getChoiceMade, selected } = props;
 
+  console.log(image.slice(1));
+
   const choiceClass = classNames("choice-item", {
     "choice-item-selected": selected,
   });
@@ -14,8 +16,8 @@ const ChoiceItem = (props) => {
 
   return (
     <div className={choiceClass} onClick={clickHandler}>
-      <p className='choice-name'>{name}</p>
-      <img src={image} className='choice-image' alt='choices' />
+      <p className="choice-name">{name}</p>
+      <img src={require("" + image)} className="choice-image" alt="choices" />
     </div>
   );
 };
