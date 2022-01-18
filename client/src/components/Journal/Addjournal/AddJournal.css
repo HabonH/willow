@@ -61,6 +61,17 @@
   cursor: pointer;
 }
 
+.back-arrow-dashboard {
+  height: 1.5rem;
+  width: 1.5rem;
+  position: absolute;
+  left: 2rem;
+  top: 1rem;
+}
+.back-arrow-dashboard:hover {
+  cursor: pointer;
+}
+
 .scale-title {
   text-align: center;
   color: #3f6aa1;
