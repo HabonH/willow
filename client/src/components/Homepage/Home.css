@@ -158,6 +158,9 @@
   background-size: contain;
   background-position: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .spacer {
   width: 100%;
@@ -313,13 +316,16 @@
   background-position: center;
   position: relative;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-container::after {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: rgba(30, 30, 145, 0.363);
+  background-color: #b3cce454;
   position: absolute;
   top: 0;
 }
@@ -327,13 +333,12 @@
 .footer-title {
   font-size: 3rem;
   color: #0b4c7e;
+  text-align: center;
 }
 
 .footer-details {
-  position: absolute;
   z-index: 2;
-  left: 25%;
-  top: 15%;
+  height: max-content;
   background-color: rgba(255, 255, 255, 0.692);
   padding: 1rem 2rem;
   border-radius: 0.75rem;
@@ -341,6 +346,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-inline: 1rem;
 }
 
 .footer-text {
@@ -369,6 +375,35 @@
   }
   .hero-right-column {
     display: none;
+  }
+}
+
+/* to handle background images in sections */
+@media (max-width: 1000px) {
+  .app-info-section,
+  .app-info-section-middle {
+    background-image: none;
+  }
+}
+
+/* Get right of bubbles */
+@media (max-width: 900px) {
+  .info-bubbles-container,
+  .info-bubble-left,
+  .info-bubble-left-bottom,
+  .info-bubble-left-bottom2,
+  .info-bubble-left-middle,
+  .info-bubble-left-middle2,
+  .info-bubble-right {
+    display: none;
+  }
+
+  .iphone-mockup {
+    background-position: left;
+  }
+
+  .app-info-title {
+    font-size: 2.5rem;
   }
 }
 
