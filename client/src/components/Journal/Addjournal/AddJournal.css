@@ -9,6 +9,9 @@
   position: absolute;
   bottom: -4rem;
   box-shadow: 0px 5px 5px 0.05px rgba(0, 0, 0, 0.274);
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
 }
 
 .plus {
@@ -235,8 +238,7 @@ svg {
   display: flex;
   width: 100%;
   flex-direction: column;
-  padding: 0.5rem 0;
-  padding-right: 1rem;
+  padding: 2rem;
 }
 
 .journal-text-title {
