@@ -104,20 +104,49 @@
 }
 
 .app-info-section {
-  background-color: #b3cce4;
+  background-color: white;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
   color: #2d5588;
-}
-.mockup-container {
+  height: 90vh;
+  background-image: url("./assets/boy-in-classroom.png");
+  background-repeat: no-repeat;
+  background-position-y: 10rem;
+  background-position-x: 0;
   position: relative;
+}
+.app-info-section-middle {
+  background-color: white;
+  padding: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #2d5588;
+  height: 90vh;
+  background-image: url("./assets/girl-holding-books.png");
+  background-repeat: no-repeat;
+  background-position-y: 10rem;
+  background-position-x: 100%;
+  position: relative;
+}
+
+.app-info-title {
+  font-size: 4rem;
+  color: #1070bb;
+}
+
+.mockup-container {
   display: flex;
   justify-content: center;
 }
+
 .iphone-mockup {
-  min-width: 20rem;
-  height: 100%;
+  width: 20rem;
+  height: 40rem;
+  background-image: url("./assets/iphone-mockup.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 }
 .spacer {
   width: 100%;
@@ -125,8 +154,7 @@
 }
 .info-bubbles-container {
   height: 40rem;
-  width: 20rem;
-  border: 3px solid red;
+  width: 100%;
   position: absolute;
   top: 0rem;
   left: 0rem;
@@ -134,12 +162,15 @@
 
 .info-bubble-right {
   background-color: white;
+  width: 15rem;
   font-size: 1rem;
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  right: 0;
-  margin-right: -10rem;
+  right: -10rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(37, 37, 37, 0.287);
+  opacity: 100%;
+  transition: opacity 1s ease-in-out;
 }
 
 .info-bubble-right::after {
@@ -160,10 +191,10 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: 0;
-  margin-left: -10rem;
+  left: -10rem;
+  top: 18rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
-
 .info-bubble-left::after {
   content: "";
   height: 0rem;
@@ -174,6 +205,42 @@
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
   border-bottom: 1rem solid white;
+}
+
+.info-bubble-left-middle {
+  background-color: white;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  left: -18rem;
+  top: 25rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
+}
+.info-bubble-left-middle::after {
+  content: "";
+  height: 0rem;
+  width: 0rem;
+  position: absolute;
+  right: -0.25rem;
+  bottom: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1rem solid white;
+}
+
+.bubble-animation {
+  opacity: 100%;
+}
+
+.bubble-button-top {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
 }
 
 @media (max-width: 750px) {

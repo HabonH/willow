@@ -295,6 +295,7 @@ svg {
 
 .close-button:hover {
   background-color: #e0ecf8;
+  cursor: pointer;
 }
 
 .close-button::before {
