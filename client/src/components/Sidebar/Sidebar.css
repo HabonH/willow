@@ -38,3 +38,41 @@ img {
   width: 2rem;
   height: 2rem;
 }
+
+.sidebar-icon-1 {
+  animation-name: slidein;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.65s;
+}
+
+.sidebar-icon-2 {
+  animation-name: slidein;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.8s;
+}
+
+.sidebar-icon-3 {
+  animation-name: slidein;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.9s;
+}
+
+.sidebar-icon-4 {
+  animation-name: slidein;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -5rem;
+    transform: rotate(0);
+    opacity: 0;
+  }
+
+  to {
+    margin-left: 0;
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+}
