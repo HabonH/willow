@@ -151,3 +151,12 @@
 .exit-show:hover {
   cursor: pointer;
 }
+
+@media (min-width: 510px) {
+  .dashboard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

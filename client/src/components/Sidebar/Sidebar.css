@@ -81,7 +81,7 @@ img {
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 510px) {
   @keyframes slidein {
     from {
       top: 100vh;
