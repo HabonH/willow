@@ -8,11 +8,13 @@ const JournalListItem = (props) => {
     <article className='therapist-card '>
       <section className='therapist-content'>
         <img className='therapist-profile-pic' src={img} alt='profile' />
-        <div className='therapist-title-content'>{name}</div>
+        <div className='therapist-title-content'>
+          <h3>{name}</h3>
+        </div>
       </section>
       <section>
         <button className='exit-show details button' onClick={clickHandler}>
-          Details
+          <h4>Details</h4>
         </button>
       </section>
     </article>
