@@ -224,7 +224,8 @@ svg {
 
 .choice-name {
   color: white;
-  text-shadow: 0px 1px 5px rgb(0, 0, 0);
+  font-weight: bold;
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.424);
 }
 
 .journal-form {
