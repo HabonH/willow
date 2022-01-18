@@ -6,8 +6,6 @@ import ChoiceList from "./ChoiceList.jsx";
 import JournalText from "./JournalText.jsx";
 import FinalView from "./FinalView.jsx";
 
-import "./AddJournal.css";
-
 const AddJournal = (props) => {
   const [view, setView] = useState("add");
 
