@@ -44,7 +44,7 @@ const ChoiceList = (props) => {
       <h3 className="choice-title">What made you feel that way?</h3>
       <img
         src={require("./icons/arrow.png")}
-        className="back-arrow"
+        className="back-arrow-dashboard"
         onClick={props.back}
         alt="back button"
       />
