@@ -21,7 +21,6 @@ const ChoiceList = (props) => {
   const getChoiceMade = () => {
     setChoiceMade(true);
   };
-
   const getChoice = (choice) => {
     setChoiceName(choice);
     props.getChoiceData(choice);

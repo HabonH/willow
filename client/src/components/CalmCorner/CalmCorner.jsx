@@ -7,7 +7,10 @@ function CalmCorner() {
   return (
     <div className="CalmCorner">
       <Carousel />
+      <div className="scrollable"> 
       <Breathing />
+      </div>
+
     </div>
   );
 }
