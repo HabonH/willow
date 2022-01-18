@@ -1,6 +1,9 @@
+import LinkWrapper from "../LinkWrapper";
+
 const TherapistShow = (props) => {
   const { name, phone, email, img, description, organization_name } =
     props.therapist[0];
+  const external_link = "https://calendly.com/final-therapist/therapy-sessions";
 
   return (
     <div className='therapist-show'>
@@ -21,13 +24,15 @@ const TherapistShow = (props) => {
         <div className='therapist-info'>{phone}</div>
         <h4>Email:</h4>
         <div className='therapist-info'>{email}</div>
-        <a
+        {/* <a
           href='https://calendly.com/final-therapist/therapy-sessions'
+          target='_blank'
+          rel='noopener noreferrer'
           class='button'
         >
           Book
-        </a>
-        {/* <button className='button'>Book</button> */}
+        </a> */}
+        <LinkWrapper link={external_link} />
       </div>
 
       <button
