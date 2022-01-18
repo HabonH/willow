@@ -8,14 +8,15 @@
   position: fixed;
   left: 0;
   top: 3rem;
+  z-index: 999999;
 }
 
 .sidebar-icons {
   list-style-type: none;
-  width: min-content;
+  width: 100%;
 }
 
-li {
+.sidebar-item {
   margin-left: 0;
   margin-bottom: 1rem;
   /* border: 1px inset rgba(71, 71, 71, 0.733); */
@@ -29,7 +30,7 @@ li {
   background-color: white;
 }
 
-li:hover {
+.sidebar-item:hover {
   cursor: pointer;
   background-color: #b3cce4;
 }
@@ -37,6 +38,9 @@ li:hover {
 img {
   width: 2rem;
   height: 2rem;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
 }
 
 .sidebar-icon-1 {
@@ -74,5 +78,50 @@ img {
     margin-left: 0;
     transform: rotate(360deg);
     opacity: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  div.sidebar-container {
+    height: 7vh;
+    width: 100%;
+    position: absolute;
+    top: 93vh;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0rem -0.5rem 3rem 0 rgba(0, 0, 0, 0.281);
+  }
+
+  ul.sidebar-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  li.sidebar-item {
+    background-color: transparent;
+    box-shadow: none;
+    margin: 1rem;
+  }
+  li.sidebar-item:hover {
+    background-color: transparent;
+  }
+  .icon-image:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.25s;
+  }
+
+  li.sidebar-icon-1,
+  li.sidebar-icon-2,
+  li.sidebar-icon-3,
+  li.sidebar-icon-4 {
+    animation-name: none;
   }
 }
