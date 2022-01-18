@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "../../ThemeMUI/Theme";
+
 const JournalText = (props) => {
   const [text, setText] = useState({ title: "", textArea: "" });
 
@@ -49,9 +53,13 @@ const JournalText = (props) => {
           />
         </label>
         {text.textArea.length > 0 && (
-          <button className="journal-submit-button" type="submit">
-            Save
-          </button>
+          <ThemeProvider theme={Theme}>
+            <div className="flex-container">
+              <Button variant="contained" color="secondary" type="submit">
+                Continue
+              </Button>
+            </div>
+          </ThemeProvider>
         )}
       </form>
     </>

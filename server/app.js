@@ -24,6 +24,7 @@ const choicesRouter = require("./routes/choices");
 const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
 const readCookieRouter = require("./routes/readCookie");
+const journalCountRouter = require("./routes/journals-count");
 
 const app = express();
 
@@ -43,6 +44,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/journals", journalRouter(db));
+app.use("/journals-count", journalCountRouter(db));
 app.use("/emojis", emojisRouter(db));
 app.use("/calming_images", calmingImagesRouter(db));
 app.use("/therapists", therapistsRouter(db));

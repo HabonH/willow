@@ -1,12 +1,16 @@
 import axios from "axios";
 
 import { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "../../ThemeMUI/Theme";
 
 import ChoiceItem from "./ChoiceItem";
 
 const ChoiceList = (props) => {
   const [choiceData, setChoiceData] = useState([]);
   const [choiceMade, setChoiceMade] = useState(false);
+  const [choiceName, setChoiceName] = useState("");
 
   useEffect(() => {
     axios.get("http://localhost:3002/choices").then((result) => {
@@ -17,8 +21,8 @@ const ChoiceList = (props) => {
   const getChoiceMade = () => {
     setChoiceMade(true);
   };
-
   const getChoice = (choice) => {
+    setChoiceName(choice);
     props.getChoiceData(choice);
   };
   const mappedChoices = choiceData.map((choice) => {
@@ -30,6 +34,7 @@ const ChoiceList = (props) => {
         image={choice.image}
         getChoice={getChoice}
         getChoiceMade={getChoiceMade}
+        selected={choiceName === choice.label}
       />
     );
   });
@@ -45,14 +50,19 @@ const ChoiceList = (props) => {
       />
       <div className="choice-grid">{mappedChoices}</div>
       {choiceMade && (
-        <button
-          className="continue"
-          onClick={() => {
-            props.getView();
-          }}
-        >
-          Continue
-        </button>
+        <ThemeProvider theme={Theme}>
+          <div className="flex-container">
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                props.getView();
+              }}
+            >
+              Continue
+            </Button>
+          </div>
+        </ThemeProvider>
       )}
     </>
   );

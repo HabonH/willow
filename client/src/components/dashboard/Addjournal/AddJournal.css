@@ -227,6 +227,7 @@ svg {
   width: 100%;
   border: none;
   border-bottom: 2px solid #b3cce4;
+  font-family: "Roboto";
 }
 
 .journal-text-title:focus {
@@ -240,6 +241,7 @@ svg {
   border: 1px solid #b3cce4;
   overflow: hidden;
   resize: none;
+  font-family: "Mulish";
 }
 
 .journal-text:focus {
