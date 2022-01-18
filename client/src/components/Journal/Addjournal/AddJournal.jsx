@@ -14,7 +14,7 @@ const AddJournal = (props) => {
   const [data, setData] = useState({
     scale: null,
     choice: "",
-    title: "untitled",
+    title: "Untitled",
     description: "",
   });
 
@@ -51,19 +51,22 @@ const AddJournal = (props) => {
   };
 
   const getTextData = (textObj) => {
+    let saveData = {};
     if (!textObj.title) {
-      setData((prev) => {
-        return { ...prev, description: textObj.textArea };
-      });
+      console.log("MADE IT HERE");
+      saveData = {
+        ...data,
+        description: textObj.textArea,
+      };
+    } else {
+      saveData = {
+        ...data,
+        title: textObj.title,
+        description: textObj.textArea,
+      };
     }
-    const saveData = {
-      ...data,
-      title: textObj.title,
-      description: textObj.textArea,
-    };
     save(saveData);
   };
-
   const close = () => {
     setView("add");
   };

@@ -1,9 +1,16 @@
 import React from 'react'
 import Card from '../UI/Card'
-function CalmSounds() {
+import "./CalmSounds.css"
+import Audio from './Audio'
+import PlayPause from '../UI/PlayPause'
+
+// const soundClass = classNames("sound-container");
+
+function CalmSounds(props) {
   return (
-    <Card id="sound-container">
-<h4>Calming Sounds</h4>
+    <Card class="sound-container">
+      
+<PlayPause></PlayPause>
     </Card>
   )
 }

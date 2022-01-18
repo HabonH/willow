@@ -1,5 +1,9 @@
 import { useState } from "react";
 
+import Button from "@mui/material/Button";
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "../../ThemeMUI/Theme";
+
 const JournalText = (props) => {
   const [text, setText] = useState({ title: "", textArea: "" });
 
@@ -22,36 +26,40 @@ const JournalText = (props) => {
 
   return (
     <>
-      <h3 className="choice-title">What happened?</h3>
+      <h3 className='choice-title'>What happened?</h3>
       <img
         src={require("./icons/arrow.png")}
-        className="back-arrow"
+        className='back-arrow'
         onClick={props.back}
-        alt="back button"
+        alt='back button'
       />
-      <form className="journal-form" onSubmit={submitHandler}>
+      <form className='journal-form' onSubmit={submitHandler}>
         <label>
           <input
-            name="title"
-            placeholder="Title.."
-            className="journal-text-title"
+            name='title'
+            placeholder='Title..'
+            className='journal-text-title'
             value={text.title}
             onChange={changeTitleHandler}
           />
         </label>
         <label>
           <textarea
-            name="text"
-            placeholder="Let it out."
-            className="journal-text"
+            name='text'
+            placeholder='Let it out.'
+            className='journal-text'
             value={text.textArea}
             onChange={changeTextAreaHandler}
           />
         </label>
         {text.textArea.length > 0 && (
-          <button className="journal-submit-button" type="submit">
-            Save
-          </button>
+          <ThemeProvider theme={Theme}>
+            <div className='flex-container'>
+              <Button variant='contained' color='secondary' type='submit'>
+                Continue
+              </Button>
+            </div>
+          </ThemeProvider>
         )}
       </form>
     </>

@@ -9,8 +9,12 @@ const JournalListItem = (props) => {
   return (
     <article onClick={clickHandler}>
       <section className='row-container'>
-        <div className='title-content'>{title}</div>
-        <div>{entry}</div>
+        <div className='journal-title-content '>
+          <h4>{title}</h4>
+        </div>
+        <div className='journal-content'>
+          <p>{entry}</p>
+        </div>
       </section>
       <div>{moment(date).startOf("minute").fromNow()}</div>
     </article>

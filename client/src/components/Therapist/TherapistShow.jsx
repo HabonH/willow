@@ -1,4 +1,4 @@
-import LinkWrapper from "../LinkWrapper";
+import LinkWrapper from "./LinkWrapper";
 
 const TherapistShow = (props) => {
   const { name, phone, email, img, description, organization_name } =
@@ -11,19 +11,27 @@ const TherapistShow = (props) => {
         <section className='therapist-details-personal'>
           <img className='therapist-show-profile-pic' src={img} alt='profile' />
         </section>
-        <section className='therapist-details-contact'>
-          <div className='therapist-title-content'>{name}</div>
-          <div>{description}</div>
+        <section className='therapist-details'>
+          <div className='therapist-title-content'>
+            <h4>{name}</h4>
+            <p className='therapist-info'>{description}</p>
+          </div>
         </section>
       </article>
 
       <div className='therapist-title-content '>
         <h4>Organization:</h4>
-        <div className='therapist-info'>{organization_name}</div>
+        <div className='therapist-info'>
+          <p>{organization_name}</p>
+        </div>
         <h4>Phone:</h4>
-        <div className='therapist-info'>{phone}</div>
+        <div className='therapist-info'>
+          <p>{phone}</p>
+        </div>
         <h4>Email:</h4>
-        <div className='therapist-info'>{email}</div>
+        <div className='therapist-info'>
+          <p>{email}</p>
+        </div>
         {/* <a
           href='https://calendly.com/final-therapist/therapy-sessions'
           target='_blank'
