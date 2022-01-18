@@ -27,6 +27,8 @@
 .therapist-card {
   display: flex;
   align-items: center;
+  /* after moving the div from edge change to space-between */
+  justify-content: space-around;
   background-color: white;
   position: relative;
   height: 9rem;
@@ -111,6 +113,9 @@ div .therapist-card:hover {
 
 .main-therapist-container {
   height: 80vh;
+}
+.right {
+  margin-right: -1;
 }
 
 .therapist-holder {
