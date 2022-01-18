@@ -104,12 +104,17 @@
 }
 
 .app-info-section {
-  background-color: #b3cce4;
+  background-color: white;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
   color: #2d5588;
   height: 90vh;
+  background-image: url("./assets/boy-in-classroom.jpeg");
+  background-repeat: no-repeat;
+  /* background-size: 100%; */
+  background-position-y: 50%;
+  background-position-x: -100%;
 }
 
 .mockup-container {
@@ -146,6 +151,9 @@
   border-radius: 0.75rem;
   position: absolute;
   right: -10rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(37, 37, 37, 0.287);
+  opacity: 100%;
+  transition: opacity 1s ease-in-out;
 }
 
 .info-bubble-right::after {
@@ -168,6 +176,7 @@
   position: absolute;
   left: -10rem;
   top: 12rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 
 .info-bubble-left::after {
@@ -180,6 +189,20 @@
   border-left: 0.5rem solid transparent;
   border-right: 0.5rem solid transparent;
   border-bottom: 1rem solid white;
+}
+
+.bubble-animation {
+  opacity: 100%;
+}
+
+.bubble-button-top {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  border-radius: 100%;
 }
 
 @media (max-width: 750px) {
