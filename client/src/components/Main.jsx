@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CalmCorner from "./calm-corner/CalmCorner";
+import CalmCorner from "./CalmCorner/CalmCorner";
 import Dashboard from "./dashboard/Dashboard";
 import Sidebar from "./Sidebar/Sidebar";
 import Journal from "./Journal/Journal";
