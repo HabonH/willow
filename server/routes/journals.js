@@ -8,7 +8,8 @@ const journalRouter = (db) => {
     // const studentEmail = req.signedCookies.name;
     const queryString = `SELECT journals.* FROM students
     JOIN journals ON journals.student_id = students.id
-    WHERE students.email = $1;`;
+    WHERE students.email = $1
+    ORDER BY journals.id DESC;`;
     const queryParams = [studentEmail];
     return db
       .query(queryString, queryParams)
