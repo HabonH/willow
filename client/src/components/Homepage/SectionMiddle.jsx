@@ -2,7 +2,7 @@ const SectionMiddle = () => {
   return (
     <>
       <section className="app-info-section-middle">
-        <h1 className="app-info-title">In One Place</h1>
+        <h1 className="app-info-title">Tools and Resources</h1>
         <div className="mockup-container">
           <div className="iphone-mockup">
             {" "}
@@ -15,7 +15,7 @@ const SectionMiddle = () => {
               <p>Calming Sounds to help soothe the soul</p>
             </div>
             <div className="spacer"></div>
-            <div className="info-bubble-left">
+            <div className="info-bubble-left-middle2">
               <p>One-click Breathing Exercise </p>
             </div>
           </div>
