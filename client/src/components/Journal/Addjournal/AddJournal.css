@@ -252,7 +252,7 @@ svg {
 
 .journal-text {
   width: 100%;
-  min-height: 10rem;
+  min-height: 8rem;
   height: max-content;
   border: 1px solid #b3cce4;
   overflow: hidden;
