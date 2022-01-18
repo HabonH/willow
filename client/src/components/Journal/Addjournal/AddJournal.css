@@ -6,6 +6,9 @@
   border-radius: 50%;
   color: white;
   border: none;
+  position: absolute;
+  bottom: -4rem;
+  box-shadow: 0px 5px 5px 0.05px rgba(0, 0, 0, 0.274);
 }
 
 .plus {
@@ -21,10 +24,11 @@
   height: 2rem;
   background-color: white;
   position: absolute;
-  top: 1rem;
+  top: 5rem;
   left: 1.75rem;
   pointer-events: none;
   border-radius: 0.5rem;
+  z-index: 1;
 }
 
 .plus::after {
@@ -33,7 +37,7 @@
   height: 2rem;
   background-color: white;
   position: absolute;
-  top: 1rem;
+  top: 5rem;
   left: 1.75rem;
   transform: rotate(90deg);
   pointer-events: none;
@@ -41,7 +45,6 @@
 }
 
 .add-journal-button:hover {
-  box-shadow: 0px 0px 5px 0.05px rgba(0, 0, 0, 0.274);
   cursor: pointer;
 }
 
