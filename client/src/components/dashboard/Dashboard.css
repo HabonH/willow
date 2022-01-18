@@ -2,12 +2,11 @@
   height: 10rem;
   width: 80%;
   border-right: 10px solid #b3cce4;
-  border-radius: 10px;
+  border-radius: 0 10px 10px 0;
   box-shadow: 0px 5px 5px 0.05px rgba(0, 0, 0, 0.274);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: -2rem;
   margin-top: 2rem;
   background-color: rgb(255, 255, 255);
 }
@@ -28,8 +27,14 @@
   font-weight: 400;
   color: #2d5588;
 }
-.journa-count-title {
-  font-size: 1.15rem;
+.quote-author {
+  font-size: 1rem;
+  font-family: "Mulish";
+  color: #2d5588;
+}
+.journal-count-title {
+  font-size: 1rem;
+  padding-top: 1rem;
 }
 
 .journal-count {
