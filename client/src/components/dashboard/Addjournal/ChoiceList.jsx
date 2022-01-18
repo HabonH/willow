@@ -10,6 +10,7 @@ import ChoiceItem from "./ChoiceItem";
 const ChoiceList = (props) => {
   const [choiceData, setChoiceData] = useState([]);
   const [choiceMade, setChoiceMade] = useState(false);
+  const [choiceName, setChoiceName] = useState("");
 
   useEffect(() => {
     axios.get("http://localhost:3002/choices").then((result) => {
@@ -22,6 +23,7 @@ const ChoiceList = (props) => {
   };
 
   const getChoice = (choice) => {
+    setChoiceName(choice);
     props.getChoiceData(choice);
   };
   const mappedChoices = choiceData.map((choice) => {
@@ -33,6 +35,7 @@ const ChoiceList = (props) => {
         image={choice.image}
         getChoice={getChoice}
         getChoiceMade={getChoiceMade}
+        selected={choiceName === choice.label}
       />
     );
   });

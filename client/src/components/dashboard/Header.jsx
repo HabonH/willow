@@ -6,7 +6,7 @@ const Header = (props) => {
         <h3 className="header-affirmation">
           Another beautiful day! Keep up the great work.
         </h3>
-        <p>
+        <p className="journa-count-title">
           Journal Entries:{" "}
           <strong className="journal-count">{journalCount}</strong>
         </p>
