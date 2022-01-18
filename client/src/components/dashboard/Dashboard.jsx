@@ -20,7 +20,7 @@ const Dashboard = () => {
 
   const getJournalData = (data) => {
     // will use this for updating count
-    console.log(data);
+    setJournalCount(Number(journalCount) + 1);
   };
 
   return (
