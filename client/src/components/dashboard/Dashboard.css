@@ -47,7 +47,7 @@
 .emoji-card-grid {
   display: grid;
   width: 100%;
-  gap: 1rem;
+  gap: 0.5rem;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 1rem;
   background-color: white;
@@ -75,6 +75,7 @@
 .emoji-emotions-text {
   text-align: center;
   color: #2d5588;
+  font-size: 0.9rem;
 }
 
 .emoji-image-grid {
