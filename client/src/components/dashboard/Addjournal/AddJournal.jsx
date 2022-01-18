@@ -103,7 +103,9 @@ const AddJournal = (props) => {
       {view === "journal" && (
         <JournalText getTextData={getTextData} back={back} />
       )}
-      {view === "final" && <FinalView close={close} />}
+      {view === "final" && (
+        <FinalView close={close} journalCount={props.journalCount} />
+      )}
     </>
   );
 };

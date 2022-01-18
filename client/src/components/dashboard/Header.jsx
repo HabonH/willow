@@ -6,11 +6,6 @@ const Header = (props) => {
       <div className="dashboard-content">
         <h3 className="header-affirmation">{quote.quote}</h3>
         <p className="quote-author"> -{quote.author}</p>
-
-        <p className="journal-count-title">
-          Journal Entries:{" "}
-          <strong className="journal-count">{journalCount}</strong>
-        </p>
       </div>
     </div>
   );

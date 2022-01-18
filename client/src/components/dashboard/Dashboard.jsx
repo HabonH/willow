@@ -35,7 +35,10 @@ const Dashboard = () => {
       <Header journalCount={journalCount} quote={quote} />
       <EmojiList />
       <Card>
-        <AddJournal getJournalData={getJournalData} />
+        <AddJournal
+          getJournalData={getJournalData}
+          journalCount={journalCount}
+        />
       </Card>
     </div>
   );
