@@ -1,5 +1,5 @@
 const EmojiItem = (props) => {
-  const { icon, getEmoji, id } = props;
+  const { icon, getEmoji, id, name } = props;
 
   const clickHandler = () => {
     getEmoji(id);
@@ -7,7 +7,7 @@ const EmojiItem = (props) => {
 
   return (
     <article className="emoji" onClick={clickHandler}>
-      {icon}
+      <img alt={name} src={icon} className="emoji-image-grid" />
     </article>
   );
 };

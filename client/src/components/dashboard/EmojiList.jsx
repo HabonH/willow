@@ -30,6 +30,7 @@ const EmojiList = () => {
     return (
       <EmojiItem
         key={emoji.id}
+        name={emoji.name}
         id={emoji.id}
         icon={emoji.icon}
         getEmoji={getEmoji}
@@ -45,6 +46,10 @@ const EmojiList = () => {
         </Card>
       ) : (
         <Card>
+          <h3 className="emoji-emotions-title">Emoji Emotions</h3>
+          <p className="emoji-emotions-text">
+            Select an Emoji to learn about an emotion
+          </p>
           <div className="emoji-card-grid"> {parsedEmojis} </div>
         </Card>
       )}

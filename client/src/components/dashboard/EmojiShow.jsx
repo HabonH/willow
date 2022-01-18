@@ -10,7 +10,7 @@ const EmojiShow = (props) => {
         }}
       ></div>
       <div className="emoji-show-header">
-        <h1 className="emoji-show-icon">{icon}</h1>
+        <img src={icon} alt={name} className="emoji-image-show" />
         <div className="emoji-show-header-content">
           <h2 className="emoji-show-name">{name}</h2>{" "}
           <p className="emoji-show-description">
