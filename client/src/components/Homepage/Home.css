@@ -109,15 +109,21 @@
   font-size: 3rem;
   text-align: center;
   color: #2d5588;
+  height: 90vh;
 }
+
 .mockup-container {
-  position: relative;
   display: flex;
   justify-content: center;
 }
+
 .iphone-mockup {
-  min-width: 20rem;
-  height: 100%;
+  width: 20rem;
+  height: 40rem;
+  background-image: url("./assets/iphone-mockup.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 }
 .spacer {
   width: 100%;
@@ -125,7 +131,7 @@
 }
 .info-bubbles-container {
   height: 40rem;
-  width: 20rem;
+  width: 100%;
   border: 3px solid red;
   position: absolute;
   top: 0rem;
@@ -134,12 +140,12 @@
 
 .info-bubble-right {
   background-color: white;
+  width: 15rem;
   font-size: 1rem;
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  right: 0;
-  margin-right: -10rem;
+  right: -10rem;
 }
 
 .info-bubble-right::after {
@@ -160,8 +166,8 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: 0;
-  margin-left: -10rem;
+  left: -10rem;
+  top: 12rem;
 }
 
 .info-bubble-left::after {
