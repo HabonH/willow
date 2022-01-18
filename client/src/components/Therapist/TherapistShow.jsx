@@ -11,12 +11,10 @@ const TherapistShow = (props) => {
         <section className='therapist-details-personal'>
           <img className='therapist-show-profile-pic' src={img} alt='profile' />
         </section>
-        <section className='therapist-details-contact'>
+        <section className='therapist-details'>
           <div className='therapist-title-content'>
             <h4>{name}</h4>
-          </div>
-          <div>
-            <p>{description}</p>
+            <p className='therapist-info'>{description}</p>
           </div>
         </section>
       </article>
