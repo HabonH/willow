@@ -13,12 +13,17 @@
   background-color: white;
 }
 
-.content {
-  padding-left: 1rem;
+.journal-show-date {
+  padding-top: 1rem;
 }
 
-.title-content {
-  padding-bottom: 5px;
+.journal-content {
+  padding-right: 1rem;
+  padding-left: 0.5rem;
+}
+
+.journal-title-content {
+  padding-bottom: 1rem;
   color: #1070bb;
 }
 
