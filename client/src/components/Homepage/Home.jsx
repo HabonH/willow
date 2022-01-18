@@ -6,6 +6,7 @@ import Theme from "../ThemeMUI/Theme";
 import Nav from "./Nav";
 import Hero from "./Hero";
 import SectionTop from "./SectionTop";
+import SectionMiddle from "./SectionMiddle";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <Nav />
         <Hero />
         <SectionTop />
+        <SectionMiddle />
       </ThemeProvider>
     </div>
   );
