@@ -4,6 +4,7 @@ import EmojiShow from "./EmojiShow";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../UI/Card";
+import getRandomEmojis from "../helpers/randomEmojis";
 
 const EmojiList = () => {
   const [emojis, setEmojis] = useState([]);
@@ -12,7 +13,7 @@ const EmojiList = () => {
 
   useEffect(() => {
     axios.get("http://localhost:3002/emojis").then((result) => {
-      setEmojis(result.data);
+      setEmojis(getRandomEmojis(result.data));
     });
   }, []);
 
