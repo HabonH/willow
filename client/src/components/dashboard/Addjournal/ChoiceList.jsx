@@ -58,6 +58,10 @@ const ChoiceList = (props) => {
               onClick={() => {
                 props.getView();
               }}
+              style={{
+                color: "white",
+                textShadow: "0px 1px 5px rgba(0, 0, 0, 0.274)",
+              }}
             >
               Continue
             </Button>

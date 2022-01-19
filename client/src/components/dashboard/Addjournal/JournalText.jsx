@@ -55,7 +55,16 @@ const JournalText = (props) => {
         {text.textArea.length > 0 && (
           <ThemeProvider theme={Theme}>
             <div className="flex-container">
-              <Button variant="contained" color="secondary" type="submit">
+              <Button
+                variant="contained"
+                color="secondary"
+                type="submit"
+                style={{
+                  color: "white",
+                  textShadow: "0px 1px 5px rgba(0, 0, 0, 0.274)",
+                  marginTop: "1rem",
+                }}
+              >
                 Continue
               </Button>
             </div>
