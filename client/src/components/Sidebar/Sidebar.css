@@ -123,6 +123,12 @@ img.icon-image {
   .sidebar-icon-label {
     display: none;
   }
+  .sidebar-icon-name {
+    background: transparent;
+  }
+  .sidebar-icons {
+    margin-left: 25%;
+  }
 }
 
 @media (max-width: 550px) {
@@ -137,7 +143,11 @@ img.icon-image {
       opacity: 100%;
     }
   }
-
+  .sidebar-spacer {
+    height: 7vh;
+    width: 100%;
+    background-color: red;
+  }
   div.sidebar-container {
     height: 7vh;
     width: 100%;
