@@ -62,7 +62,7 @@
   display: grid;
   width: 100%;
   gap: 0.5rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   padding: 1rem;
   background-color: white;
 }
@@ -190,8 +190,8 @@
     font-size: 2rem;
   }
   .emoji-image-grid {
-    width: 6rem;
-    height: 6rem;
+    width: 7rem;
+    height: 7rem;
   }
 }
 
@@ -205,5 +205,9 @@
   .emoji-show-affirmation {
     font-size: 1.4rem;
     text-align: center;
+  }
+  .emoji-image-grid {
+    width: 10rem;
+    height: 10rem;
   }
 }
