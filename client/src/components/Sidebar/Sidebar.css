@@ -1,10 +1,10 @@
 .sidebar-container {
   height: 100vh;
   width: 25%;
+  max-width: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: -1.5rem;
   left: 0;
   top: 0rem;
   z-index: 999999;
@@ -24,24 +24,28 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-around;
   height: 30%;
+  padding: 0;
 }
 
 .sidebar-icon-name {
   height: 3rem;
   width: 90%;
+  max-width: 14rem;
   background-color: white;
   border-radius: 3rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
 }
 .sidebar-icon-label {
   margin-left: 3.5rem;
   font-size: 1.25rem;
   font-weight: lighter;
+  color: rgb(7, 4, 34);
 }
 
 .sidebar-item {
@@ -137,6 +141,7 @@ img.icon-image {
   div.sidebar-container {
     height: 7vh;
     width: 100%;
+    max-width: none;
     position: absolute;
     top: 93vh;
     background-color: white;
