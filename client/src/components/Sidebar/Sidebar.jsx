@@ -18,35 +18,52 @@ const Sidebar = (props) => {
   };
   return (
     <div className="sidebar-container">
+      <h1 className="sidebar-app-name">AppName</h1>
       <ul className="sidebar-icons">
-        <li onClick={homeHandler} className="sidebar-icon-1 sidebar-item">
-          <img
-            className="icon-image"
-            alt="home button"
-            src={require("./sidebar_icons/home.png")}
-          />
-        </li>
-        <li onClick={journalHandler} className="sidebar-icon-2 sidebar-item">
-          <img
-            className="icon-image"
-            alt="journals button"
-            src={require("./sidebar_icons/journal.png")}
-          />
-        </li>
-        <li onClick={calmHandler} className="sidebar-icon-3 sidebar-item">
-          <img
-            className="icon-image"
-            alt="calm corner button"
-            src={require("./sidebar_icons/calm.png")}
-          />
-        </li>
-        <li onClick={therapistHandler} className="sidebar-icon-4 sidebar-item">
-          <img
-            className="icon-image"
-            alt="therapists button"
-            src={require("./sidebar_icons/therapist.png")}
-          />
-        </li>
+        <div className="sidebar-icon-name">
+          {" "}
+          <li onClick={homeHandler} className="sidebar-icon-1 sidebar-item">
+            <img
+              className="icon-image"
+              alt="home button"
+              src={require("./sidebar_icons/home.png")}
+            />
+          </li>
+          <h1 className="sidebar-icon-label">Home</h1>
+        </div>
+        <div className="sidebar-icon-name">
+          <li onClick={journalHandler} className="sidebar-icon-2 sidebar-item">
+            <img
+              className="icon-image"
+              alt="journals button"
+              src={require("./sidebar_icons/journal.png")}
+            />
+          </li>
+          <h1 className="sidebar-icon-label">Journals</h1>
+        </div>
+        <div className="sidebar-icon-name">
+          <li onClick={calmHandler} className="sidebar-icon-3 sidebar-item">
+            <img
+              className="icon-image"
+              alt="calm corner button"
+              src={require("./sidebar_icons/calm.png")}
+            />
+          </li>
+          <h1 className="sidebar-icon-label">Calm Corner</h1>
+        </div>
+        <div className="sidebar-icon-name">
+          <li
+            onClick={therapistHandler}
+            className="sidebar-icon-4 sidebar-item"
+          >
+            <img
+              className="icon-image"
+              alt="therapists button"
+              src={require("./sidebar_icons/therapist.png")}
+            />
+          </li>
+          <h1 className="sidebar-icon-label">Therapists</h1>
+        </div>
       </ul>
     </div>
   );
