@@ -9,7 +9,7 @@ CREATE TABLE journals (
   title VARCHAR(255),
   entry TEXT,
   date DATE DEFAULT CURRENT_DATE,
-  image VARCHAR(255),
+  choice VARCHAR(255),
   student_id INTEGER REFERENCES students(id) ON DELETE CASCADE
 );
 
