@@ -2,7 +2,7 @@ const SectionTop = () => {
   return (
     <>
       <section className="app-info-section">
-        <h1 className="app-info-title">Everything You Need</h1>
+        <h1 className="app-info-title">Simple To Use</h1>
         <div className="mockup-container">
           <div className="iphone-mockup">
             {" "}
@@ -12,7 +12,7 @@ const SectionTop = () => {
             </div>
             <div className="spacer"></div>
             <div className="info-bubble-left">
-              <p>Simple Navigation UI</p>
+              <p>Journaling to promote and engage health tracking.</p>
             </div>
             <div className="spacer"></div>
             <div className="info-bubble-right">

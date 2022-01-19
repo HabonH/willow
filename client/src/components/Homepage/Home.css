@@ -1,12 +1,12 @@
 .home-container {
-  max-width: 75rem;
+  max-width: 100rem;
   display: block;
   margin: 0 auto;
 }
 
 .navbar {
   width: 100%;
-  max-width: 75rem;
+  max-width: 100rem;
   height: 5rem;
   background-color: #b3cce4;
   display: flex;
@@ -30,7 +30,7 @@
 .hero {
   margin-top: 5rem;
   display: flex;
-  height: 50rem;
+  height: 95vh;
   overflow: hidden;
   position: relative;
   background-color: white;
@@ -79,7 +79,7 @@
   position: absolute;
   transform: skewX(-10deg);
   top: 0;
-  right: -5rem;
+  right: -7rem;
   overflow: hidden;
   box-shadow: -1px 0 2rem 0.5px rgba(0, 0, 0, 0.103);
 }
@@ -90,7 +90,7 @@
   background-image: url("./assets/happy-teen.jpg");
   transform: skewX(10deg);
   background-size: cover;
-  margin-left: -5rem;
+  margin-left: -6.5rem;
   background-position-x: 35%;
 }
 
@@ -109,15 +109,15 @@
   font-size: 3rem;
   text-align: center;
   color: #2d5588;
-  height: 90vh;
+  height: 60rem;
   background-image: url("./assets/boy-in-classroom.png");
   background-repeat: no-repeat;
-  background-position-y: 10rem;
+  background-position-y: 3rem;
   background-position-x: 0;
   position: relative;
 }
 .app-info-section-middle {
-  background-color: white;
+  background-color: #b3cce4;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
@@ -127,6 +127,16 @@
   background-repeat: no-repeat;
   background-position-y: 10rem;
   background-position-x: 100%;
+  position: relative;
+}
+
+.app-info-section-bottom {
+  background-color: white;
+  padding: 3rem;
+  font-size: 3rem;
+  text-align: center;
+  color: #2d5588;
+  height: 90vh;
   position: relative;
 }
 
@@ -141,12 +151,16 @@
 }
 
 .iphone-mockup {
-  width: 20rem;
-  height: 40rem;
+  width: 50rem;
+  height: 50rem;
   background-image: url("./assets/iphone-mockup.png");
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .spacer {
   width: 100%;
@@ -167,7 +181,7 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  right: -10rem;
+  right: 0rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(37, 37, 37, 0.287);
   opacity: 100%;
   transition: opacity 1s ease-in-out;
@@ -191,8 +205,8 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: -10rem;
-  top: 18rem;
+  left: -5rem;
+  bottom: 18rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 .info-bubble-left::after {
@@ -213,8 +227,8 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: -18rem;
-  top: 25rem;
+  left: -5rem;
+  bottom: 10rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 .info-bubble-left-middle::after {
@@ -228,25 +242,124 @@
   border-right: 0.5rem solid transparent;
   border-bottom: 1rem solid white;
 }
-
-.bubble-animation {
-  opacity: 100%;
+.info-bubble-left-middle2 {
+  background-color: white;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  left: 0rem;
+  top: 15rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
+}
+.info-bubble-left-middle2::after {
+  content: "";
+  height: 0rem;
+  width: 0rem;
+  position: absolute;
+  right: -0.25rem;
+  bottom: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1rem solid white;
 }
 
-.bubble-button-top {
-  width: 1rem;
-  height: 1rem;
+.info-bubble-left-bottom {
+  background-color: white;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
   position: absolute;
-  background-color: red;
+  left: 0rem;
+  bottom: 10rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
+}
+.info-bubble-left-bottom::after {
+  content: "";
+  height: 0rem;
+  width: 0rem;
+  position: absolute;
+  right: -0.25rem;
   bottom: 0;
-  left: 0;
-  border-radius: 100%;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1rem solid white;
+}
+.info-bubble-left-bottom2 {
+  background-color: white;
+  font-size: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  left: 0rem;
+  top: 15rem;
+  box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
+}
+.info-bubble-left-bottom2::after {
+  content: "";
+  height: 0rem;
+  width: 0rem;
+  position: absolute;
+  right: -0.25rem;
+  bottom: 0;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 1rem solid white;
+}
+
+.footer-container {
+  height: 30rem;
+  width: 100%;
+  background-image: url("./assets/footer-backpack.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #b3cce454;
+  position: absolute;
+  top: 0;
+}
+
+.footer-title {
+  font-size: 3rem;
+  color: #0b4c7e;
+  text-align: center;
+}
+
+.footer-details {
+  z-index: 2;
+  height: max-content;
+  background-color: rgba(255, 255, 255, 0.692);
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 2rem 0.5rem rgba(0, 0, 0, 0.377);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 1rem;
+}
+
+.footer-text {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 750px) {
   .hero {
     flex-direction: column;
     align-items: center;
+    height: 50rem;
   }
   .hero-left-column {
     background-image: url("./assets/happy-teen.jpg");
@@ -262,6 +375,35 @@
   }
   .hero-right-column {
     display: none;
+  }
+}
+
+/* to handle background images in sections */
+@media (max-width: 1000px) {
+  .app-info-section,
+  .app-info-section-middle {
+    background-image: none;
+  }
+}
+
+/* Get right of bubbles */
+@media (max-width: 900px) {
+  .info-bubbles-container,
+  .info-bubble-left,
+  .info-bubble-left-bottom,
+  .info-bubble-left-bottom2,
+  .info-bubble-left-middle,
+  .info-bubble-left-middle2,
+  .info-bubble-right {
+    display: none;
+  }
+
+  .iphone-mockup {
+    background-position: left;
+  }
+
+  .app-info-title {
+    font-size: 2.5rem;
   }
 }
 
