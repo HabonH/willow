@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-right: 4rem;
+  
 }
 .instructions span {
   font-weight: 500;
@@ -36,7 +36,7 @@
   justify-content: center;
   align-items: center;
   top: -28%;
-  padding-right: 4rem;
+  
 }
 
 .unanimated {
@@ -78,8 +78,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 4rem;
 }
+
 .button.play {
   background: none;
   width: 1px;
