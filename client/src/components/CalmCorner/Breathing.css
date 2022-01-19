@@ -52,38 +52,25 @@
   border-radius: 50%;
   animation-name: breathe-animation !important;
   animation: breathe-animation 8s ease infinite none running;
-  transition-delay: 4s;
+  transition-delay: 5s;
 }
 @keyframes breathe-animation {
   0% {
-    background-color: lightgray;
-    width: 100px;
-    height: 100px;
-  }
-  25% {
     background-color: lightblue;
     width: 50px;
     height: 50px;
   }
+
   50% {
     background-color: lightgray;
     width: 100px;
     height: 100px;
   }
-  50% {
+
+  100% {
     background-color: lightblue;
     width: 50px;
     height: 50px;
-  }
-  100% {
-    background-color: lightgray;
-    width: 100px;
-    height: 100px;
-  }
-  100% {
-    background-color: lightgray;
-    width: 100px;
-    height: 100px;
   }
 }
 
