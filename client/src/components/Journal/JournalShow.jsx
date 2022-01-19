@@ -5,6 +5,12 @@ const JournalShow = (props) => {
 
   return (
     <div className='journal-show'>
+      <div
+        className='close-button'
+        onClick={() => {
+          return props.exitShow();
+        }}
+      ></div>
       <div className='journal-title'>
         <h4>{title}</h4>
       </div>
@@ -14,14 +20,6 @@ const JournalShow = (props) => {
       <p className='journal-show-date'>
         {moment(date).startOf("minute").fromNow()}
       </p>
-      <button
-        className='exit-show'
-        onClick={() => {
-          return props.exitShow();
-        }}
-      >
-        x
-      </button>
     </div>
   );
 };
