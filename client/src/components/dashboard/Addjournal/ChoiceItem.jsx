@@ -8,7 +8,7 @@ const ChoiceItem = (props) => {
   });
 
   const clickHandler = () => {
-    getChoice(name);
+    getChoice(image);
     getChoiceMade();
   };
 
