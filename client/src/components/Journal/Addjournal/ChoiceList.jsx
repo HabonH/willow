@@ -34,7 +34,7 @@ const ChoiceList = (props) => {
         image={choice.image}
         getChoice={getChoice}
         getChoiceMade={getChoiceMade}
-        selected={choiceName === choice.label}
+        selected={choiceName === choice.image}
       />
     );
   });
