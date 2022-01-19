@@ -23,8 +23,7 @@ function Carousel() {
       <div
         className="carouselInner"
         style={{
-          backgroundImage: `url(${data[index].img})`,
-          transition: "background-image 1s ease-in-out",
+          backgroundImage: `url(${data[index].img})`
         }}
       >
         <div

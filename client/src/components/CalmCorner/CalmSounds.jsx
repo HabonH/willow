@@ -64,8 +64,8 @@ function CalmSounds() {
         <div className="instructions">
           <span>Calm Sounds</span> </div>
         <div className="audio-list">{audioPlayers}</div>
-        
       </div>
+        
   );
 }
 
