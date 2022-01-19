@@ -171,28 +171,28 @@ svg {
 
 .label-sad {
   background-color: #3f6aa1;
-  border-radius: 1rem;
+  border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 
 .label-lil-sad {
   background-color: #3f6aa1;
-  border-radius: 1rem;
+  border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 .label-neutral {
-  border-radius: 1rem;
+  border-radius: 50%;
   background-color: #3f6aa1;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 .label-lil-happy {
   background-color: #3f6aa1;
-  border-radius: 1rem;
+  border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 .label-happy {
   background-color: #3f6aa1;
-  border-radius: 1rem;
+  border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 
