@@ -2,28 +2,28 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
+
 import "./Breathing.css";
-import Card from "../UI/Card";
 
 function Breathing() {
   const [animation, setAnimation] = useState(false);
   const breatheClass = classNames("unanimated", { breathe: animation });
 
   const handlePlay = () => {
-    if (animation === false) {
-      setAnimation(true);
-    } else {
+    if (animation === true) {
       setAnimation(false);
+    } else {
+      setAnimation(true);
     }
   };
 
   return (
-  
-        <Card>
+    <>
+        <div id="breathe-card">
           <div className="instructions">
             <span>Breathing Exercise </span>
             <p>Inhale slowly through the nose as the circle expands,</p>
-            <p> and breathe out through the mouth as it contracts. </p>
+            <p>and breathe out through the mouth as it contracts. </p>
             <p>Repeat as much as you need, to feel calm.</p>
           </div>
           <div className="breathe-container">
@@ -41,9 +41,9 @@ function Breathing() {
               </button>
             )}
           </div>
-          </ Card>
+        </div>
   
-
+    </>
   );
 }
 
