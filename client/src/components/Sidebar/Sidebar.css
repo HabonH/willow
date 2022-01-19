@@ -42,6 +42,18 @@
   position: relative;
 }
 
+.sidebar-icon-name:hover {
+  cursor: pointer;
+  background-color: #b3cce4;
+}
+
+.home-selected,
+.journal-selected,
+.calm-selected,
+.therapist-selected {
+  background-color: #b3cce4;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -138,6 +150,15 @@ img.icon-image {
   }
   .sidebar-icons {
     margin-left: 25%;
+  }
+  .sidebar-icon-name:hover {
+    background-color: transparent;
+  }
+  .home-icon-selected,
+  .journal-icon-selected,
+  .calm-icon-selected,
+  .therapist-icon-selected {
+    background-color: #b3cce4;
   }
 }
 

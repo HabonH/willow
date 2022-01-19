@@ -1,28 +1,48 @@
+import { useState } from "react";
+
 import "./Sidebar.css";
 
 const Sidebar = (props) => {
+  const [selected, setSelected] = useState("home");
+
+  const sidebarNameClass = "sidebar-icon-name";
+
   const homeHandler = () => {
     props.getView("home");
+    setSelected("home");
   };
 
   const journalHandler = () => {
     props.getView("journal");
+    setSelected("journal");
   };
 
   const calmHandler = () => {
     props.getView("calm");
+    setSelected("calm");
   };
 
   const therapistHandler = () => {
     props.getView("therapist");
+    setSelected("therapist");
   };
   return (
     <div className="sidebar-container">
       <h1 className="sidebar-app-name">AppName</h1>
       <ul className="sidebar-icons">
-        <div className="sidebar-icon-name">
+        <div
+          className={`${sidebarNameClass} ${
+            selected === "home" ? "home-selected" : null
+          }`}
+          onClick={homeHandler}
+        >
           {" "}
-          <li onClick={homeHandler} className="sidebar-icon-1 sidebar-item">
+          <li
+            onClick={homeHandler}
+            className={`sidebar-icon-1 sidebar-item ${
+              selected === "home" ? "home-icon-selected" : null
+            }`}
+          >
             <img
               className="icon-image"
               alt="home button"
@@ -31,8 +51,18 @@ const Sidebar = (props) => {
           </li>
           <h1 className="sidebar-icon-label">Home</h1>
         </div>
-        <div className="sidebar-icon-name">
-          <li onClick={journalHandler} className="sidebar-icon-2 sidebar-item">
+        <div
+          className={`${sidebarNameClass} ${
+            selected === "journal" ? "journal-selected" : null
+          }`}
+          onClick={journalHandler}
+        >
+          <li
+            onClick={journalHandler}
+            className={`sidebar-icon-2 sidebar-item ${
+              selected === "journal" ? "journal-icon-selected" : null
+            }`}
+          >
             <img
               className="icon-image"
               alt="journals button"
@@ -41,8 +71,18 @@ const Sidebar = (props) => {
           </li>
           <h1 className="sidebar-icon-label">Journals</h1>
         </div>
-        <div className="sidebar-icon-name">
-          <li onClick={calmHandler} className="sidebar-icon-3 sidebar-item">
+        <div
+          className={`${sidebarNameClass}  ${
+            selected === "calm" ? "calm-selected" : null
+          }`}
+          onClick={calmHandler}
+        >
+          <li
+            onClick={calmHandler}
+            className={`sidebar-icon-3 sidebar-item ${
+              selected === "calm" ? "calm-icon-selected" : null
+            }`}
+          >
             <img
               className="icon-image"
               alt="calm corner button"
@@ -51,10 +91,17 @@ const Sidebar = (props) => {
           </li>
           <h1 className="sidebar-icon-label">Calm Corner</h1>
         </div>
-        <div className="sidebar-icon-name">
+        <div
+          className={`${sidebarNameClass} ${
+            selected === "therapist" ? "therapist-selected" : null
+          }`}
+          onClick={therapistHandler}
+        >
           <li
             onClick={therapistHandler}
-            className="sidebar-icon-4 sidebar-item"
+            className={`sidebar-icon-4 sidebar-item ${
+              selected === "therapist" ? "therapist-icon-selected" : null
+            }`}
           >
             <img
               className="icon-image"
