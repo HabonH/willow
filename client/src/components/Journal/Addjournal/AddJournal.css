@@ -14,6 +14,22 @@
   border-bottom: 3px solid white;
 }
 
+.add-journal-button-header {
+  width: 100%;
+  height: 100%;
+  background-color: #b3cce4;
+  font-size: 5rem;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  position: absolute;
+  bottom: -3rem;
+  box-shadow: 0px 5px 5px 0.05px rgba(0, 0, 0, 0.274);
+  border-left: 3px solid white;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+}
+
 .plus {
   width: 4rem;
   height: 4rem;
@@ -47,6 +63,39 @@
   border-radius: 0.5rem;
 }
 
+.plus-header {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.plus-header::before {
+  content: "";
+  width: 0.5rem;
+  height: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 4rem;
+  left: 1.75rem;
+  pointer-events: none;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.plus-header::after {
+  content: "";
+  width: 0.5rem;
+  height: 2rem;
+  background-color: white;
+  position: absolute;
+  top: 4rem;
+  left: 1.75rem;
+  transform: rotate(90deg);
+  pointer-events: none;
+  border-radius: 0.5rem;
+}
+
 .add-journal-button:hover {
   cursor: pointer;
 }
@@ -54,14 +103,16 @@
 .journal-title-card {
   text-align: center;
   color: #3f6aa1;
+  padding-top: 1rem;
+  margin-bottom: -2rem;
 }
 
 .back-arrow {
   height: 1.5rem;
   width: 1.5rem;
   position: absolute;
-  right: 2rem;
-  top: 1rem;
+  left: 2rem;
+  bottom: 1rem;
 }
 .back-arrow:hover {
   cursor: pointer;
@@ -107,8 +158,7 @@ input.radio:last-child {
 .scale-face {
   width: 4rem;
   height: 4rem;
-  margin-inline: 0.25rem;
-  position: relative;
+  margin: 0.5rem;
 }
 
 .scale-face:hover {
@@ -119,49 +169,31 @@ svg {
   display: none;
 }
 
-.selected1 {
-  position: absolute;
-  display: block;
-  top: 4rem;
-  left: 2rem;
-  fill: #27bb27;
-  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+.label-sad {
+  background-color: #3f6aa1;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 
-.selected2 {
-  position: absolute;
-  display: block;
-  top: 4rem;
-  left: 6.5rem;
-  fill: #27bb27;
-  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+.label-lil-sad {
+  background-color: #3f6aa1;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
-
-.selected3 {
-  position: absolute;
-  display: block;
-  top: 4rem;
-  left: 10.9rem;
-  fill: #27bb27;
-  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+.label-neutral {
+  border-radius: 1rem;
+  background-color: #3f6aa1;
+  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
-
-.selected4 {
-  position: absolute;
-  display: block;
-  top: 4rem;
-  left: 15.5rem;
-  fill: #27bb27;
-  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+.label-lil-happy {
+  background-color: #3f6aa1;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
-
-.selected5 {
-  position: absolute;
-  display: block;
-  top: 4rem;
-  left: 20rem;
-  fill: #27bb27;
-  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+.label-happy {
+  background-color: #3f6aa1;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
 }
 
 .scale-face:hover {
@@ -191,10 +223,7 @@ svg {
 
 .choice-grid {
   width: 100%;
-  height: 100%;
-
-  margin-bottom: 1rem;
-
+  height: 75%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -203,14 +232,14 @@ svg {
 .choice-item {
   flex-basis: 30%;
   width: 100%;
-  height: 100%;
+  height: 3rem;
   display: flex;
   background-color: #b3cce4;
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1.5rem;
   border-radius: 3rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 
 .choice-item:hover {

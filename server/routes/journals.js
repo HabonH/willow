@@ -23,10 +23,16 @@ const journalRouter = (db) => {
     const userID = req.params.userID;
     const data = req.body;
 
-    const queryString = `INSERT INTO journals (scale, title, entry, student_id)
+    const queryString = `INSERT INTO journals (scale, title, entry, choice, student_id)
     VALUES
-    ($1, $2, $3, $4);`;
-    const queryParams = [data.scale, data.title, data.description, userID];
+    ($1, $2, $3, $4, $5);`;
+    const queryParams = [
+      data.scale,
+      data.title,
+      data.description,
+      data.choice,
+      userID,
+    ];
 
     return db.query(queryString, queryParams).catch((err) => {
       console.log(err);

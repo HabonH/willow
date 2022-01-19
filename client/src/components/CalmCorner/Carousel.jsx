@@ -3,6 +3,7 @@ import "./Carousel.css";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import axios from "axios";
+import transitions from "@material-ui/core/styles/transitions";
 
 function Carousel() {
   const [index, setIndex] = useState(0);
@@ -21,7 +22,10 @@ function Carousel() {
     <div className="carousel">
       <div
         className="carouselInner"
-        style={{ backgroundImage: `url(${data[index].img})` }}
+        style={{
+          backgroundImage: `url(${data[index].img})`,
+          transition: "background-image 1s ease-in-out",
+        }}
       >
         <div
           className="left"

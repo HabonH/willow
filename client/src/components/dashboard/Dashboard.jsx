@@ -6,6 +6,7 @@ import Header from "./Header";
 import AddJournal from "./Addjournal/AddJournal";
 import Card from "../UI/Card";
 import headerQuotes from "./headerQuotes";
+import Resources from "./Resources";
 
 import "./Dashboard.css";
 
@@ -32,14 +33,16 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <Header journalCount={journalCount} quote={quote} />
-      <EmojiList />
       <Card>
         <AddJournal
           getJournalData={getJournalData}
           journalCount={journalCount}
         />
       </Card>
+      <Header journalCount={journalCount} quote={quote} />
+      <EmojiList />
+      <Resources />
+      <div className="dashboard-spacer"></div>
     </div>
   );
 };

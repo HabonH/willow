@@ -1,6 +1,8 @@
 .CalmCorner {
-  margin-left: -2rem;
- 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -12,6 +14,9 @@ body {
   width: 100%;
   height: 90vh;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .scrollable::-webkit-scrollbar {

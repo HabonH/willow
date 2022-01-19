@@ -1,16 +1,17 @@
 .carousel {
-  width: 100vw;
+  width: 85%;
   height: max-content;
   background-color: transparent;
   border-radius: 2rem;
-  margin-left: -0.5rem;
+  box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
+  margin-top: 1rem;
 }
 .card-default {
   height: 109px;
 }
 .carouselInner {
-  height: 9.5rem;
-  width: 100vw;
+  height: 20rem;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

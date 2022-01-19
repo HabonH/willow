@@ -34,7 +34,7 @@ const ChoiceList = (props) => {
         image={choice.image}
         getChoice={getChoice}
         getChoiceMade={getChoiceMade}
-        selected={choiceName === choice.label}
+        selected={choiceName === choice.image}
       />
     );
   });
@@ -57,6 +57,10 @@ const ChoiceList = (props) => {
               color="secondary"
               onClick={() => {
                 props.getView();
+              }}
+              style={{
+                color: "white",
+                textShadow: "0px 1px 5px rgba(0, 0, 0, 0.274)",
               }}
             >
               Continue
