@@ -157,6 +157,7 @@ input.radio:last-child {
 
 .scale-face {
   width: 75%;
+  max-width: 12rem;
   height: 75%;
   margin: 0.5rem;
 }
