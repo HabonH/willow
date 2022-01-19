@@ -171,6 +171,11 @@
   margin-bottom: 7rem;
 }
 
+.resources-container {
+  width: 100%;
+  text-align: center;
+}
+
 @media (min-width: 550px) {
   .dashboard-container {
     width: 100%;
