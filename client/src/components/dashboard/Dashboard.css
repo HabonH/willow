@@ -135,6 +135,7 @@
   align-items: flex-start;
   flex-direction: column;
   margin-left: 0.5rem;
+  color: #3f6aa1;
 }
 
 .emoji-show-description {
@@ -148,6 +149,7 @@
 
 .emoji-show-affirmation {
   margin-top: 1rem;
+  color: #2d5588;
 }
 
 .exit-show {
@@ -190,5 +192,18 @@
   .emoji-image-grid {
     width: 6rem;
     height: 6rem;
+  }
+}
+
+@media (min-width: 1110px) {
+  .emoji-show-description {
+    font-size: 1.1rem;
+  }
+  .emoji-show-header-content {
+    font-size: 1.5rem;
+  }
+  .emoji-show-affirmation {
+    font-size: 1.4rem;
+    text-align: center;
   }
 }
