@@ -31,16 +31,19 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard-container">
-      <Header journalCount={journalCount} quote={quote} />
-      <EmojiList />
-      <Card>
-        <AddJournal
-          getJournalData={getJournalData}
-          journalCount={journalCount}
-        />
-      </Card>
-    </div>
+    <>
+      <div className="dashboard-container">
+        <Header journalCount={journalCount} quote={quote} />
+        <EmojiList />
+        <Card>
+          <AddJournal
+            getJournalData={getJournalData}
+            journalCount={journalCount}
+          />
+        </Card>
+        <div className="dashboard-spacer"></div>
+      </div>
+    </>
   );
 };
 
