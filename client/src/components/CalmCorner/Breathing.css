@@ -79,8 +79,11 @@
   justify-content: center;
   align-items: center;
 }
-
-.button.play {
+#button{
+  display: flex;
+  justify-content: center;
+}
+.button .play {
   background: none;
   width: 1px;
   height: 1px;
@@ -90,7 +93,7 @@
   text-indent: -9999px;
   box-shadow: 1px 1px 3px #999999;
 }
-.button.pause {
+.button .pause {
   background: none;
   width: 1px;
   height: 1px;
