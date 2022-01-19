@@ -10,7 +10,7 @@ const JournalListItem = (props) => {
     <article onClick={clickHandler}>
       <section>
         <div className='journal-plus'>
-          <button className='journal-choice'></button>
+          <div className='journal-choice'></div>
         </div>
         <div>
           <h4 className='journal-title-content'>{title}</h4>
