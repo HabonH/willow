@@ -11,8 +11,8 @@ const JournalListItem = (props) => {
   return (
     <ThemeProvider theme={Theme}>
       <article className='therapist-card'>
-        <div className='journal-plus'>
-          <img className='journal-choice' src={img} alt='profile' />
+        <div className='therapist-plus'>
+          <img className='therapist-choice' src={img} alt='profile' />
         </div>
         <section className='therapist-content'>
           <div className='therapist-title-content'>

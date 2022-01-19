@@ -19,7 +19,7 @@
   height: 3rem;
 }
 
-.journal-choice {
+.therapist-choice {
   width: 100%;
   height: 100%;
   background-color: #b3cce4;
@@ -28,7 +28,7 @@
   border: 5px solid white;
 }
 
-.journal-plus {
+.therapist-plus {
   margin-top: -3rem;
   width: 6rem;
   height: 6rem;
