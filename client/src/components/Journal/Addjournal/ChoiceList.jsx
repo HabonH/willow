@@ -24,6 +24,7 @@ const ChoiceList = (props) => {
   const getChoice = (choice) => {
     setChoiceName(choice);
     props.getChoiceData(choice);
+    console.log(choice);
   };
   const mappedChoices = choiceData.map((choice) => {
     return (
@@ -34,27 +35,27 @@ const ChoiceList = (props) => {
         image={choice.image}
         getChoice={getChoice}
         getChoiceMade={getChoiceMade}
-        selected={choiceName === choice.label}
+        selected={choiceName === choice.image}
       />
     );
   });
 
   return (
     <>
-      <h3 className='choice-title'>What made you feel that way?</h3>
+      <h3 className="choice-title">What made you feel that way?</h3>
       <img
         src={require("./icons/arrow.png")}
-        className='back-arrow'
+        className="back-arrow"
         onClick={props.back}
-        alt='back button'
+        alt="back button"
       />
-      <div className='choice-grid'>{mappedChoices}</div>
+      <div className="choice-grid">{mappedChoices}</div>
       {choiceMade && (
         <ThemeProvider theme={Theme}>
-          <div className='flex-container'>
+          <div className="flex-container">
             <Button
-              variant='contained'
-              color='secondary'
+              variant="contained"
+              color="neutral"
               onClick={() => {
                 props.getView();
               }}
