@@ -10,14 +10,15 @@ const JournalListItem = (props) => {
   };
   return (
     <ThemeProvider theme={Theme}>
-      <article className='therapist-card '>
+      <article className='therapist-card'>
+        <div className='journal-plus'>
+          <img className='journal-choice' src={img} alt='profile' />
+        </div>
         <section className='therapist-content'>
-          <img className='therapist-profile-pic' src={img} alt='profile' />
           <div className='therapist-title-content'>
             <h3>{name}</h3>
           </div>
-        </section>
-        <section>
+
           <Button
             variant='contained'
             color='secondary'
