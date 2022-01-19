@@ -8,15 +8,21 @@ const JournalListItem = (props) => {
   };
   return (
     <article onClick={clickHandler}>
-      <section className='row-container'>
-        <div className='journal-title-content '>
-          <h4>{title}</h4>
+      <section>
+        <div className='journal-plus'>
+          <button className='journal-choice'></button>
+        </div>
+        <div>
+          <h4 className='journal-title-content'>{title}</h4>
         </div>
         <div className='journal-content'>
-          <p>{entry}</p>
+          <p className='journal-content-entry'>{entry}</p>
         </div>
+        <section className='journal-card-footer'>
+          <div>{moment(date).startOf("minute").fromNow()}</div>
+          <div className='journal-arrow'>→</div>
+        </section>
       </section>
-      <div>{moment(date).startOf("minute").fromNow()}</div>
     </article>
   );
 };
