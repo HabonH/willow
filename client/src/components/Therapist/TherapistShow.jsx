@@ -7,6 +7,12 @@ const TherapistShow = (props) => {
 
   return (
     <div className='therapist-show'>
+      <div
+        className='close-button'
+        onClick={() => {
+          return props.exitShow();
+        }}
+      ></div>
       <article className='therapist-details'>
         <section className='therapist-details'>
           <img className='therapist-show-profile-pic' src={img} alt='profile' />
@@ -32,14 +38,6 @@ const TherapistShow = (props) => {
         </div>
         <LinkWrapper link={external_link} />
       </div>
-      <button
-        className='exit-show'
-        onClick={() => {
-          return props.exitShow();
-        }}
-      >
-        x
-      </button>
     </div>
   );
 };

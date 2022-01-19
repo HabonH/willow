@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 const JournalList = (props) => {
-  console.log(props.journalData);
   const { journalData } = props;
 
   const [show, setShow] = useState(false);
@@ -31,14 +30,14 @@ const JournalList = (props) => {
   };
   const parsedJournals = journals.map((journal) => {
     return (
-      <div className="card">
+      <div className='card' key={journal.id}>
         <JournalListItem
           key={journal.id}
           id={journal.id}
           title={journal.title}
           entry={journal.entry}
           date={journal.date}
-          scale={journal.scale}
+          image={journal.choice}
           getJournal={getJournal}
         />
       </div>
@@ -52,7 +51,7 @@ const JournalList = (props) => {
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
         </div>
       ) : (
-        <div className="journal-holder">{parsedJournals}</div>
+        <div className='journal-holder'>{parsedJournals}</div>
       )}
     </>
   );

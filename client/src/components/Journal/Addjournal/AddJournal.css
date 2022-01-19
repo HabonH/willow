@@ -111,8 +111,8 @@
   height: 1.5rem;
   width: 1.5rem;
   position: absolute;
-  right: 2rem;
-  top: 1rem;
+  left: 2rem;
+  bottom: 1rem;
 }
 .back-arrow:hover {
   cursor: pointer;
