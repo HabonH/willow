@@ -1,16 +1,24 @@
 .therapist-header {
+  display: flex;
+  flex-direction: column;
   background-color: white;
-  height: 10rem;
+  height: max-content;
   width: 80%;
   border-right: 8px solid #b2cae2;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: -2rem;
 }
 
+.header-text {
+  padding: 1rem;
+}
+
+.therapist-holder {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  padding-bottom: 5rem;
+}
 .therapist-content {
   display: flex;
   flex-direction: row;
@@ -22,10 +30,9 @@
 .therapist-choice {
   width: 100%;
   height: 100%;
-  background-color: #b3cce4;
-  border-radius: 50%;
   color: white;
-  border: 5px solid white;
+  border-radius: 50%;
+  border: 4px solid white;
 }
 
 .therapist-plus {
@@ -49,9 +56,12 @@
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   padding: 1rem;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+}
+.therapist-card:hover {
+  transform: translateY(-1rem);
 }
 
 .therapist-show {
@@ -110,16 +120,15 @@
 }
 
 .main-therapist-container {
-  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .right {
   margin-right: -1;
-}
-
-.therapist-holder {
-  height: 90vh;
-  overflow-y: scroll;
-  padding-bottom: 5rem;
 }
 
 .therapist-holder::-webkit-scrollbar {
@@ -148,3 +157,55 @@
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+@media (min-width: 550px) {
+  .therapist-holder {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .main-therapist-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .therapist-card {
+    width: 40rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+/* 
+@media (min-width: 1360px) {
+  .therapist-holder {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .main-therapist-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .therapist-card {
+    width: 30rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+} */
