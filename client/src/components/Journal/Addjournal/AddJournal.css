@@ -315,11 +315,13 @@ svg {
   text-align: center;
   font-size: 2rem;
   margin-right: 1rem;
+  color: #525f76;
 }
 
 .final-view-text {
   text-align: center;
   margin-right: 1rem;
+  color: #525f76;
 }
 
 .close-button {

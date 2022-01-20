@@ -51,13 +51,14 @@
   font-size: 1rem;
   padding-top: 1rem;
   text-align: center;
+  color: #525f76;
 }
 
 .journal-count {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: #b3cce4;
-  color: white;
+  background-color: #36a893;
+  color: #fffde1;
 }
 .emoji-card-grid {
   display: grid;
