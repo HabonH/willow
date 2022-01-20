@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AudioPlayer from "material-ui-audio-player";
-import PlayCircleOutlineSharpIcon from '@mui/icons-material/PlayCircleOutlineSharp';
-import PauseCircleOutlineSharpIcon from '@mui/icons-material/PauseCircleOutlineSharp';
+import PlayCircleOutlineSharpIcon from "@mui/icons-material/PlayCircleOutlineSharp";
+import PauseCircleOutlineSharpIcon from "@mui/icons-material/PauseCircleOutlineSharp";
 import "./CalmSounds.css";
 import "../UI/PlayPause.css";
 
@@ -27,10 +27,10 @@ function CalmSounds() {
   const icons = {
     PlayIcon: PlayCircleOutlineSharpIcon,
     PauseIcon: PauseCircleOutlineSharpIcon,
-  
-  }
+  };
   const audioPlayers = sounds.map((sound, index) => {
     return (
+       
       <h5 className="sounds-instructions" key={index}>
         {currentPlayer}
         <h4 className="title">{sound.label}</h4>
@@ -49,20 +49,19 @@ function CalmSounds() {
           src={sound.audio}
           volume={false}
           displaySlider={false}
-          />
-
-          </h5>
+        />
+      </h5>
+    
     );
   });
 
   return (
-    
-      <div className="sound-container">
-        <div className="instructions">
-          <span>Calm Sounds</span> </div>
-        <div className="audio-list">{audioPlayers}</div>
+    <div className="sound-card">
+      <div className="instructions">
+        <span>Calm Sounds</span>
+      <div className="audio-list">{audioPlayers}</div>
       </div>
-        
+    </div>
   );
 }
 
