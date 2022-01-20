@@ -129,6 +129,13 @@ h3 {
   transform: translateY(-50%);
 }
 
+iframe {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0.5rem 0.5rem #fff8bb;
+  margin-bottom: 1rem;
+}
+
 .row-container:hover {
   -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
 }
