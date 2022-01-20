@@ -36,6 +36,7 @@ function CalmSounds() {
         <div className="audio-button">
 
         <AudioPlayer
+        style={{color: "#525F76" }}
         key={index}
         id={index}
         icons={icons}

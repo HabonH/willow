@@ -43,7 +43,7 @@
 }
 
 .unanimated {
-  background-color: lightblue;
+  background-color: #C9E4D7;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -54,24 +54,28 @@
   height: 100px;
   border-radius: 50%;
   animation-name: breathe-animation !important;
-  animation: breathe-animation 8s ease infinite none running;
-  transition-delay: 5s;
+  animation: breathe-animation 10s ease infinite none running;
+  transition-delay: 8s;
 }
 @keyframes breathe-animation {
   0% {
-    background-color: lightblue;
+    background-color: #C9E4D7;
     width: 50px;
     height: 50px;
   }
 
   50% {
-    background-color: lightgray;
+    background-color: #FEEE8C;
     width: 100px;
     height: 100px;
   }
-
   100% {
-    background-color: lightblue;
+    background-color: #FEEE8C;
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    background-color: #C9E4D7;
     width: 50px;
     height: 50px;
   }
