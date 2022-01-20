@@ -133,6 +133,9 @@
   background-position-y: 10rem;
   background-position-x: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .app-info-section-bottom {
@@ -144,6 +147,9 @@
   height: 90vh;
   max-height: 55rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .app-info-title {
@@ -169,6 +175,28 @@
 }
 
 .iphone-mockup-top {
+  height: 80%;
+  background-image: url("./assets/mockup-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.iphone-mockup-middle {
+  height: 80%;
+  background-image: url("./assets/mockup-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.iphone-mockup-bottom {
   height: 80%;
   background-image: url("./assets/mockup-home.png");
   background-repeat: no-repeat;
@@ -426,7 +454,9 @@
     display: none;
   }
   .mockup-container,
-  .iphone-mockup-top {
+  .iphone-mockup-top,
+  .iphone-mockup-middle,
+  .iphone-mockup-bottom {
     width: 100%;
   }
 
@@ -434,7 +464,9 @@
     background-position: left;
   }
 
-  .iphone-mockup-top {
+  .iphone-mockup-top,
+  .iphone-mockup-middle,
+  .iphone-mockup-bottom {
     background-position: left;
   }
 

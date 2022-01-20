@@ -4,7 +4,7 @@ const SectionMiddle = () => {
       <section className="app-info-section-middle">
         <h1 className="app-info-title">Tools and Resources</h1>
         <div className="mockup-container">
-          <div className="iphone-mockup">
+          <div className="iphone-mockup-middle">
             {" "}
             <div className="info-bubbles-container"></div>
             <div className="info-bubble-right">
