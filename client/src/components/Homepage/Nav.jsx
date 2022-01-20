@@ -6,7 +6,7 @@ const Nav = () => {
   const navigate = useNavigate();
   return (
     <nav className="navbar">
-      <h1 className="app-name">AppName</h1>
+      <h1 className="app-name">willow</h1>
       <div className="buttons-container">
         <Stack spacing={3} direction="row">
           <Button

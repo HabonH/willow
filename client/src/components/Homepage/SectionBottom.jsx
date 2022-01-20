@@ -4,7 +4,7 @@ const SectionBottom = () => {
       <section className="app-info-section-bottom">
         <h1 className="app-info-title">Access to Professional Care</h1>
         <div className="mockup-container">
-          <div className="iphone-mockup">
+          <div className="iphone-mockup-bottom">
             {" "}
             <div className="info-bubbles-container"></div>
             <div className="info-bubble-right">

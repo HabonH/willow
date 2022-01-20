@@ -28,7 +28,9 @@ const Sidebar = (props) => {
   };
   return (
     <div className="sidebar-container">
-      <h1 className="sidebar-app-name">AppName</h1>
+      <div className="sidebar-header">
+        <h1 className="sidebar-app-name">willow</h1>
+      </div>
       <ul className="sidebar-icons">
         <div
           className={`${sidebarNameClass} ${

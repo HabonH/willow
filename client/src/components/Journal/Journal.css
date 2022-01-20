@@ -11,7 +11,7 @@
 }
 
 .journal-show-date {
-  padding-top: 1rem;
+  margin-top: 10rem;
 }
 
 .journal-content {
@@ -34,6 +34,10 @@
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
+.modal-journal-holder {
+  position: absolute;
+  top: 0px;
+}
 .journal-title-content {
   text-align: center;
   margin-bottom: 0.5rem;
@@ -51,13 +55,15 @@
 
 .journal-choice {
   position: absolute;
+  padding: 1rem;
   width: 100%;
   height: 100%;
-  background-color: #b3cce4;
   border-radius: 50%;
   color: white;
   border: 5px solid white;
+  background-color: #b3cce4;
 }
+
 .journal-card-footer {
   margin-right: 1rem;
   display: flex;
@@ -71,34 +77,38 @@
 }
 .card {
   background-color: white;
-  z-index: -1;
   height: max-content;
   width: 85%;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2.5rem;
+  margin-top: 4rem;
   padding: 1rem;
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
 }
 
-/* div .card:hover {
+div .card:hover {
   cursor: pointer;
-  -webkit-mask-image: linear-gradient(to bottom, #bae2e9 50%, transparent 200%);
- } */
+  transform: translateY(-1rem);
+}
 
-.journal-show {
+#journal-show {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
   background-color: white;
   border-left: 18px solid #b1c9e2;
   position: relative;
   height: 60vh;
-  width: 85%;
+  width: 55%;
   border-radius: 10px;
-  margin-left: 6rem;
-  margin-top: 1rem;
-  margin-right: -2rem;
-  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  /* margin-left: auto; */
+  /* margin-top: 4rem; */
+  /* margin-right: auto; */
+  box-shadow: 0px 0px 10px 0.05px rgb(0 0 0 / 27%);
   padding: 1rem;
+  margin-inline: 12.5%;
 }
 
 .journal-title {
@@ -129,15 +139,41 @@
 
 /* scroll the list */
 .journal-holder {
+  display: flex;
+  flex-direction: column;
   padding-top: 2rem;
-  height: 90vh;
+  height: 100%;
+  width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  padding-bottom: 5rem;
 }
 .journal-holder::-webkit-scrollbar {
   display: none;
 }
 
 .main-journal-container {
-  height: 80vh;
+  height: 100%;
+}
+@media (min-width: 550px) {
+  .journal-holder {
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .main-journal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 30rem;
+  }
 }

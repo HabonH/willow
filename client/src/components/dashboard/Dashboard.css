@@ -4,8 +4,6 @@
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
 }
 
 .dashboard-container::-webkit-scrollbar {
@@ -21,11 +19,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  background: linear-gradient(
-    328deg,
-    rgba(156, 174, 255, 0.59) 5.09%,
-    #9ecaff 99.83%
-  );
+  background: linear-gradient(10deg, #6ed697 0.81%, #36a893 98.73%);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -43,27 +37,28 @@
 .header-affirmation {
   font-size: 2rem;
   font-weight: 400;
-  color: #2d5588;
+  color: #fffde1;
   margin-top: 1rem;
   line-height: 1;
 }
 .quote-author {
   font-size: 1rem;
   font-family: "Mulish";
-  color: #2d5588;
+  color: #fffde1;
   margin-bottom: 1rem;
 }
 .journal-count-title {
   font-size: 1rem;
   padding-top: 1rem;
   text-align: center;
+  color: #525f76;
 }
 
 .journal-count {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
-  background-color: #b3cce4;
-  color: white;
+  background-color: #36a893;
+  color: #fffde1;
 }
 .emoji-card-grid {
   display: grid;
@@ -78,7 +73,6 @@
   position: relative;
   height: max-content;
   width: 85%;
-  border-left: 10px solid #b3cce4;
   border-radius: 10px 0 0 10px;
   margin-left: 5rem;
   margin-top: 1rem;
@@ -90,12 +84,12 @@
 .emoji-emotions-title {
   font-size: 1.5rem;
   text-align: center;
-  color: #3f6aa1;
+  color: #525f76;
 }
 
 .emoji-emotions-text {
   text-align: center;
-  color: #2d5588;
+  color: #525f76;
   font-size: 0.9rem;
 }
 
@@ -142,12 +136,13 @@
   align-items: flex-start;
   flex-direction: column;
   margin-left: 0.5rem;
-  color: #3f6aa1;
+  color: #525f76;
 }
 
 .emoji-show-description {
   font-size: 0.75rem;
   padding-right: 0.5rem;
+  color: #525f76;
 }
 
 .emoji-show-body {
@@ -181,26 +176,24 @@
 .resources-title {
   font-size: 1.5rem;
   text-align: center;
-  color: #2d5588;
+  color: #525f76;
   margin-bottom: 1rem;
 }
 
 .resources-info-container {
   width: 100%;
   height: 15rem;
-  background-color: #b3cce4;
+  background-color: #cff4d2;
   border-radius: 0.75rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  overflow-y: scroll;
 }
 
-.resources-info-container::-webkit-scrollbar {
+/* .resources-info-container::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .resources-info-card {
   height: min-content;
@@ -214,6 +207,7 @@
   align-items: flex-start;
   padding: 0.75rem;
   box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
+  color: #525f76;
 }
 
 @media (min-width: 550px) {
