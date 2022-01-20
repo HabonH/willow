@@ -8,7 +8,7 @@
   width: 100%;
   max-width: 100rem;
   height: 5rem;
-  background-color: #b3cce4;
+  background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
   display: flex;
   align-items: center;
   position: fixed;
@@ -20,7 +20,7 @@
 
 .app-name {
   margin: 3rem;
-  color: white;
+  color: #fffde1;
 }
 
 .buttons-container {
@@ -33,13 +33,13 @@
   height: 95vh;
   overflow: hidden;
   position: relative;
-  background-color: white;
+  background-color: #cff4d2;
 }
 
 .hero-title {
   font-size: 5rem;
   line-height: 0.75;
-  color: #1070bb;
+  color: #525f76;
   margin-left: 3rem;
 }
 
@@ -47,7 +47,7 @@
   margin-left: 3rem;
   margin-top: 1rem;
   font-size: 1.25rem;
-  color: #2d5588;
+  color: #525f76;
 }
 
 .hero-button-container {
@@ -104,24 +104,29 @@
 }
 
 .app-info-section {
-  background-color: white;
+  background-color: #fff8bb;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
-  color: #2d5588;
-  height: 60rem;
+  color: #525f76;
+  height: 90vh;
+  max-height: 55rem;
   background-image: url("./assets/boy-in-classroom.png");
   background-repeat: no-repeat;
   background-position-y: 3rem;
   background-position-x: 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .app-info-section-middle {
-  background-color: #b3cce4;
+  background-color: #cff4d2;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
-  color: #2d5588;
+  color: #525f76;
+  max-height: 55rem;
   height: 90vh;
   background-image: url("./assets/girl-holding-books.png");
   background-repeat: no-repeat;
@@ -131,36 +136,47 @@
 }
 
 .app-info-section-bottom {
-  background-color: white;
+  background-color: #fff8bb;
   padding: 3rem;
   font-size: 3rem;
   text-align: center;
-  color: #2d5588;
+  color: #525f76;
   height: 90vh;
+  max-height: 55rem;
   position: relative;
 }
 
 .app-info-title {
   font-size: 4rem;
-  color: #1070bb;
+  color: #525f76;
 }
 
 .mockup-container {
   display: flex;
   justify-content: center;
+  width: 50%;
+  height: 100%;
 }
 
 .iphone-mockup {
-  width: 50rem;
-  height: 50rem;
+  width: 50%;
+  height: 80%;
   background-image: url("./assets/iphone-mockup.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   position: relative;
+}
+
+.iphone-mockup-top {
+  height: 80%;
+  background-image: url("./assets/mockup-home.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: center;
 }
 .spacer {
   width: 100%;
@@ -168,10 +184,7 @@
 }
 .info-bubbles-container {
   height: 40rem;
-  width: 100%;
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
+  width: 40rem;
 }
 
 .info-bubble-right {
@@ -205,8 +218,8 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: -5rem;
-  bottom: 18rem;
+  left: -9rem;
+  bottom: 2rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 .info-bubble-left::after {
@@ -332,7 +345,7 @@
 
 .footer-title {
   font-size: 3rem;
-  color: #0b4c7e;
+  color: #525f76;
   text-align: center;
   z-index: 2;
 }
@@ -386,7 +399,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(2, 1, 8, 0.301);
+    background-color: #12271442;
   }
   .hero-right-column {
     display: none;
@@ -412,8 +425,16 @@
   .info-bubble-right {
     display: none;
   }
+  .mockup-container,
+  .iphone-mockup-top {
+    width: 100%;
+  }
 
   .iphone-mockup {
+    background-position: left;
+  }
+
+  .iphone-mockup-top {
     background-position: left;
   }
 
