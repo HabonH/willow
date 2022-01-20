@@ -78,11 +78,34 @@ select {
   background-color: transparent !important;
   color: #35373b;
 }
+.modal-open {
+  overflow-y: scroll !important;
+}
+
+.modal {
+  display: inline !important;
+}
+
+.modal-content {
+  background: linear-gradient(0.77deg, #cff4d2 0.81%, #9ac9ac 98.73%);
+}
+
+.modal-show {
+  width: 50%;
+  margin-left: 2 0rem;
+}
 .modal-dialog {
+  margin-left: 10rem;
   padding-bottom: 5rem;
   padding-left: 5rem;
 }
+/* 
+modal-dialog is the popup
+modal-content holds it all
+modal-body holds i-frame
+modal-footer holds button
 
+*/
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -100,5 +123,5 @@ select {
 }
 
 body {
-  background-color: #e0ecf8;
+  background-color: #cff4d2;
 }
