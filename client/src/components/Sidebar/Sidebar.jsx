@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import willowLogo from "../Homepage/assets/willow-logo.svg";
 
 import "./Sidebar.css";
 
 const Sidebar = (props) => {
+  const navigate = useNavigate();
   const [selected, setSelected] = useState("home");
 
   const sidebarNameClass = "sidebar-icon-name";
@@ -27,6 +29,13 @@ const Sidebar = (props) => {
     props.getView("therapist");
     setSelected("therapist");
   };
+
+  const logoutHandler = () => {
+    localStorage.removeItem("userID");
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
@@ -117,6 +126,16 @@ const Sidebar = (props) => {
             />
           </li>
           <h1 className="sidebar-icon-label">Therapists</h1>
+        </div>
+        <div className={`${sidebarNameClass}`} onClick={logoutHandler}>
+          <li onClick={logoutHandler} className="sidebar-icon-5 sidebar-item">
+            <img
+              className="icon-image logout-button"
+              alt="logout button"
+              src={require("./sidebar_icons/logout.png")}
+            />
+          </li>
+          <h1 className="sidebar-icon-label">Logout</h1>
         </div>
       </ul>
     </div>
