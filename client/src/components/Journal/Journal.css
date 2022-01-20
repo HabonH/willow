@@ -34,6 +34,10 @@
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
 }
 
+.modal-journal-holder {
+  position: absolute;
+  top: 0px;
+}
 .journal-title-content {
   text-align: center;
   margin-bottom: 0.5rem;
@@ -88,7 +92,8 @@ div .card:hover {
   transform: translateY(-1rem);
 }
 
-.journal-show {
+#journal-show {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -96,13 +101,14 @@ div .card:hover {
   border-left: 18px solid #b1c9e2;
   position: relative;
   height: 60vh;
-  width: 85%;
+  width: 55%;
   border-radius: 10px;
-  margin-left: auto;
-  margin-top: 4rem;
-  margin-right: auto;
-  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  /* margin-left: auto; */
+  /* margin-top: 4rem; */
+  /* margin-right: auto; */
+  box-shadow: 0px 0px 10px 0.05px rgb(0 0 0 / 27%);
   padding: 1rem;
+  margin-inline: 12.5%;
 }
 
 .journal-title {
@@ -137,6 +143,7 @@ div .card:hover {
   flex-direction: column;
   padding-top: 2rem;
   height: 100%;
+  width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-bottom: 5rem;
@@ -163,7 +170,7 @@ div .card:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 75%;
+    width: 100%;
   }
 
   .card {
