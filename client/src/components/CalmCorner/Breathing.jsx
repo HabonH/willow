@@ -31,13 +31,13 @@ function Breathing() {
         </div>
         <div id="button">
           {animation === true ? (
-            <button className="button play" onClick={handlePlay}>
-              <PauseIcon />
-            </button>
+            // <button className="button play" onClick={handlePlay}>
+              <PauseIcon style={{color: "#525F76" }} className="button-play" onClick={handlePlay}/>
+            // </button>
           ) : (
-            <button className="button pause" onClick={handlePlay}>
-              <PlayArrowIcon />
-            </button>
+            // <button className="button pause" onClick={handlePlay}>
+              <PlayArrowIcon  style={{color: "#525F76" }} className="button-pause" onClick={handlePlay}/>
+            // </button>
           )}
         </div>
       </Card>
