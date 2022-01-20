@@ -8,15 +8,24 @@
   left: 0;
   top: 0rem;
   z-index: 999999;
-  background-color: #2d5588;
+  background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
   box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
   position: relative;
+  overflow: hidden;
+}
+.sidebar-header {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .sidebar-app-name {
-  position: absolute;
-  top: 0;
-  left: 20%;
+  color: #fffde1;
 }
 
 .sidebar-icons {
@@ -24,18 +33,19 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-around;
-  height: 30%;
+  height: 25%;
   padding: 0;
+  margin-left: 0.25rem;
 }
 
 .sidebar-icon-name {
   height: 3rem;
-  width: 90%;
+  width: 100%;
   max-width: 14rem;
   background-color: white;
-  border-radius: 3rem;
+  border-radius: 3rem 0 0 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,14 +54,14 @@
 
 .sidebar-icon-name:hover {
   cursor: pointer;
-  background-color: #b3cce4;
+  background-color: #cff4d2;
 }
 
 .home-selected,
 .journal-selected,
 .calm-selected,
 .therapist-selected {
-  background-color: #b3cce4;
+  background-color: #cff4d2;
 }
 
 @keyframes fadeIn {
@@ -66,7 +76,7 @@
   margin-left: 3.5rem;
   font-size: 1.25rem;
   font-weight: lighter;
-  color: rgb(7, 4, 34);
+  color: #525f76;
   animation: fadeIn 2s ease-in-out;
 }
 
@@ -185,6 +195,7 @@ img.icon-image {
     max-width: none;
     position: absolute;
     top: 93vh;
+    background: none;
     background-color: white;
     padding: 0;
     margin: 0;
