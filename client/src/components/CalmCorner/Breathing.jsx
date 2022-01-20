@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
-
 import "./Breathing.css";
+import Card from "../UI/Card";
 
 function Breathing() {
   const [animation, setAnimation] = useState(false);
@@ -19,7 +19,7 @@ function Breathing() {
 
   return (
     <>
-      <div id="breathe-card">
+      <Card className="breathe-card">
         <div className="instructions">
           <span>Breathing Exercise </span>
           <p>Inhale slowly through the nose as the circle expands,</p>
@@ -40,7 +40,7 @@ function Breathing() {
             </button>
           )}
         </div>
-      </div>
+      </Card>
     </>
   );
 }

@@ -30,28 +30,29 @@ function CalmSounds() {
   };
   const audioPlayers = sounds.map((sound, index) => {
     return (
-       
-      <h5 className="sounds-instructions" key={index}>
+      <div className="sounds-instructions" key={index}>
         {currentPlayer}
         <h4 className="title">{sound.label}</h4>
+        <div className="audio-button">
 
         <AudioPlayer
-          key={index}
-          icons={icons}
-          width="0"
-          elevation={1}
-          // variation="default"
-          spacing={0}
-          rounded={1}
-          order="standart"
-          preload="auto"
-          loop={false}
-          src={sound.audio}
-          volume={false}
-          displaySlider={false}
+        key={index}
+        id={index}
+        icons={icons}
+        width="100%"
+        elevation={0}
+        // variation="default"
+        spacing={0}
+        rounded={1}
+        order="standart"
+        preload="auto"
+        loop={false}
+        src={sound.audio}
+        volume={false}
+        displaySlider={false}
         />
-      </h5>
-    
+        </div>
+      </div>
     );
   });
 
@@ -59,7 +60,7 @@ function CalmSounds() {
     <div className="sound-card">
       <div className="instructions">
         <span>Calm Sounds</span>
-      <div className="audio-list">{audioPlayers}</div>
+        <div className="audio-list">{audioPlayers}</div>
       </div>
     </div>
   );

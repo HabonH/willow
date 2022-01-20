@@ -4,7 +4,7 @@
   background-color: transparent;
   border-radius: 0.75rem;
   box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 /* turned this off as it was effecting the card default UI component */

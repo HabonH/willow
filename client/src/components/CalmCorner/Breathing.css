@@ -1,3 +1,4 @@
+
 #breathe-card {
   position: relative;
   width: 85%;
@@ -19,11 +20,13 @@
   
 }
 .instructions span {
+  color: #525F76;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
 
 .instructions p {
+  color: #525F76;
   font-weight: 200;
   font-family: "Mulish", sans-serif;
   font-size: smaller;
