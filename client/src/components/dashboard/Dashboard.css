@@ -179,8 +179,10 @@
 }
 
 .resources-title {
+  font-size: 1.5rem;
   text-align: center;
   color: #2d5588;
+  margin-bottom: 1rem;
 }
 
 .resources-info-container {
