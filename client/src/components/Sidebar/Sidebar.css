@@ -95,7 +95,7 @@
 
 .sidebar-item:hover {
   cursor: pointer;
-  background-color: #b3cce4;
+  background-color: #cff4d2;
 }
 
 img.icon-image {
@@ -168,7 +168,7 @@ img.icon-image {
   .journal-icon-selected,
   .calm-icon-selected,
   .therapist-icon-selected {
-    background-color: #b3cce4;
+    background-color: #cff4d2;
   }
 }
 
@@ -183,11 +183,6 @@ img.icon-image {
       top: 93vh;
       opacity: 100%;
     }
-  }
-  .sidebar-spacer {
-    height: 7vh;
-    width: 100%;
-    background-color: red;
   }
   div.sidebar-container {
     height: 7vh;
