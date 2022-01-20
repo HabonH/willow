@@ -162,7 +162,9 @@
   font-size: 4rem;
   color: #525f76;
 }
-
+.info-section-list {
+  display: none;
+}
 .mockup-container {
   display: flex;
   justify-content: center;
@@ -417,6 +419,10 @@
   z-index: 2;
 }
 
+.mockup-img {
+  display: none;
+}
+
 @media (max-width: 750px) {
   .hero {
     flex-direction: column;
@@ -441,15 +447,19 @@
 }
 
 /* to handle background images in sections */
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
+
+} */
+
+/* Get right of bubbles */
+@media (max-width: 900px) {
+  .mockup-image {
+    display: none;
+  }
   .app-info-section,
   .app-info-section-middle {
     background-image: none;
   }
-}
-
-/* Get right of bubbles */
-@media (max-width: 900px) {
   .info-bubbles-container,
   .info-bubble-left,
   .info-bubble-left-bottom,
@@ -490,6 +500,7 @@
   }
 
   .info-section-list {
+    display: block;
     width: 50%;
     height: 100%;
   }
@@ -536,6 +547,41 @@
   }
 }
 
+@media (max-width: 715px) {
+  .iphone-mockup-middle {
+    background: none;
+  }
+
+  .iphone-mockup {
+    background: none;
+  }
+
+  .iphone-mockup-top,
+  .iphone-mockup-bottom {
+    background: none;
+  }
+
+  .info-section-list {
+    width: 90%;
+    height: max-content;
+    z-index: 2;
+  }
+  .iphone-mockup,
+  .iphone-mockup-middle,
+  .iphone-mockup-bottom,
+  .iphone-mockup-top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mockup-img {
+    display: block;
+    height: 100%;
+    position: absolute;
+    bottom: -85%;
+  }
+}
 /* AUTH FORM STYLING */
 
 .form-container {

@@ -1,3 +1,5 @@
+import dashboardMockup from "./assets/mockup-home.png";
+
 const SectionMiddle = () => {
   return (
     <>
@@ -29,6 +31,8 @@ const SectionMiddle = () => {
                 </p>
               </div>
             </div>
+            <img src={dashboardMockup} className="mockup-img" />
+
             <div className="info-bubbles-container"></div>
             <div className="info-bubble-right">
               <p>Calming Space for when emotions are high.</p>
