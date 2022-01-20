@@ -2,7 +2,8 @@ import Breathing from "./Breathing"
 import "./CalmCorner.css";
 import CalmSounds from "./CalmSounds";
 import Carousel from "./Carousel"
-import Card from "../UI/Card";
+import Coping from "./Coping";
+
 
 
 function CalmCorner() {
@@ -12,7 +13,7 @@ function CalmCorner() {
       <div className="scrollable"> 
       <Breathing />
       <CalmSounds />
-      <Card/>
+      <Coping/>
       </div>
 
     </div>

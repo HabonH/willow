@@ -3,7 +3,6 @@ import "./Carousel.css";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import axios from "axios";
-import transitions from "@material-ui/core/styles/transitions";
 
 function Carousel() {
   const [index, setIndex] = useState(0);

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import AudioPlayer from "material-ui-audio-player";
-import Card from "../UI/Card";
 import PlayCircleOutlineSharpIcon from '@mui/icons-material/PlayCircleOutlineSharp';
 import PauseCircleOutlineSharpIcon from '@mui/icons-material/PauseCircleOutlineSharp';
 import "./CalmSounds.css";
@@ -22,8 +21,6 @@ const audios = [
   { audio: WhiteNoise, label: "White Noise", playing: false },
 ];
 
-
-{/* <ThemeProvider theme={muiTheme}> */}
 function CalmSounds() {
   const [sounds, setSounds] = useState([...audios]);
   const [currentPlayer, setCurrentPlayer] = useState(null);
@@ -34,16 +31,16 @@ function CalmSounds() {
   }
   const audioPlayers = sounds.map((sound, index) => {
     return (
-      <h5 className="instructions" key={index}>
+      <h5 className="sounds-instructions" key={index}>
         {currentPlayer}
-        <h4>{sound.label}</h4>
+        <h4 className="title">{sound.label}</h4>
 
         <AudioPlayer
           key={index}
           icons={icons}
           width="0"
           elevation={1}
-          variation="default"
+          // variation="default"
           spacing={0}
           rounded={1}
           order="standart"
@@ -52,9 +49,9 @@ function CalmSounds() {
           src={sound.audio}
           volume={false}
           displaySlider={false}
-        />
+          />
 
-      </h5>
+          </h5>
     );
   });
 
