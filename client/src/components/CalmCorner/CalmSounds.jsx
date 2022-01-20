@@ -4,13 +4,13 @@ import PlayCircleOutlineSharpIcon from "@mui/icons-material/PlayCircleOutlineSha
 import PauseCircleOutlineSharpIcon from "@mui/icons-material/PauseCircleOutlineSharp";
 import "./CalmSounds.css";
 import "../UI/PlayPause.css";
-
 import Waves from "./audio/Waves.mp3";
 import WhiteNoise from "./audio/WhiteNoise.mp3";
 import Campfire from "./audio/Campfire.mp3";
 import FanNoise from "./audio/FanNoise.mp3";
 import Raindrops from "./audio/Raindrops.mp3";
 import CricketsAtNight from "./audio/CricketsAtNight.mp3";
+
 
 const audios = [
   { audio: Waves, label: "Waves", playing: false },
