@@ -1,5 +1,6 @@
 import JournalListItem from "./JournalListItem";
 import JournalShow from "./JournalShow";
+import MyModal from "./MyModal";
 import "./Journal.css";
 
 import { useEffect, useState } from "react";
@@ -49,6 +50,7 @@ const JournalList = (props) => {
       {show ? (
         <div>
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
+          <div className='journal-holder'>{parsedJournals}</div>
         </div>
       ) : (
         <div className='journal-holder'>{parsedJournals}</div>
