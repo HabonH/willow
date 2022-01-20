@@ -4,12 +4,12 @@
   background-color: white;
   height: max-content;
   width: 80%;
-  border-right: 8px solid #b2cae2;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  box-shadow: 0.5rem 0.5rem #fff8bb;
 }
 
 .header-text {
+  color: #525f76;
   padding: 1rem;
 }
 
@@ -17,14 +17,20 @@
   height: 100%;
   width: 100%;
   overflow-y: scroll;
+  margin-top: 1rem;
   padding-bottom: 5rem;
 }
+
 .therapist-content {
+  color: #525f76;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+}
+h3 {
+  color: #525f76;
 }
 
 .therapist-choice {
@@ -33,6 +39,7 @@
   color: white;
   border-radius: 50%;
   border: 4px solid white;
+  background-color: white;
 }
 
 .therapist-plus {
@@ -46,19 +53,25 @@
 .therapist-title-content {
   padding-top: 2rem;
   padding-bottom: 1rem;
-  color: #35373b;
+  color: #525f76;
+}
+
+.therapist-detail-content {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  color: #525f76;
 }
 
 .therapist-card {
   background-color: white;
-  height: 10rem;
+  height: 12rem;
   width: 85%;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 3rem;
   padding: 1rem;
-  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  box-shadow: 0.5rem 0.5rem #fff8bb;
 }
 .therapist-card:hover {
   transform: translateY(-1rem);
@@ -66,16 +79,17 @@
 
 .therapist-show {
   background-color: white;
-  border-left: 18px solid #b1c9e2;
   position: relative;
   height: max-content;
   width: 85%;
   border-radius: 10px;
-  margin-left: 6rem;
+  margin-left: auto;
   margin-top: 1rem;
-  margin-right: -2rem;
-  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  margin-right: auto;
+  box-shadow: 0.5rem 0.5rem #fff8bb;
   padding: 1rem;
+  padding-bottom: 2rem;
+  background-color: white;
 }
 
 .therapist-title {
@@ -127,8 +141,13 @@
   height: 100%;
   width: 100%;
 }
-.right {
+
+.button-right {
   margin-right: -1;
+}
+
+.booking-popup {
+  margin-right: 1rem;
 }
 
 .therapist-holder::-webkit-scrollbar {
@@ -178,11 +197,19 @@
   }
 
   .therapist-card {
-    width: 40rem;
+    width: 85%;
     margin-left: 1rem;
     margin-right: 1rem;
+    box-shadow: 0.5rem 0.5rem #fff8bb;
   }
 }
+
+@media (min-width: 1280px) {
+  .therapist-card {
+    width: 45%;
+  }
+}
+
 /* 
 @media (min-width: 1360px) {
   .therapist-holder {
