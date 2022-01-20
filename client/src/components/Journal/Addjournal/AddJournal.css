@@ -102,7 +102,7 @@
 
 .journal-title-card {
   text-align: center;
-  color: #3f6aa1;
+  color: #525f76;
   padding-top: 1rem;
   margin-bottom: -2rem;
 }
@@ -131,7 +131,7 @@
 
 .scale-title {
   text-align: center;
-  color: #3f6aa1;
+  color: #525f76;
 }
 
 .scale-container {
@@ -157,7 +157,7 @@ input.radio:last-child {
 
 .scale-face {
   width: 75%;
-  max-width: 12rem;
+  max-width: 8rem;
   height: 75%;
   margin: 0.5rem;
 }
@@ -171,7 +171,7 @@ svg {
 }
 
 .label-sad {
-  background-color: #3f6aa1;
+  background-color: #cff4d2;
   border-radius: 100%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
   width: max-content;
@@ -182,7 +182,7 @@ svg {
 }
 
 .label-lil-sad {
-  background-color: #3f6aa1;
+  background-color: #cff4d2;
   border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
   width: max-content;
@@ -193,7 +193,7 @@ svg {
 }
 .label-neutral {
   border-radius: 50%;
-  background-color: #3f6aa1;
+  background-color: #cff4d2;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
   width: max-content;
   aspect-ratio: 1;
@@ -202,7 +202,7 @@ svg {
   align-items: center;
 }
 .label-lil-happy {
-  background-color: #3f6aa1;
+  background-color: #cff4d2;
   border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
   width: max-content;
@@ -212,7 +212,7 @@ svg {
   align-items: center;
 }
 .label-happy {
-  background-color: #3f6aa1;
+  background-color: #cff4d2;
   border-radius: 50%;
   box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
   width: max-content;
@@ -226,25 +226,9 @@ svg {
   cursor: pointer;
 }
 
-.continue {
-  display: block;
-  margin: 0 auto;
-  padding: 0.5rem 1rem;
-  border-radius: 5rem;
-  border: none;
-  background-color: #b3cce4;
-  z-index: 100;
-}
-
-.continue:hover {
-  background-color: #e0ecf8;
-  z-index: 100;
-  cursor: pointer;
-}
-
 .choice-title {
   text-align: center;
-  color: #3f6aa1;
+  color: #525f76;
 }
 
 .choice-grid {
@@ -261,7 +245,7 @@ svg {
   width: 100%;
   height: 3rem;
   display: flex;
-  background-color: #b3cce4;
+  background-color: #cff4d2;
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1.5rem;
@@ -270,12 +254,12 @@ svg {
 }
 
 .choice-item:hover {
-  background-color: #3f6aa1;
+  background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
   cursor: pointer;
 }
 
 .choice-item-selected {
-  background-color: #3f6aa1;
+  background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
 }
 
 .choice-image {
@@ -285,9 +269,9 @@ svg {
 }
 
 .choice-name {
-  color: white;
+  color: #525f76;
   font-weight: bold;
-  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.424);
+  text-shadow: 0px 1px 6px rgba(0, 0, 0, 0.178);
 }
 
 .journal-form {
@@ -303,8 +287,9 @@ svg {
   margin: 0.5rem auto;
   width: 100%;
   border: none;
-  border-bottom: 2px solid #b3cce4;
+  border-bottom: 3px solid #36a893;
   font-family: "Roboto";
+  color: #525f76;
 }
 
 .journal-text-title:focus {
@@ -315,26 +300,15 @@ svg {
   width: 100%;
   min-height: 8rem;
   height: max-content;
-  border: 1px solid #b3cce4;
+  border: 3px solid #36a893;
   overflow: hidden;
   resize: none;
   font-family: "Mulish";
+  color: #525f76;
 }
 
 .journal-text:focus {
   outline: none;
-}
-
-.journal-submit-button {
-  background-color: #b3cce4;
-  border-radius: 3rem;
-  margin: 0.05rem;
-  border: none;
-}
-
-.journal-submit-button:hover {
-  cursor: pointer;
-  background-color: #c3d3e2;
 }
 
 .final-view-title {
@@ -351,7 +325,7 @@ svg {
 .close-button {
   width: 2rem;
   height: 2rem;
-  background-color: #b3cce4;
+  background: linear-gradient(325deg, #6ed697 0.81%, #36a893 98.73%);
   position: absolute;
   right: 2rem;
   border-radius: 50%;
