@@ -1,4 +1,5 @@
 import { useState } from "react";
+import willowLogo from "../Homepage/assets/willow-logo.svg";
 
 import "./Sidebar.css";
 
@@ -29,7 +30,11 @@ const Sidebar = (props) => {
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        <h1 className="sidebar-app-name">willow</h1>
+        <img
+          src={willowLogo}
+          alt="willow logo"
+          className="willow-logo-sidebar"
+        />
       </div>
       <ul className="sidebar-icons">
         <div

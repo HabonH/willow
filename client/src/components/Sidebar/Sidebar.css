@@ -21,13 +21,16 @@
   pointer-events: none;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   margin-top: 1rem;
 }
 
 .sidebar-app-name {
   color: #fffde1;
 }
-
+.willow-logo-sidebar {
+  width: 50%;
+}
 .sidebar-icons {
   list-style-type: none;
   width: 100%;
@@ -183,6 +186,10 @@ img.icon-image {
       top: 93vh;
       opacity: 100%;
     }
+  }
+
+  .willow-logo-sidebar {
+    display: none;
   }
   div.sidebar-container {
     height: 7vh;
