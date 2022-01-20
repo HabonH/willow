@@ -3,7 +3,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../ThemeMUI/Theme";
 
 const JournalListItem = (props) => {
-  const { id, name, img, getTherapist } = props;
+  const { id, name, img, title, getTherapist } = props;
 
   const clickHandler = () => {
     getTherapist(id);
@@ -17,12 +17,13 @@ const JournalListItem = (props) => {
         <section className='therapist-content'>
           <div className='therapist-title-content'>
             <h3>{name}</h3>
+            <p className=''>{title}</p>
           </div>
 
           <Button
             variant='contained'
             color='secondary'
-            className='right'
+            className='button-right'
             onClick={clickHandler}
           >
             <h4>Details</h4>

@@ -5,7 +5,7 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 0px 0px 10px 10px;
-  box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
+  box-shadow: 0.5rem 0.5rem #fff8bb;
   background-color: white;
   padding-bottom: 1rem;
 }
@@ -13,7 +13,7 @@
 .journal-content {
   padding-right: 1rem;
   padding-left: 0.5rem;
-  height: 6rem;
+  height: 8rem;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -24,7 +24,7 @@
   color: #64748b;
   margin-right: auto;
   margin-left: auto;
-  padding: 0.2rem;
+  padding: 0.75rem;
   height: 90%;
   overflow: hidden;
   -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
@@ -70,7 +70,7 @@
   justify-content: space-between;
 }
 .journal-arrow {
-  margin-top: -3rem;
+  /* margin-top: -3rem; */
   font-weight: bolder;
   font-size: 1rem;
 }
@@ -83,7 +83,7 @@
   margin-right: auto;
   margin-top: 4rem;
   padding: 1rem;
-  box-shadow: 0px 0px 10px 0.05px rgba(0, 0, 0, 0.274);
+  box-shadow: 0.5rem 0.5rem #fff8bb;
 }
 
 div .card:hover {
@@ -122,6 +122,7 @@ div .card:hover {
   overflow: hidden;
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 120%);
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 /* hide the scroll bar in journal view */
@@ -155,6 +156,7 @@ div .card:hover {
 .main-journal-container {
   height: 100%;
 }
+
 @media (min-width: 550px) {
   .journal-holder {
     width: 100%;
@@ -174,6 +176,12 @@ div .card:hover {
   }
 
   .card {
-    width: 30rem;
+    width: 85%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .card {
+    width: 45%;
   }
 }

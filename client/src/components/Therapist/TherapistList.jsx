@@ -35,6 +35,7 @@ const TherapistList = () => {
         name={therapist.name}
         img={therapist.img}
         getTherapist={getTherapist}
+        title={therapist.title}
       />
     );
   });
