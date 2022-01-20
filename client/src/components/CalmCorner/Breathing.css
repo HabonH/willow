@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-right: 4rem;
+  
 }
 .instructions span {
   font-weight: 500;
@@ -36,7 +36,7 @@
   justify-content: center;
   align-items: center;
   top: -28%;
-  padding-right: 4rem;
+  
 }
 
 .unanimated {
@@ -52,38 +52,25 @@
   border-radius: 50%;
   animation-name: breathe-animation !important;
   animation: breathe-animation 8s ease infinite none running;
-  transition-delay: 4s;
+  transition-delay: 5s;
 }
 @keyframes breathe-animation {
   0% {
-    background-color: lightgray;
-    width: 100px;
-    height: 100px;
-  }
-  25% {
     background-color: lightblue;
     width: 50px;
     height: 50px;
   }
+
   50% {
     background-color: lightgray;
     width: 100px;
     height: 100px;
   }
-  50% {
+
+  100% {
     background-color: lightblue;
     width: 50px;
     height: 50px;
-  }
-  100% {
-    background-color: lightgray;
-    width: 100px;
-    height: 100px;
-  }
-  100% {
-    background-color: lightgray;
-    width: 100px;
-    height: 100px;
   }
 }
 
@@ -91,9 +78,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 4rem;
 }
-.button.play {
+#button{
+  display: flex;
+  justify-content: center;
+}
+.button .play {
   background: none;
   width: 1px;
   height: 1px;
@@ -103,7 +93,7 @@
   text-indent: -9999px;
   box-shadow: 1px 1px 3px #999999;
 }
-.button.pause {
+.button .pause {
   background: none;
   width: 1px;
   height: 1px;

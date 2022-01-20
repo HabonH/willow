@@ -4,20 +4,28 @@
   flex-direction: column;
   align-items: center;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.dashboard-container::-webkit-scrollbar {
+  display: none;
 }
 
 .header-dashboard {
   height: max-content;
   width: 85%;
-  border-right: 10px solid #b3cce4;
-  border-left: 10px solid #b3cce4;
   border-radius: 0.75rem;
   box-shadow: 0px 5px 5px 0.05px rgba(0, 0, 0, 0.274);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
-  background-color: rgb(255, 255, 255);
+  background: linear-gradient(
+    328deg,
+    rgba(156, 174, 255, 0.59) 5.09%,
+    #9ecaff 99.83%
+  );
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -29,8 +37,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-right: 1rem;
-  margin-left: 3rem;
+  margin: 2rem;
 }
 
 .header-affirmation {
@@ -171,23 +178,58 @@
   margin-bottom: 7rem;
 }
 
-.resources-container {
-  width: 100%;
+.resources-title {
+  font-size: 1.5rem;
   text-align: center;
+  color: #2d5588;
+  margin-bottom: 1rem;
+}
+
+.resources-info-container {
+  width: 100%;
+  height: 15rem;
+  background-color: #b3cce4;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.resources-info-container::-webkit-scrollbar {
+  display: none;
+}
+
+.resources-info-card {
+  height: min-content;
+  background-color: white;
+  align-items: center;
+  flex-basis: 100%;
+  border-radius: 0.75rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.75rem;
+  box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
 }
 
 @media (min-width: 550px) {
+  .resources-info-card {
+    flex-basis: auto;
+  }
   .dashboard-container {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .dashboard-spacer {
+  /* .dashboard-spacer {
     display: none;
-  }
+  } */
   .header-dashboard {
-    border-left: 10px solid #b3cce4;
     border-radius: 10px;
   }
 
@@ -197,6 +239,13 @@
   .emoji-image-grid {
     width: 7rem;
     height: 7rem;
+  }
+}
+
+@media (max-width: 865px) {
+  .resources-info-card {
+    flex-basis: 100%;
+    align-items: center;
   }
 }
 

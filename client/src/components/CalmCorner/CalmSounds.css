@@ -1,5 +1,54 @@
 .sound-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 85%;
+  height: min-content;
+  border-left: 10px solid #b3cce4;
+  border-right: 10px solid #b3cce4;
+  border-radius: 0.75rem;
+  margin-top: 1rem;
+  box-shadow: 0px 5px 10px 0.05px rgb(0 0 0 / 27%);
+  padding: 2rem 0rem;
+  background-color: white;
 }
+.instructions h4 {
+  justify-content: center;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+}
+
+.audio-list {
+  display: grid;
+  width: 100%;
+  grid-gap: 0.5rem;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  background-color: white;
+  color: black;
+}
+
+.sound {
+  height: 100px;
+  padding: 1rem;
+}
+.audio-list .makeStyles-icon-248,
+.makeStyles-icon-236,
+.makeStyles-icon-224,
+.makeStyles-icon-284,
+.makeStyles-icon-272,
+.makeStyles-icon-260 {
+  color: #b3cce4;
+}
+
+.makeStyles-root-218 {
+  justify-content: center;
+}
+/* .sound-container .first-row-audio{
+  justify-content: space-between;
+
+}
+.sound-container .second-row-audio{
+  justify-content: space-between;
+  flex-direction: row;
+
+} */
