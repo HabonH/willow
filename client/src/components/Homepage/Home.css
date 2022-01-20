@@ -18,11 +18,17 @@
   z-index: 999999;
 }
 
-.app-name {
+.logo-container {
+  width: max-content;
+  height: 100%;
   margin: 3rem;
-  color: #fffde1;
+  display: flex;
+  align-items: center;
 }
-
+.willow-logo {
+  width: 100%;
+  height: 50%;
+}
 .buttons-container {
   margin: 3rem;
 }

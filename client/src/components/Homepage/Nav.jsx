@@ -1,12 +1,15 @@
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import willowLogo from "./assets/willow-logo.svg";
 
 import { useNavigate } from "react-router-dom";
 const Nav = () => {
   const navigate = useNavigate();
   return (
     <nav className="navbar">
-      <h1 className="app-name">willow</h1>
+      <div className="logo-container">
+        <img src={willowLogo} className="willow-logo" />
+      </div>
       <div className="buttons-container">
         <Stack spacing={3} direction="row">
           <Button
