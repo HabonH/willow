@@ -17,13 +17,13 @@ const TherapistShow = (props) => {
         <section className='therapist-details'>
           <img className='therapist-show-profile-pic' src={img} alt='profile' />
           <div className='therapist-title-content'>
-            <h4>{name}</h4>
+            <h3>{name}</h3>
             <p className='therapist-info'>{description}</p>
           </div>
         </section>
       </article>
 
-      <div className='therapist-title-content '>
+      <div className='therapist-detail-content '>
         <h4>Organization:</h4>
         <div className='therapist-details-personal'>
           <p>{organization_name}</p>
@@ -36,8 +36,8 @@ const TherapistShow = (props) => {
         <div className='therapist-details-personal'>
           <p>{email}</p>
         </div>
-        <LinkWrapper link={external_link} />
       </div>
+      <LinkWrapper link={external_link} />
     </div>
   );
 };
