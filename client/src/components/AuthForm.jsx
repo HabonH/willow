@@ -11,23 +11,24 @@ import axios from "axios";
 const AuthForm = (props) => {
   const navigate = useNavigate();
   const [user, setUser] = useState({});
+  const [error, setError] = useState(false);
 
-  const auth = async () => {
-    try {
-      const res = await axios.post("http://localhost:3002/login", {
+  const auth = () => {
+    axios
+      .post("http://localhost:3002/login", {
         email: user.email,
         password: user.password,
         type: user.type,
+      })
+      .then((res) => {
+        if (res.data === "invalid") {
+          setError(true);
+        } else {
+          localStorage.setItem("user", res.data.email);
+          localStorage.setItem("userID", res.data.id);
+          navigate("/main");
+        }
       });
-      if (res) {
-        console.log(res.data);
-        localStorage.setItem("user", res.data.email);
-        localStorage.setItem("userID", res.data.id);
-        navigate("/main");
-      }
-    } catch (e) {
-      console.log(e);
-    }
   };
 
   const submitHandler = (e) => {
@@ -36,18 +37,21 @@ const AuthForm = (props) => {
   };
 
   const emailHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, email: e.target.value };
     });
   };
 
   const passHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, password: e.target.value };
     });
   };
 
   const loginTypeHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, type: e.target.value };
     });
@@ -59,6 +63,11 @@ const AuthForm = (props) => {
         <Nav />
         <div className="form-container">
           <form onSubmit={submitHandler} className="login-form">
+            {error && (
+              <p className="invalid-login">
+                Sorry that username or password was incorrect!
+              </p>
+            )}
             <input
               placeholder="Email"
               onChange={emailHandler}
