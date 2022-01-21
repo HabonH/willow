@@ -14,8 +14,10 @@ const AuthForm = (props) => {
 
   const auth = async () => {
     try {
-      const res = await axios.get("http://localhost:3002/login", {
-        auth: { username: user.email, password: user.password },
+      const res = await axios.post("http://localhost:3002/login", {
+        email: user.email,
+        password: user.password,
+        type: user.type,
       });
       if (res) {
         console.log(res.data);
@@ -45,6 +47,12 @@ const AuthForm = (props) => {
     });
   };
 
+  const loginTypeHandler = (e) => {
+    setUser((prev) => {
+      return { ...prev, type: e.target.value };
+    });
+  };
+
   return (
     <div className="home-container">
       <ThemeProvider theme={Theme}>
@@ -63,6 +71,32 @@ const AuthForm = (props) => {
               type="password"
               className="login-input"
             />
+            <div className="login-radio-container">
+              <p>Account type: </p>
+              <label form="thearpist" className="radio-label">
+                Therapist
+                <input
+                  id="therapist"
+                  onChange={loginTypeHandler}
+                  type="radio"
+                  value="therapist"
+                  className="login-radio"
+                  name="login-type"
+                  required
+                />
+              </label>
+              <label form="student" className="radio-label">
+                Student
+                <input
+                  id="student"
+                  onChange={loginTypeHandler}
+                  type="radio"
+                  value="student"
+                  className="login-radio"
+                  name="login-type"
+                />
+              </label>
+            </div>
             <Button variant="contained" color="primary" type="submit">
               Login
             </Button>
