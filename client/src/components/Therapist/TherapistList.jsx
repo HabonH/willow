@@ -35,6 +35,7 @@ const TherapistList = () => {
         name={therapist.name}
         img={therapist.img}
         getTherapist={getTherapist}
+        title={therapist.title}
       />
     );
   });
@@ -42,9 +43,7 @@ const TherapistList = () => {
   return (
     <>
       {show ? (
-        <div>
-          <TherapistShow therapist={selectedTherapist} exitShow={exitShow} />
-        </div>
+        <TherapistShow therapist={selectedTherapist} exitShow={exitShow} />
       ) : (
         <div className='therapist-holder'>{parsedTherapists}</div>
       )}

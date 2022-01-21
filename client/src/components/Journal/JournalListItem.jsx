@@ -23,8 +23,8 @@ const JournalListItem = (props) => {
           <p className='journal-content-entry'>{entry}</p>
         </div>
         <section className='journal-card-footer'>
-          <div>{moment(date).startOf("minute").fromNow()}</div>
-          <div className='journal-arrow'>→</div>
+          <p>{moment(date).startOf("minute").fromNow()}</p>
+          <p className='journal-arrow'>→</p>
         </section>
       </section>
     </article>
