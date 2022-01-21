@@ -44,7 +44,8 @@
 }
 
 .affirmation-text {
-  font-size: 0.75rem;
+  font-size: 1rem;
+  color: #1e2537;
   background-color: rgb(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 9px;

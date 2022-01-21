@@ -2,8 +2,13 @@ import React from "react";
 import Card from "../UI/Card";
 import SelfImprovementIcon from "@mui/icons-material/SelfImprovement";
 import SpaIcon from "@mui/icons-material/Spa";
+import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import CloudIcon from '@mui/icons-material/Cloud';
 import { Button } from "@material-ui/core";
 import "./Coping.css";
+
+
+
 function Coping() {
   return (
     <>
@@ -25,13 +30,35 @@ function Coping() {
             <Button
               style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF" }}
               variant="contained"
+              startIcon={<WbSunnyIcon />}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://google.com";
+              }}
+            >
+              Mindfulness
+            </Button>
+            <Button
+              style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF" }}
+              variant="contained"
               startIcon={<SpaIcon />}
               onClick={(e) => {
                 e.preventDefault();
                 window.location.href = "http://google.com";
               }}
             >
-              More Coping Mechanisms
+              Yoga
+            </Button>
+            <Button
+              style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF" }}
+              variant="contained"
+              startIcon={<CloudIcon />}
+              onClick={(e) => {
+                e.preventDefault();
+                window.location.href = "http://google.com";
+              }}
+            >
+              More
             </Button>
           </div>
         </div>

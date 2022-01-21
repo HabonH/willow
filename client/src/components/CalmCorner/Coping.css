@@ -10,3 +10,8 @@
   text-align: center;
   color: #525F76;
 }
+
+.mechanisms-button {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

@@ -18,7 +18,7 @@ const audios = [
   { audio: FanNoise, label: "Fan", playing: false },
   { audio: Raindrops, label: "Raindrops", playing: false },
   { audio: CricketsAtNight, label: "Crickets", playing: false },
-  { audio: WhiteNoise, label: "White", playing: false },
+  { audio: WhiteNoise, label: "White Noise", playing: false },
 ];
 
 function CalmSounds() {
@@ -32,7 +32,7 @@ function CalmSounds() {
     return (
       <div className="sounds-instructions" key={index}>
         {currentPlayer}
-        <h4 className="title">{sound.label}</h4>
+        <div id={index} className="title">{sound.label}</div>
         <div className="audio-button">
 
         <AudioPlayer
@@ -56,7 +56,10 @@ function CalmSounds() {
       </div>
     );
   });
-
+  // console.log(audioPlayers[1].props.children[1].props.children) //Campfire
+  // console.log(audioPlayers[0].props.children[1].props.children) // Waves
+  
+  
   return (
     <div className="sound-card">
       <div className="instructions">
