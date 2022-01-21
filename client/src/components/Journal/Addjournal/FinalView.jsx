@@ -6,6 +6,11 @@ const FinalView = (props) => {
       <p className="final-view-text">
         I'm proud of you for taking a risk and writing down your feelings.
       </p>
+
+      <p className="journal-count-title">
+        Journal Entries So Far:{" "}
+        <strong className="journal-count">{props.journalCount}</strong>
+      </p>
     </>
   );
 };

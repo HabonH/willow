@@ -265,12 +265,13 @@ svg {
 }
 
 .choice-grid {
-  width: 100%;
   height: 75%;
+  max-width: 50rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 1rem;
   gap: 1rem;
+  margin-inline: auto;
 }
 
 .choice-item {
@@ -283,7 +284,8 @@ svg {
   justify-content: center;
   padding: 0.5rem 1.5rem;
   border-radius: 3rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
+  max-width: 12rem;
 }
 
 .choice-item:hover {
@@ -362,7 +364,7 @@ svg {
   height: 2rem;
   background: linear-gradient(325deg, #6ed697 0.81%, #36a893 98.73%);
   position: absolute;
-  right: 2rem;
+  right: 1rem;
   border-radius: 50%;
 }
 

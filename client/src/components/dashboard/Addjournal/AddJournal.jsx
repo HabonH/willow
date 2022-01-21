@@ -78,7 +78,6 @@ const AddJournal = (props) => {
       .catch((err) => console.log(err));
     setView("final");
     props.getJournalData(data);
-    console.log(data);
   };
 
   return (
