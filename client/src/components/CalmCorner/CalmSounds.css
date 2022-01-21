@@ -65,7 +65,7 @@
   }
 }
 
-@media all and (max-width: 830px) {
+@media (max-width: 830px) {
   .audio-list {
     padding-left: 1.5rem;
   }

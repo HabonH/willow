@@ -1,17 +1,8 @@
-/* .coping-container .mechanisms-button {
-  display: flex;
-  justify-content: space-evenly;
-} */
 .coping-container h4 {
   padding-bottom: 2rem;
   text-align: center;
   color: #525f76;
 }
-/* 
-.mechanisms-button {
-  justify-content: space-around;
-  flex-wrap: wrap;
-} */
 
 .coping-container .mechanisms-button{
   display: flex;

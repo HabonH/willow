@@ -1,10 +1,9 @@
-
 #breathe-card {
   position: relative;
   width: 85%;
   height: min-content;
-  border-left: 10px solid #C9E4D7;
-  border-right: 10px solid #C9E4D7;
+  border-left: 10px solid #c9e4d7;
+  border-right: 10px solid #c9e4d7;
   border-radius: 0.75rem;
   margin-top: 1rem;
   box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
@@ -17,16 +16,15 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 .instructions span {
-  color: #525F76;
+  color: #525f76;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
 
 .instructions p {
-  color: #525F76;
+  color: #525f76;
   font-weight: 200;
   font-family: "Mulish", sans-serif;
   font-size: initial;
@@ -39,11 +37,10 @@
   justify-content: center;
   align-items: center;
   top: -28%;
-  
 }
 
 .unanimated {
-  background-color: #C9E4D7;
+  background-color: #c9e4d7;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -59,28 +56,28 @@
 }
 @keyframes breathe-animation {
   0% {
-    background-color: #C9E4D7;
+    background-color: #c9e4d7;
     width: 50px;
     height: 50px;
   }
 
   25% {
-    background-color: #FEEE8C;
+    background-color: #feee8c;
     width: 100px;
     height: 100px;
   }
   50% {
-    background-color: #FEEE8C;
+    background-color: #feee8c;
     width: 100px;
     height: 100px;
   }
   100% {
-    background-color: #C9E4D7;
+    background-color: #c9e4d7;
     width: 50px;
     height: 50px;
   }
   100% {
-    background-color: #C9E4D7;
+    background-color: #c9e4d7;
     width: 50px;
     height: 50px;
   }
@@ -91,7 +88,7 @@
   justify-content: center;
   align-items: center;
 }
-#button{
+#button {
   display: flex;
   justify-content: center;
 }
@@ -117,16 +114,15 @@
 } */
 
 @media (max-width: 550px) {
- 
   .instructions p {
     margin-left: 3rem;
     margin-right: 3rem;
-  } 
+  }
 }
 
-@media all and (max-width: 830px) {
+@media (max-width: 830px) {
   .instructions p {
     margin-left: 3rem;
     margin-right: 3rem;
-  } 
+  }
 }
