@@ -1,6 +1,8 @@
 import Button from "@mui/material/Button";
 
+import { useNavigate } from "react-router-dom";
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <div className="footer-container">
       <div className="footer-details">
@@ -10,6 +12,9 @@ const Footer = () => {
           variant="contained"
           color="neutral"
           className="learn-more-button"
+          onClick={() => {
+            navigate("/register");
+          }}
         >
           Sign Up!
         </Button>

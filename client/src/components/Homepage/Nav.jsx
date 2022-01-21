@@ -8,7 +8,13 @@ const Nav = () => {
   return (
     <nav className="navbar">
       <div className="logo-container">
-        <img src={willowLogo} className="willow-logo" />
+        <img
+          src={willowLogo}
+          className="willow-logo"
+          onClick={() => {
+            navigate("/");
+          }}
+        />
       </div>
       <div className="buttons-container">
         <Stack spacing={3} direction="row">
