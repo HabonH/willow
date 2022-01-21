@@ -4,7 +4,8 @@
     width: 85%;
     height: max-content;
     border-radius: 0.75rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     padding: 2rem 1rem;
     background-color: white;
     box-shadow: 0.5rem 0.5rem #fff8bb;
@@ -64,3 +65,7 @@
 .sound-card span{
   text-align: center;
 }
+
+/* screen and @media  (min-width: 550px){
+
+} */

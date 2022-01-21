@@ -15,10 +15,10 @@ import CricketsAtNight from "./audio/CricketsAtNight.mp3";
 const audios = [
   { audio: Waves, label: "Waves", playing: false },
   { audio: Campfire, label: "Campfire", playing: false },
-  { audio: FanNoise, label: "Fan noise", playing: false },
+  { audio: FanNoise, label: "Fan", playing: false },
   { audio: Raindrops, label: "Raindrops", playing: false },
-  { audio: CricketsAtNight, label: "Cricket At Night", playing: false },
-  { audio: WhiteNoise, label: "White Noise", playing: false },
+  { audio: CricketsAtNight, label: "Crickets", playing: false },
+  { audio: WhiteNoise, label: "White", playing: false },
 ];
 
 function CalmSounds() {
