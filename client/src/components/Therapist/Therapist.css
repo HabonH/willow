@@ -186,6 +186,10 @@ iframe {
   touch-action: manipulation;
 }
 
+.modal-close-button {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 550px) {
   .therapist-holder {
     width: 100%;
@@ -213,9 +217,6 @@ iframe {
 }
 
 @media (min-width: 830px) {
-  .therapist-card {
-    width: 45%;
-  }
   .therapist-detail-content {
     margin-top: 2rem;
     margin-bottom: 2rem;

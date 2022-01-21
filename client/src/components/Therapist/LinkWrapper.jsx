@@ -20,11 +20,12 @@ export default function LinkWrapper({ link }) {
 
         <Modal show={show} onHide={handleClose} className='modal-show'>
           <iframe
+            seamless
             src={link}
             style={{ width: "100%", height: "800px", border: "none" }}
           />
           <Modal.Footer>
-            <div>
+            <div className='modal-close-button'>
               <Button
                 variant='contained'
                 color='secondary'
