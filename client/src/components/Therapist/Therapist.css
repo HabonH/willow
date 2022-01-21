@@ -51,14 +51,12 @@ h3 {
 }
 
 .therapist-title-content {
-  padding-top: 2rem;
-  padding-bottom: 1rem;
   color: #525f76;
 }
 
 .therapist-detail-content {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   color: #525f76;
 }
 
@@ -84,11 +82,12 @@ h3 {
   width: 85%;
   border-radius: 10px;
   margin-left: auto;
-  margin-top: 1rem;
+  margin-top: 4.5rem;
   margin-right: auto;
+  margin-bottom: 3rem;
   box-shadow: 0.5rem 0.5rem #fff8bb;
   padding: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   background-color: white;
 }
 
@@ -104,6 +103,8 @@ h3 {
 .therapist-show-profile-pic {
   width: 8rem;
   height: 8rem;
+  border-radius: 50%;
+  border: 5px solid white;
 }
 .therapist-details-personal {
   padding-top: 0.2rem;
@@ -113,6 +114,7 @@ h3 {
 }
 
 .therapist-details {
+  margin-top: -2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,10 +145,10 @@ iframe {
 .main-therapist-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow-y: scroll;
 }
 
 .button-right {
@@ -198,7 +200,6 @@ iframe {
   .main-therapist-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
   }
@@ -208,6 +209,16 @@ iframe {
     margin-left: 1rem;
     margin-right: 1rem;
     box-shadow: 0.5rem 0.5rem #fff8bb;
+  }
+}
+
+@media (min-width: 830px) {
+  .therapist-card {
+    width: 45%;
+  }
+  .therapist-detail-content {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
