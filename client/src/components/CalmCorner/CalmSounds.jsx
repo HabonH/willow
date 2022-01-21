@@ -11,14 +11,13 @@ import FanNoise from "./audio/FanNoise.mp3";
 import Raindrops from "./audio/Raindrops.mp3";
 import CricketsAtNight from "./audio/CricketsAtNight.mp3";
 
-
 const audios = [
   { audio: Waves, label: "Waves", playing: false },
   { audio: Campfire, label: "Campfire", playing: false },
   { audio: FanNoise, label: "Fan", playing: false },
   { audio: Raindrops, label: "Raindrops", playing: false },
   { audio: CricketsAtNight, label: "Crickets", playing: false },
-  { audio: WhiteNoise, label: "White Noise", playing: false },
+  { audio: WhiteNoise, label: "White", playing: false },
 ];
 
 function CalmSounds() {
@@ -31,35 +30,35 @@ function CalmSounds() {
   const audioPlayers = sounds.map((sound, index) => {
     return (
       <div className="sounds-instructions" key={index}>
+        <div id={index} className="title">
+          {sound.label}
         {currentPlayer}
-        <div id={index} className="title">{sound.label}</div>
+        </div>
         <div className="audio-button">
-
-        <AudioPlayer
-        style={{color: "#525F76" }}
-        key={index}
-        id={index}
-        icons={icons}
-        width="100%"
-        elevation={0}
-        // variation="default"
-        spacing={0}
-        rounded={1}
-        order="standart"
-        preload="auto"
-        loop={false}
-        src={sound.audio}
-        volume={false}
-        displaySlider={false}
-        />
+          <AudioPlayer
+            style={{ color: "#525F76" }}
+            key={index}
+            id={index}
+            icons={icons}
+            width="100%"
+            elevation={0}
+            // variation="default"
+            spacing={0}
+            rounded={1}
+            order="standart"
+            preload="auto"
+            loop={false}
+            src={sound.audio}
+            volume={false}
+            displaySlider={false}
+          />
         </div>
       </div>
     );
   });
   // console.log(audioPlayers[1].props.children[1].props.children) //Campfire
   // console.log(audioPlayers[0].props.children[1].props.children) // Waves
-  
-  
+
   return (
     <div className="sound-card">
       <div className="instructions">

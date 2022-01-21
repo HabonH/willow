@@ -8,10 +8,6 @@
   margin-bottom: 1rem;
 }
 
-/* turned this off as it was effecting the card default UI component */
-/* .card-default {
-  height: 109px;
-} */
 .carouselInner {
   height: 20rem;
   width: 100%;
@@ -63,7 +59,6 @@
 
 .right-carousel {
   z-index: 100;
-
 }
 
 .left-carousel {
