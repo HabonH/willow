@@ -33,12 +33,12 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard-container">
-      <Card>
+      <div className="journal-header">
         <AddJournal
           getJournalData={getJournalData}
           journalCount={journalCount}
         />
-      </Card>
+      </div>
       <Header journalCount={journalCount} quote={quote} />
       <EmojiList />
       <Resources />

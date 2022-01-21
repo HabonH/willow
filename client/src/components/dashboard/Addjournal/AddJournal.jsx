@@ -85,8 +85,11 @@ const AddJournal = (props) => {
       {view === "add" && (
         <>
           <h2 className="journal-title-card">Write in Your Journal</h2>
-          <div className="plus">
-            <button className="add-journal-button" onClick={getView}></button>
+          <div className="plus-header">
+            <button
+              className="add-journal-button-header"
+              onClick={getView}
+            ></button>
           </div>
         </>
       )}
