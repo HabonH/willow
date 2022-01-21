@@ -45,7 +45,7 @@
 }
 
 .hero-title {
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 0.75;
   color: #525f76;
   margin-left: 3rem;
@@ -54,7 +54,7 @@
 .hero-description {
   margin-left: 3rem;
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: #525f76;
 }
 
@@ -487,6 +487,9 @@
 @media (max-width: 1000px) {
   .hero-title {
     font-size: 5rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
   }
 }
 
