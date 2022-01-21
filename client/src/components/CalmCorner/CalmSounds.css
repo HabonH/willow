@@ -1,21 +1,19 @@
-
 .sound-card {
   position: relative;
-    width: 85%;
-    height: max-content;
-    border-radius: 0.75rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    padding: 2rem 1rem;
-    background-color: white;
-    box-shadow: 0.5rem 0.5rem #fff8bb;
+  width: 85%;
+  height: max-content;
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding: 2rem 1rem;
+  background-color: white;
+  box-shadow: 0.5rem 0.5rem #fff8bb;
 }
 
 .instructions h4 {
   justify-content: center;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
-
 }
 
 .audio-list {
@@ -24,26 +22,14 @@
   width: 100%;
   padding: 1rem;
   background-color: white;
-  color: #525F76;
+  color: #525f76;
   padding-left: 3rem;
 }
 
-.sound {
+/* .sound {
   height: 100px;
   padding: 1rem;
-}
-.audio-list .makeStyles-icon-248,
-.makeStyles-icon-236,
-.makeStyles-icon-224,
-.makeStyles-icon-284,
-.makeStyles-icon-272,
-.makeStyles-icon-260 {
-  color: #b3cce4;
-}
-
-.makeStyles-root-218 {
-  justify-content: center;
-}
+} */
 
 .title {
   margin-bottom: 0.5rem;
@@ -60,20 +46,27 @@
   margin: 1rem;
 }
 
-.audio-button{
+.audio-button {
   display: flex;
   justify-content: center;
   width: 100%;
 }
 
-.sound-card span{
+.sound-card span {
   text-align: center;
 }
 
-@media (max-width: 550px){
+@media (max-width: 550px) {
+  .audio-list {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+}
 
-} 
-
-@media all and (max-width: 830px){
-
-} 
+@media all and (max-width: 830px) {
+  .audio-list {
+    padding-left: 1.5rem;
+  }
+}

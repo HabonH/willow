@@ -23,3 +23,19 @@ body {
 .scrollable::-webkit-scrollbar {
   display: none;
 }
+
+@media (max-width: 550px){
+  .audio-list{
+    padding-left: 1rem;
+  }
+  .coping-container .mechanisms-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mechanisms-button{
+    flex-wrap: wrap;
+  }
+  } 
+  
+  

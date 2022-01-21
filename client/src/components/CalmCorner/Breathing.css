@@ -115,3 +115,18 @@
   text-indent: -9999px;
   box-shadow: 1px 1px 3px #999999;
 } */
+
+@media (max-width: 550px) {
+ 
+  .instructions p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  } 
+}
+
+@media all and (max-width: 830px) {
+  .instructions p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  } 
+}
