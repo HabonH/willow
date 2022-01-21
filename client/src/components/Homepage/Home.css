@@ -18,11 +18,19 @@
   z-index: 999999;
 }
 
-.app-name {
+.logo-container {
+  width: max-content;
+  height: 100%;
   margin: 3rem;
-  color: #fffde1;
+  display: flex;
+  align-items: center;
 }
-
+.willow-logo {
+  width: 100%;
+  height: 50%;
+  min-width: 6rem;
+  margin-bottom: 0.5rem;
+}
 .buttons-container {
   margin: 3rem;
 }
@@ -37,7 +45,7 @@
 }
 
 .hero-title {
-  font-size: 5rem;
+  font-size: 7rem;
   line-height: 0.75;
   color: #525f76;
   margin-left: 3rem;
@@ -46,7 +54,7 @@
 .hero-description {
   margin-left: 3rem;
   margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.75rem;
   color: #525f76;
 }
 
@@ -79,7 +87,7 @@
   position: absolute;
   transform: skewX(-10deg);
   top: 0;
-  right: -7rem;
+  right: -8rem;
   overflow: hidden;
   box-shadow: -1px 0 2rem 0.5px rgba(0, 0, 0, 0.103);
 }
@@ -90,7 +98,7 @@
   background-image: url("./assets/happy-teen.jpg");
   transform: skewX(10deg);
   background-size: cover;
-  margin-left: -6.5rem;
+  margin-left: -6rem;
   background-position-x: 35%;
 }
 
@@ -99,7 +107,7 @@
   width: 100%;
   height: 100%;
   z-index: 4;
-  background-color: rgba(3, 3, 14, 0.158);
+  background-color: rgba(7, 7, 29, 0.158);
   position: absolute;
 }
 
@@ -150,13 +158,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("./assets/happy-student.png");
+  background-repeat: no-repeat;
+  background-position-x: 0%;
+  background-size: contain;
 }
 
 .app-info-title {
   font-size: 4rem;
   color: #525f76;
+  margin-bottom: 2rem;
 }
-
+.info-section-list {
+  display: none;
+}
 .mockup-container {
   display: flex;
   justify-content: center;
@@ -268,8 +283,8 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: -5rem;
-  bottom: 10rem;
+  left: -8rem;
+  bottom: 6rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 .info-bubble-left-middle::after {
@@ -289,7 +304,7 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: 0rem;
+  left: -3rem;
   top: 15rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
@@ -411,6 +426,10 @@
   z-index: 2;
 }
 
+.mockup-img {
+  display: none;
+}
+
 @media (max-width: 750px) {
   .hero {
     flex-direction: column;
@@ -432,32 +451,83 @@
   .hero-right-column {
     display: none;
   }
+  .hero-left-column {
+    align-items: center;
+    position: relative;
+  }
+
+  .hero-left-column::before {
+    height: 50%;
+    background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
+    margin: 0;
+    margin-inline: 2rem;
+    width: 60%;
+    min-width: 25rem;
+    border-radius: 0.75rem;
+  }
+
+  .hero-button-container {
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+  }
+  .hero-title {
+    margin: 1rem;
+    z-index: 10;
+  }
+  .hero-description {
+    margin: 0;
+    z-index: 10;
+  }
+  .hero-title {
+    font-size: 4rem;
+    color: #fffde1;
+  }
+  .hero-description {
+    font-size: 1rem;
+  }
 }
 
 /* to handle background images in sections */
 @media (max-width: 1000px) {
-  .app-info-section,
-  .app-info-section-middle {
-    background-image: none;
+  .hero-title {
+    font-size: 5rem;
+  }
+  .hero-description {
+    font-size: 1.25rem;
   }
 }
 
 /* Get right of bubbles */
 @media (max-width: 900px) {
+  .mockup-image {
+    display: none;
+  }
+  .app-info-section,
+  .app-info-section-middle,
+  .app-info-section-bottom {
+    background-image: none;
+  }
   .info-bubbles-container,
   .info-bubble-left,
   .info-bubble-left-bottom,
   .info-bubble-left-bottom2,
   .info-bubble-left-middle,
   .info-bubble-left-middle2,
-  .info-bubble-right {
+  .info-bubble-right,
+  .spacer {
     display: none;
   }
   .mockup-container,
   .iphone-mockup-top,
-  .iphone-mockup-middle,
   .iphone-mockup-bottom {
     width: 100%;
+    justify-content: flex-end;
+  }
+
+  .iphone-mockup-middle {
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .iphone-mockup {
@@ -465,16 +535,128 @@
   }
 
   .iphone-mockup-top,
-  .iphone-mockup-middle,
   .iphone-mockup-bottom {
     background-position: left;
+  }
+
+  .iphone-mockup-middle {
+    background-position: right;
   }
 
   .app-info-title {
     font-size: 2.5rem;
   }
+
+  .info-section-list {
+    display: block;
+    width: 50%;
+    height: 100%;
+  }
+
+  .info-section-item {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0.5rem 0.5rem #cff4d2;
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .info-section-item-middle {
+    background-color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    box-shadow: -0.5rem 0.5rem #fff8bb;
+    margin-bottom: 1rem;
+  }
+
+  .info-card-title {
+    font-size: 1.5rem;
+    border-bottom: 2px solid #cff4d2;
+  }
+
+  .info-card-body {
+    font-size: 1rem;
+  }
+
+  .coming-soon {
+    font-size: 0.65rem;
+    background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
+    width: max-content;
+    position: absolute;
+    padding: 0.35rem 0.45rem;
+    text-align: center;
+    left: -2rem;
+    top: 1.25rem;
+    width: 8rem;
+    transform: rotate(-45deg);
+    color: #fffde1;
+  }
 }
 
+@media (max-width: 715px) {
+  .logo-container {
+    margin: 0;
+    margin-left: 1rem;
+  }
+  .iphone-mockup-middle {
+    background: none;
+  }
+
+  .iphone-mockup {
+    background: none;
+  }
+
+  .iphone-mockup-top,
+  .iphone-mockup-bottom {
+    background: none;
+  }
+
+  .info-section-list {
+    width: 90%;
+    height: max-content;
+    z-index: 2;
+  }
+  .iphone-mockup,
+  .iphone-mockup-middle,
+  .iphone-mockup-bottom,
+  .iphone-mockup-top {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mockup-img {
+    display: block;
+    height: 100%;
+    max-height: 50rem;
+    position: absolute;
+    bottom: -75%;
+  }
+
+  .app-info-section,
+  .app-info-section-bottom,
+  .app-info-section-middle {
+    height: 100%;
+    max-height: none;
+  }
+
+  .info-section-item:last-child,
+  .info-section-item-middle:last-child {
+    margin-bottom: 10rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-left-column::before {
+    min-width: 20rem;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
 /* AUTH FORM STYLING */
 
 .form-container {
@@ -505,4 +687,30 @@
 
 .login-input:focus {
   outline: none;
+}
+
+.login-radio-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.radio-label {
+  font-family: "mulish";
+  font-weight: bold;
+  color: #525f76;
+}
+
+.login-radio {
+  width: 1rem;
+  height: 1rem;
+}
+
+.invalid-login {
+  color: red;
+  width: 100%;
+  text-align: center;
+  font-size: 0.8rem;
+  height: min-content;
 }
