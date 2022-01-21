@@ -191,9 +191,15 @@
   overflow-y: scroll;
 }
 
-/* .resources-info-container::-webkit-scrollbar {
-  display: none;
-} */
+.resources-info-container::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 100%;
+}
+
+.resources-info-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(10deg, #6ed697 0.81%, #36a893 98.73%);
+  border-radius: 1rem;
+}
 
 .resources-info-card {
   height: min-content;
