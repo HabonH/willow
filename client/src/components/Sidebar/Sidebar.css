@@ -248,7 +248,8 @@ img.icon-image {
   li.sidebar-icon-1,
   li.sidebar-icon-2,
   li.sidebar-icon-3,
-  li.sidebar-icon-4 {
+  li.sidebar-icon-4,
+  li.sidebar-icon-5 {
     animation-name: none;
   }
   .sidebar-icon-label {
