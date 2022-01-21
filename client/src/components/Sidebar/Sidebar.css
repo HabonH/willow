@@ -235,7 +235,7 @@ img.icon-image {
     height: 7vh;
     width: 100%;
     max-width: none;
-    position: absolute;
+    position: fixed;
     top: 93vh;
     background: none;
     background-color: white;

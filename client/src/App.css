@@ -92,7 +92,7 @@ select {
   border-radius: 10px;
   margin-left: auto;
   margin-right: 1rem;
-  width: 75%;
+  width: 100%;
   background: linear-gradient(0.77deg, #cff4d2 0.81%, #9ac9ac 98.73%);
 }
 
@@ -110,8 +110,18 @@ modal-dialog is the popup
 modal-content holds it all
 modal-body holds i-frame
 modal-footer holds button
-
 */
+
+@media (min-width: 550px) {
+  .modal-content {
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: 1rem;
+    width: 100%;
+    background: linear-gradient(0.77deg, #cff4d2 0.81%, #9ac9ac 98.73%);
+  }
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
