@@ -6,24 +6,25 @@ import axios from "axios";
 
 function StudentRegister(props) {
   const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({ type: "student" });
+  const [error, setError] = useState(false);
 
-  const auth = async () => {
-    try {
-      const res = await axios.get("http://localhost:3002/login", {
-        auth: { username: user.email, password: user.password },
+  const auth = () => {
+    axios
+      .post("http://localhost:3002/login", {
+        username: user.email,
+        password: user.password,
+        type: user.type,
+      })
+      .then((res) => {
+        if (res.data === "invalid") {
+          setError(true);
+        } else {
+          localStorage.setItem("user", res.data.email);
+          localStorage.setItem("userID", res.data.id);
+          navigate("/main");
+        }
       });
-      // if user does not exist add them to database and set localStorage
-      if (!res) {
-        console.log(res.data);
-        // axios.post("http://localhost:3002/login", student);
-        localStorage.setItem("user", res.data.email);
-        localStorage.setItem("userID", res.data.id);
-        navigate("/main");
-      }
-    } catch (e) {
-      console.log(e);
-    }
   };
 
   const submitHandler = (e) => {
@@ -32,12 +33,14 @@ function StudentRegister(props) {
   };
 
   const emailHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, email: e.target.value };
     });
   };
 
   const passHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, password: e.target.value };
     });
@@ -46,6 +49,9 @@ function StudentRegister(props) {
   return (
     <div className='form-container'>
       <form onSubmit={submitHandler} className='login-form'>
+        {error && (
+          <p className='invalid-Register'>Sorry that email already exists!</p>
+        )}
         <input
           placeholder='Email'
           onChange={emailHandler}
