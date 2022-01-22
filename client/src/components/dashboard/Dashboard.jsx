@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import EmojiList from "./EmojiList";
 import Header from "./Header";
 import AddJournal from "./Addjournal/AddJournal";
-import Card from "../UI/Card";
 import headerQuotes from "./headerQuotes";
 import Resources from "./Resources";
 
