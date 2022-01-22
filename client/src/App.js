@@ -31,7 +31,7 @@ function App() {
           )}
           {user && userType === "therapist" ? (
             <>
-              <Route path="/therapist" element={<Main />} />
+              <Route path="/therapist" element={<TherapistDashboard />} />
             </>
           ) : (
             <Route path="/therapist" element={<Home />} />

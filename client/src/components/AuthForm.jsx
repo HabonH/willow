@@ -28,7 +28,12 @@ const AuthForm = (props) => {
           localStorage.setItem("user", res.data.email);
           localStorage.setItem("userID", res.data.id);
           localStorage.setItem("userType", res.data.userType);
-          navigate("/main");
+
+          if (res.data.userType === "student") {
+            navigate("/main");
+          } else {
+            navigate("/therapist");
+          }
         }
       });
   };

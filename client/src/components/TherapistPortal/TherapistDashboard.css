@@ -1,0 +1,55 @@
+.therapist-dashboard-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 10%;
+}
+
+.therapist-dashboard-left {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(320deg, #6ed697 0.81%, #36a893 98.73%);
+  border-radius: 0.75rem 0 0 0.75rem;
+  padding-left: 0.5rem;
+  box-shadow: 0.2rem 0 0.5rem 0rem rgba(53, 53, 53, 0.39);
+  z-index: 1;
+}
+
+.therapist-dashboard-right {
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.therapist-nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.therapist-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+}
+
+.therapist-nav-item {
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  padding: 1rem 2rem;
+  width: 100%;
+  color: #525f76;
+}
+
+.therapist-nav-item:hover {
+  background-color: white;
+  border-radius: 0.75rem 0 0 0.75rem;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
