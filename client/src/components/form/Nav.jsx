@@ -1,11 +1,8 @@
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
 import willowLogo from "../Homepage/assets/willow-logo.svg";
 import "./Form.css";
 
-import { useNavigate } from "react-router-dom";
 const Nav = (props) => {
-  const { setShow } = props;
+  const { view } = props;
   return (
     <section>
       <nav className='form-navbar'>
@@ -14,20 +11,10 @@ const Nav = (props) => {
         </div>
       </nav>
       <div className='form-sections'>
-        <h3
-          className='first-label'
-          onClick={() => {
-            setShow(true);
-          }}
-        >
+        <h3 className='first-label' onClick={view}>
           Student
         </h3>
-        <h3
-          className='second-label'
-          onClick={() => {
-            setShow(false);
-          }}
-        >
+        <h3 className='second-label' onClick={view}>
           Therapist
         </h3>
       </div>
