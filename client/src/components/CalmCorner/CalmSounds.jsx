@@ -32,7 +32,7 @@ function CalmSounds() {
       <div className="sounds-instructions" key={index}>
         <div id={index} className="title">
           {sound.label}
-        {currentPlayer}
+          {currentPlayer}
         </div>
         <div className="audio-button">
           <AudioPlayer
