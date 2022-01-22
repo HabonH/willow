@@ -69,59 +69,6 @@ select {
   font: inherit;
 }
 
-/* modal styles */
-.modal .button {
-  margin-top: 1rem;
-}
-
-.modal .btn {
-  border: none !important;
-  background-color: transparent !important;
-  color: #35373b;
-}
-
-.modal-open {
-  overflow-y: scroll !important;
-}
-
-.modal {
-  display: inline !important;
-}
-
-.modal-content {
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: 1rem;
-  width: 100%;
-  background: linear-gradient(0.77deg, #cff4d2 0.81%, #9ac9ac 98.73%);
-}
-
-.modal-show {
-  width: 100%;
-  margin-left: 2 0rem;
-}
-.modal-dialog {
-  margin-top: 1rem;
-  padding-bottom: 5rem;
-  padding-left: 2rem;
-}
-/* 
-modal-dialog is the popup
-modal-content holds it all
-modal-body holds i-frame
-modal-footer holds button
-*/
-
-@media (min-width: 550px) {
-  .modal-content {
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: 1rem;
-    width: 100%;
-    background: linear-gradient(0.77deg, #cff4d2 0.81%, #9ac9ac 98.73%);
-  }
-}
-
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
