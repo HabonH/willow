@@ -12,7 +12,7 @@ function StudentRegister(props) {
   const auth = () => {
     axios
       .post("http://localhost:3002/register", {
-        username: user.email,
+        email: user.email,
         password: user.password,
         type: user.type,
       })
