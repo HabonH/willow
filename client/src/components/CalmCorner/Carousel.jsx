@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Carousel.css";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
+import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import axios from "axios";
 
 function Carousel() {
@@ -26,18 +26,18 @@ function Carousel() {
         }}
       >
         <div
-          className="left"
+          className="left-carousel"
           onClick={() => {
             index > 0 && setIndex(index - 1);
           }}
         >
-          <ArrowBackIosIcon style={{ fontSize: 30 }} />
+          <ArrowBackIosSharpIcon style={{ fontSize: 30 }} />
         </div>
-        <div className="center">
+        <div className="center-carousel">
           <h1 className="affirmation-text">{data[index].affirmations}</h1>
         </div>
         <div
-          className="right"
+          className="right-carousel"
           onClick={() => {
             if (index === data.length - 1) {
               setIndex(0);
@@ -46,7 +46,7 @@ function Carousel() {
             }
           }}
         >
-          <ArrowForwardIosIcon style={{ fontSize: 30 }} />
+          <ArrowForwardIosSharpIcon style={{ fontSize: 30 }} />
         </div>
       </div>
     </div>

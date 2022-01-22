@@ -4,7 +4,6 @@ import PlayCircleOutlineSharpIcon from "@mui/icons-material/PlayCircleOutlineSha
 import PauseCircleOutlineSharpIcon from "@mui/icons-material/PauseCircleOutlineSharp";
 import "./CalmSounds.css";
 import "../UI/PlayPause.css";
-
 import Waves from "./audio/Waves.mp3";
 import WhiteNoise from "./audio/WhiteNoise.mp3";
 import Campfire from "./audio/Campfire.mp3";
@@ -15,10 +14,10 @@ import CricketsAtNight from "./audio/CricketsAtNight.mp3";
 const audios = [
   { audio: Waves, label: "Waves", playing: false },
   { audio: Campfire, label: "Campfire", playing: false },
-  { audio: FanNoise, label: "Fan noise", playing: false },
+  { audio: FanNoise, label: "Fan", playing: false },
   { audio: Raindrops, label: "Raindrops", playing: false },
-  { audio: CricketsAtNight, label: "Cricket At Night", playing: false },
-  { audio: WhiteNoise, label: "White Noise", playing: false },
+  { audio: CricketsAtNight, label: "Crickets", playing: false },
+  { audio: WhiteNoise, label: "White", playing: false },
 ];
 
 function CalmSounds() {
@@ -30,36 +29,41 @@ function CalmSounds() {
   };
   const audioPlayers = sounds.map((sound, index) => {
     return (
-       
-      <h5 className="sounds-instructions" key={index}>
+      <div className="sounds-instructions" key={index}>
+        <div id={index} className="title">
+          {sound.label}
         {currentPlayer}
-        <h4 className="title">{sound.label}</h4>
-
-        <AudioPlayer
-          key={index}
-          icons={icons}
-          width="0"
-          elevation={1}
-          // variation="default"
-          spacing={0}
-          rounded={1}
-          order="standart"
-          preload="auto"
-          loop={false}
-          src={sound.audio}
-          volume={false}
-          displaySlider={false}
-        />
-      </h5>
-    
+        </div>
+        <div className="audio-button">
+          <AudioPlayer
+            style={{ color: "#525F76" }}
+            key={index}
+            id={index}
+            icons={icons}
+            width="100%"
+            elevation={0}
+            // variation="default"
+            spacing={0}
+            rounded={1}
+            order="standart"
+            preload="auto"
+            loop={false}
+            src={sound.audio}
+            volume={false}
+            displaySlider={false}
+          />
+        </div>
+      </div>
     );
   });
+  // console.log(audioPlayers[1].props.children[1].props.children) //Campfire
+  // console.log(audioPlayers[0].props.children[1].props.children) // Waves
 
   return (
     <div className="sound-card">
       <div className="instructions">
         <span>Calm Sounds</span>
-      <div className="audio-list">{audioPlayers}</div>
+        <div className="audio-list">{audioPlayers}</div>
       </div>
     </div>
   );
