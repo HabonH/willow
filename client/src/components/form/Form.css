@@ -1,0 +1,87 @@
+.form-page {
+  height: 100vh;
+}
+.form-page-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100rem;
+}
+
+.form-navbar {
+  width: 100%;
+  max-width: 100rem;
+  height: 5rem;
+  background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  box-shadow: 0px 2px 25px 0.05px rgba(0, 0, 0, 0.116);
+  z-index: 999999;
+}
+
+.logo-container {
+  width: max-content;
+  height: 100%;
+  margin: 3rem;
+  display: flex;
+  align-items: center;
+}
+.willow-logo {
+  width: 100%;
+  height: 50%;
+  min-width: 6rem;
+  margin-bottom: 0.5rem;
+}
+.form-sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  background: white;
+}
+
+/* AUTH FORM STYLING */
+
+.form-holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first-label {
+  border-right: 2px solid rgb(63, 63, 63);
+  text-align: center;
+  width: 100%;
+}
+
+.second-label {
+  text-align: center;
+  width: 100%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: -1px 0 2rem 0.5px rgba(0, 0, 0, 0.103);
+}
+
+.login-input {
+  margin-bottom: 1rem;
+  line-height: 2;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+}
+
+.login-input:focus {
+  outline: none;
+}
