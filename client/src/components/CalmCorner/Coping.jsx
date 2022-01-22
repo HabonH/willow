@@ -5,6 +5,7 @@ import SpaIcon from "@mui/icons-material/Spa";
 import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import CloudIcon from "@mui/icons-material/Cloud";
 import { Button } from "@material-ui/core";
+
 import "./Coping.css";
 
 function Coping() {
@@ -15,7 +16,8 @@ function Coping() {
           <h4>More Coping Mechanisms</h4>
           <div className="mechanisms-button">
             <Button
-              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ margin: "0.5rem" }}
+              color='primary'
               variant="contained"
               startIcon={<SelfImprovementIcon />}
               onClick={(e) => {
@@ -27,7 +29,8 @@ function Coping() {
               Meditation
             </Button>
             <Button
-              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ margin: "0.5rem" }}
+              color='primary'
               variant="contained"
               startIcon={<WbSunnyIcon />}
               onClick={(e) => {
@@ -39,7 +42,8 @@ function Coping() {
               Mindfulness
             </Button>
             <Button
-              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ margin: "0.5rem" }}
+              color='primary'
               variant="contained"
               startIcon={<SpaIcon />}
               onClick={(e) => {
@@ -51,7 +55,8 @@ function Coping() {
               Yoga
             </Button>
             <Button
-              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ margin: "0.5rem" }}
+              color='primary'
               variant="contained"
               startIcon={<CloudIcon />}
               onClick={(e) => {
