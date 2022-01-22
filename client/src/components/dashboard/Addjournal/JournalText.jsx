@@ -29,7 +29,7 @@ const JournalText = (props) => {
       <h3 className="choice-title">What happened?</h3>
       <img
         src={require("./icons/arrow.png")}
-        className="back-arrow-dashboard"
+        className="back-arrow"
         onClick={props.back}
         alt="back button"
       />

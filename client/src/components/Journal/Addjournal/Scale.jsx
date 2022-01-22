@@ -20,11 +20,13 @@ const Scale = (props) => {
         alt="back button"
       />
       <div className="scale-container">
-        <label className={selected === "label-sad" ? selected : null}>
+        <label>
           <img
             alt="sad face"
             src={require("./icons/sad.png")}
-            className="scale-face"
+            className={`scale-face sad ${
+              selected === "label-sad" ? selected : null
+            }`}
           />
           <input
             className="very sad radio"
@@ -37,11 +39,13 @@ const Scale = (props) => {
             }}
           />
         </label>
-        <label className={selected === "label-lil-sad" ? selected : null}>
+        <label>
           <img
             alt="sad face"
             src={require("./icons/lil-sad.png")}
-            className="scale-face"
+            className={`scale-face lil-sad ${
+              selected === "label-lil-sad" ? selected : null
+            }`}
           />
           <input
             className="lil-sad radio"
@@ -54,11 +58,13 @@ const Scale = (props) => {
             }}
           />
         </label>
-        <label className={selected === "label-neutral" ? selected : null}>
+        <label>
           <img
             alt="neutral face"
             src={require("./icons/neutral.png")}
-            className="scale-face"
+            className={`scale-face neutral ${
+              selected === "label-neutral" ? selected : null
+            }`}
           />
           <input
             className="neutral radio"
@@ -71,11 +77,13 @@ const Scale = (props) => {
             }}
           />
         </label>
-        <label className={selected === "label-lil-happy" ? selected : null}>
+        <label>
           <img
             alt="happy face"
             src={require("./icons/lil-happy.png")}
-            className="scale-face"
+            className={`scale-face lil-happy ${
+              selected === "label-lil-happy" ? selected : null
+            }`}
           />
           <input
             className="lil-happy radio"
@@ -88,11 +96,13 @@ const Scale = (props) => {
             }}
           />
         </label>
-        <label className={selected === "label-happy" ? selected : null}>
+        <label>
           <img
             alt="very happy face"
             src={require("./icons/happy.png")}
-            className="scale-face"
+            className={`scale-face ${
+              selected === "label-happy" ? selected : null
+            }`}
           />
           <input
             className="happy radio"

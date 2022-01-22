@@ -23,6 +23,9 @@ const AuthForm = (props) => {
       .then((res) => {
         if (res.data === "invalid") {
           setError(true);
+        } else if (res.data === "no email") {
+          // change error message to include email doesn't exist
+          setError(true);
         } else {
           localStorage.setItem("user", res.data.email);
           localStorage.setItem("userID", res.data.id);
