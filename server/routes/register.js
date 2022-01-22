@@ -25,16 +25,19 @@ const registerRouter = (db) => {
 
     console.log(req.body);
     console.log(queryString);
-    const queryParams = [
-      userEmail,
-      userPassword,
-      userOrg,
-      userName,
-      userProfile,
-      userPhone,
-      userDescription,
-      userTitle,
-    ];
+    const queryParams =
+      req.body.type === "student"
+        ? [userEmail, userPassword, userOrg]
+        : [
+            userEmail,
+            userPassword,
+            userOrg,
+            userName,
+            userProfile,
+            userPhone,
+            userDescription,
+            userTitle,
+          ];
     return db
       .query(queryString, queryParams)
       .then((data) => {
