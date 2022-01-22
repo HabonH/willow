@@ -3,8 +3,49 @@ const router = express.Router();
 
 /* GET users listing. */
 const registerRouter = (db) => {
-  router.get("/", function (req, res, next) {
-    res.send("this is the register route");
+  router.post("/", function (req, res, next) {
+    const userEmail = req.body.email;
+    const userPassword = req.body.password;
+    const userOrg = req.body.organization;
+    const userName = req.body.name;
+    const userProfile = req.body.profile;
+    const userPhone = req.body.phone;
+    const userDescription = req.body.description;
+    const userTitle = req.body.title;
+
+    // will check to see the type of login coming in and set the query accordingly
+    const queryString =
+      req.body.type === "student"
+        ? `INSERT INTO students (email, password, organization_name) 
+        VALUES 
+        ($1, $2, $3);`
+        : `INSERT INTO therapists (email, password, organization_name, name, img, phone, description, title)
+        VALUES
+        ($1, $2, $3, $4, $5, $6, $8); `;
+
+    console.log(req.body);
+    console.log(queryString);
+    const queryParams = [
+      userEmail,
+      userPassword,
+      userOrg,
+      userName,
+      userProfile,
+      userPhone,
+      userDescription,
+      userTitle,
+    ];
+    return db
+      .query(queryString, queryParams)
+      .then((data) => {
+        console.log(data.rows);
+        if (req.body.password === data.rows[0].password) {
+          res.send({ id: data.rows[0].id, email: data.rows[0].email });
+        } else {
+          res.send("invalid");
+        }
+      })
+      .catch((err) => res.send("invalid"));
   });
 
   return router;
