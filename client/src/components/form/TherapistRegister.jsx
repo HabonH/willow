@@ -8,6 +8,18 @@ function TherapistRegister(props) {
   const navigate = useNavigate();
   const [user, setUser] = useState({ type: "therapsit" });
   const [error, setError] = useState(false);
+  const [view, setView] = useState("add");
+
+  const back = () => {
+    if (view === "step2") {
+      setView("step1");
+    } 
+  };
+
+  const getView = () => {
+    if (view === "step1") {
+      setView("step2");
+  };
 
   const auth = () => {
     axios
@@ -91,9 +103,9 @@ function TherapistRegister(props) {
   return (
     <div className='form-container'>
       <form onSubmit={submitHandler} className='login-form'>
-        {error && (
+        {view === "step1" && ({error && (
           <p className='invalid-Register'>Please fill out all fields!</p>
-        )}
+        )} )}
         <input
           placeholder='Name'
           onChange={nameHandler}
@@ -112,12 +124,18 @@ function TherapistRegister(props) {
           type='title'
           className='login-input'
         />
-        <input
+        {/* <input
           placeholder='Description'
           onChange={descriptionHandler}
           type='description'
           className='login-input'
-        />
+        /> */}
+        <textarea
+            type="text"
+            placeholder="Let it out."
+            onChange={descriptionHandler}
+            className='login-input'
+          />
         <input
           placeholder='Profile Picture URL'
           onChange={profileHandler}
