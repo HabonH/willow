@@ -30,7 +30,7 @@ function Coping() {
             </Button>
             <Button
               style={{ margin: "0.5rem" }}
-              color='primary'
+              color="primary"
               variant="contained"
               startIcon={<WbSunnyIcon />}
               onClick={(e) => {
@@ -43,7 +43,7 @@ function Coping() {
             </Button>
             <Button
               style={{ margin: "0.5rem" }}
-              color='primary'
+              color="primary"
               variant="contained"
               startIcon={<SpaIcon />}
               onClick={(e) => {
@@ -56,7 +56,7 @@ function Coping() {
             </Button>
             <Button
               style={{ margin: "0.5rem" }}
-              color='primary'
+              color="primary"
               variant="contained"
               startIcon={<CloudIcon />}
               onClick={(e) => {
