@@ -31,7 +31,6 @@ const SectionMiddle = () => {
                 </p>
               </div>
             </div>
-            <img src={dashboardMockup} className="mockup-img" />
 
             <div className="info-bubbles-container"></div>
             <div className="info-bubble-right">

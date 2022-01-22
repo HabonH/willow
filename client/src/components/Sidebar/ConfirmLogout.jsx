@@ -10,7 +10,7 @@ const ConfirmLogout = (props) => {
   };
 
   return (
-    <div className="logout-backdrop">
+    <div className="logout-backdrop" onClick={noClickHandler}>
       <div className="logout-container">
         <h3 className="logout-text">Are you sure you want to logout?</h3>
         <div className="button-container-logout">

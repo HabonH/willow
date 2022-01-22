@@ -36,7 +36,6 @@ const SectionTop = () => {
                 </p>
               </div>
             </div>
-            <img src={dashboardMockup} className="mockup-img" />
             <div className="info-bubbles-container">
               <div className="info-bubble-right">
                 <p>Dashboard with quick insights and insipiring words.</p>

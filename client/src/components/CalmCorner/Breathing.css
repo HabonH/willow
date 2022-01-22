@@ -2,8 +2,8 @@
   position: relative;
   width: 85%;
   height: min-content;
-  border-left: 10px solid #b3cce4;
-  border-right: 10px solid #b3cce4;
+  border-left: 10px solid #c9e4d7;
+  border-right: 10px solid #c9e4d7;
   border-radius: 0.75rem;
   margin-top: 1rem;
   box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
@@ -16,17 +16,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 .instructions span {
+  color: #525f76;
   font-weight: 500;
   font-family: "Roboto", sans-serif;
 }
 
 .instructions p {
+  color: #525f76;
   font-weight: 200;
   font-family: "Mulish", sans-serif;
-  font-size: smaller;
+  font-size: initial;
 }
 
 .breathe-container {
@@ -36,11 +37,10 @@
   justify-content: center;
   align-items: center;
   top: -28%;
-  
 }
 
 .unanimated {
-  background-color: lightblue;
+  background-color: #c9e4d7;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -52,23 +52,32 @@
   border-radius: 50%;
   animation-name: breathe-animation !important;
   animation: breathe-animation 8s ease infinite none running;
-  transition-delay: 5s;
+  transition-delay: 2s;
 }
 @keyframes breathe-animation {
   0% {
-    background-color: lightblue;
+    background-color: #c9e4d7;
     width: 50px;
     height: 50px;
   }
 
-  50% {
-    background-color: lightgray;
+  25% {
+    background-color: #feee8c;
     width: 100px;
     height: 100px;
   }
-
+  50% {
+    background-color: #feee8c;
+    width: 100px;
+    height: 100px;
+  }
   100% {
-    background-color: lightblue;
+    background-color: #c9e4d7;
+    width: 50px;
+    height: 50px;
+  }
+  100% {
+    background-color: #c9e4d7;
     width: 50px;
     height: 50px;
   }
@@ -79,11 +88,11 @@
   justify-content: center;
   align-items: center;
 }
-#button{
+#button {
   display: flex;
   justify-content: center;
 }
-.button .play {
+/* .button-play {
   background: none;
   width: 1px;
   height: 1px;
@@ -93,7 +102,7 @@
   text-indent: -9999px;
   box-shadow: 1px 1px 3px #999999;
 }
-.button .pause {
+.button-pause {
   background: none;
   width: 1px;
   height: 1px;
@@ -102,4 +111,18 @@
   position: relative;
   text-indent: -9999px;
   box-shadow: 1px 1px 3px #999999;
+} */
+
+@media (max-width: 550px) {
+  .instructions p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .instructions p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
 }
