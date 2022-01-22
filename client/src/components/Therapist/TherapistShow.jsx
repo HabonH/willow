@@ -7,6 +7,11 @@ const TherapistShow = (props) => {
 
   return (
     <div className='therapist-show'>
+      <iframe
+        seamless
+        src={external_link}
+        style={{ width: "100%", height: "800px", border: "none" }}
+      />
       <div
         className='close-button'
         onClick={() => {
