@@ -22,7 +22,10 @@ const AuthForm = (props) => {
       })
       .then((res) => {
         if (res.data === "invalid") {
-          setError(true);
+          setError("invalid");
+        } else if (res.data === "no email") {
+          // change error message to include email doesn't exist
+          setError("no account");
         } else {
           localStorage.setItem("user", res.data.email);
           localStorage.setItem("userID", res.data.id);
@@ -63,10 +66,13 @@ const AuthForm = (props) => {
         <Nav />
         <div className="form-container">
           <form onSubmit={submitHandler} className="login-form">
-            {error && (
+            {error === "invalid" && (
               <p className="invalid-login">
                 Sorry that username or password was incorrect!
               </p>
+            )}
+            {error === "no account" && (
+              <p className="invalid-login">That account does not exist!</p>
             )}
             <input
               placeholder="Email"

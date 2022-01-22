@@ -14,8 +14,6 @@ const loginRouter = (db) => {
         : `SELECT * FROM therapists
     WHERE email = $1;`;
 
-    console.log(req.body);
-    console.log(queryString);
     const queryParams = [userEmail];
     return db
       .query(queryString, queryParams)
@@ -27,7 +25,7 @@ const loginRouter = (db) => {
           res.send("invalid");
         }
       })
-      .catch((err) => res.send("invalid"));
+      .catch((err) => res.send("no email"));
   });
 
   return router;
