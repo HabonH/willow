@@ -21,9 +21,9 @@ const TherapistDashboard = () => {
     axios
       .get(`http://localhost:3002/therapists/profile/${userID}`)
       .then((res) => {
-        setTherapist(res.data);
-      }, []);
-  });
+        setTherapist(res.data[0]);
+      });
+  }, []);
 
   return (
     <div className="therapist-dashboard-container">
