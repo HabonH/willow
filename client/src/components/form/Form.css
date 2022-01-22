@@ -85,3 +85,10 @@
 .login-input:focus {
   outline: none;
 }
+
+.form-back-arrow {
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+  margin-left: -2.5rem;
+  width: 1rem;
+}
