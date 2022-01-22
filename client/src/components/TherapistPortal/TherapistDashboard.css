@@ -25,6 +25,7 @@
 .therapist-nav-container {
   display: flex;
   justify-content: center;
+  height: 100%;
 }
 
 .therapist-nav-list {
@@ -48,6 +49,10 @@
   background-color: white;
   border-radius: 0.75rem 0 0 0.75rem;
   cursor: pointer;
+}
+
+.logout-nav {
+  margin-top: auto;
 }
 
 li {

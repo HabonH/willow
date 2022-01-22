@@ -9,10 +9,21 @@ import StudentsList from "./StudentsList";
 
 const TherapistDashboard = () => {
   const [view, setView] = useState("profile");
+  const [therapist, setTherapist] = useState({});
 
   const getView = (view) => {
     setView(view);
   };
+
+  const userID = localStorage.getItem("userID");
+
+  useEffect(() => {
+    axios
+      .get(`http://localhost:3002/therapists/profile/${userID}`)
+      .then((res) => {
+        setTherapist(res.data);
+      }, []);
+  });
 
   return (
     <div className="therapist-dashboard-container">
@@ -20,7 +31,7 @@ const TherapistDashboard = () => {
         <TherapistNav getView={getView} />
       </div>
       <div className="therapist-dashboard-right">
-        {view === "profile" && <Profile />}
+        {view === "profile" && <Profile therapist={therapist} />}
         {view === "students" && <StudentsList />}
       </div>
     </div>

@@ -9,6 +9,10 @@ const TherapistNav = (props) => {
     getView("students");
   };
 
+  const logoutHandler = () => {
+    console.log("this will logout eventually");
+  };
+
   return (
     <div className="therapist-nav-container">
       <ul className="therapist-nav-list">
@@ -17,6 +21,9 @@ const TherapistNav = (props) => {
         </li>
         <li className="therapist-nav-item" onClick={studentsHandler}>
           Students
+        </li>
+        <li className="therapist-nav-item logout-nav" onClick={logoutHandler}>
+          Logout
         </li>
       </ul>
     </div>
