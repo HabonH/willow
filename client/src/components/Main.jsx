@@ -9,13 +9,13 @@ import "./Main.css";
 const Main = () => {
   const [view, setView] = useState("home");
 
-  const user = localStorage.getItem("user");
+  const userType = localStorage.getItem("userType");
 
   const getView = (view) => {
     setView(view);
   };
   return (
-    <div className='app-container'>
+    <div className="app-container">
       {view === "home" && <Dashboard />}
       {view === "calm" && <CalmCorner />}
       {view === "journal" && <Journal />}

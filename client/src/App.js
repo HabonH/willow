@@ -12,13 +12,13 @@ import "./App.css";
 function App() {
   return (
     <ThemeProvider theme={Theme}>
-      <div className='App'>
+      <div className="App">
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/user' element={<AuthForm />} />
-            <Route path='/main' element={<Main />} />
-            <Route path='/register' element={<RegisterForm />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/user" element={<AuthForm />} />
+            <Route path="/main" element={<Main />} />
+            <Route path="/register" element={<RegisterForm />} />
           </Routes>
         </BrowserRouter>
       </div>
