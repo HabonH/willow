@@ -16,8 +16,7 @@ function Coping() {
           <h4>More Coping Mechanisms</h4>
           <div className="mechanisms-button">
             <Button
-              style={{ margin: "0.5rem" }}
-              color='primary'
+              color="primary"
               variant="contained"
               startIcon={<SelfImprovementIcon />}
               onClick={(e) => {
@@ -25,11 +24,11 @@ function Coping() {
                 window.location.href =
                   "https://www.youtube.com/watch?v=IN5z4gNOVYg";
               }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
             >
               Meditation
             </Button>
             <Button
-              style={{ margin: "0.5rem" }}
               color="primary"
               variant="contained"
               startIcon={<WbSunnyIcon />}
@@ -38,11 +37,11 @@ function Coping() {
                 window.location.href =
                   "https://www.youtube.com/watch?v=ihwcw_ofuME";
               }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
             >
               Mindfulness
             </Button>
             <Button
-              style={{ margin: "0.5rem" }}
               color="primary"
               variant="contained"
               startIcon={<SpaIcon />}
@@ -51,11 +50,11 @@ function Coping() {
                 window.location.href =
                   "https://www.youtube.com/watch?v=fTzXFPh6CPI";
               }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
             >
               Yoga
             </Button>
             <Button
-              style={{ margin: "0.5rem" }}
               color="primary"
               variant="contained"
               startIcon={<CloudIcon />}
@@ -64,6 +63,7 @@ function Coping() {
                 window.location.href =
                   "https://www.thehelpfulcounselor.com/18-coping-skills-strategies-for-children-and-teens/";
               }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
             >
               More
             </Button>
