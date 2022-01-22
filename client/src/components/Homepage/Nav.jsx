@@ -23,10 +23,11 @@ const Nav = () => {
             onClick={() => {
               navigate("/user");
             }}
+            color="primary"
           >
             Login
           </Button>
-          <Button variant="contained" color="white">
+          <Button variant="contained" color="neutral">
             Register
           </Button>
         </Stack>

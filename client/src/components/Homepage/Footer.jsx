@@ -10,7 +10,7 @@ const Footer = () => {
         <p className="footer-text">Get started by registering below.</p>
         <Button
           variant="contained"
-          color="neutral"
+          color="primary"
           className="learn-more-button"
           onClick={() => {
             navigate("/register");

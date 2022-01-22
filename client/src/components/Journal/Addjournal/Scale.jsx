@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
-import { ThemeProvider } from "@mui/material/styles";
-import Theme from "../../ThemeMUI/Theme";
 
 const Scale = (props) => {
   const { back, getValue } = props;
@@ -12,26 +10,26 @@ const Scale = (props) => {
 
   return (
     <>
-      <h3 className="scale-title">How do you feel today?</h3>
+      <h3 className='scale-title'>How do you feel today?</h3>
       <img
         src={require("./icons/arrow.png")}
-        className="back-arrow"
+        className='back-arrow'
         onClick={back}
-        alt="back button"
+        alt='back button'
       />
-      <div className="scale-container">
+      <div className='scale-container'>
         <label>
           <img
-            alt="sad face"
+            alt='sad face'
             src={require("./icons/sad.png")}
             className={`scale-face sad ${
               selected === "label-sad" ? selected : null
             }`}
           />
           <input
-            className="very sad radio"
-            type="radio"
-            name="scale-choice"
+            className='very sad radio'
+            type='radio'
+            name='scale-choice'
             onClick={() => {
               setChoiceMade(true);
               setSelected("label-sad");
@@ -41,16 +39,16 @@ const Scale = (props) => {
         </label>
         <label>
           <img
-            alt="sad face"
+            alt='sad face'
             src={require("./icons/lil-sad.png")}
             className={`scale-face lil-sad ${
               selected === "label-lil-sad" ? selected : null
             }`}
           />
           <input
-            className="lil-sad radio"
-            type="radio"
-            name="scale-choice"
+            className='lil-sad radio'
+            type='radio'
+            name='scale-choice'
             onClick={() => {
               setChoiceMade(true);
               getValue(2);
@@ -60,16 +58,16 @@ const Scale = (props) => {
         </label>
         <label>
           <img
-            alt="neutral face"
+            alt='neutral face'
             src={require("./icons/neutral.png")}
             className={`scale-face neutral ${
               selected === "label-neutral" ? selected : null
             }`}
           />
           <input
-            className="neutral radio"
-            type="radio"
-            name="scale-choice"
+            className='neutral radio'
+            type='radio'
+            name='scale-choice'
             onClick={() => {
               setChoiceMade(true);
               getValue(3);
@@ -79,16 +77,16 @@ const Scale = (props) => {
         </label>
         <label>
           <img
-            alt="happy face"
+            alt='happy face'
             src={require("./icons/lil-happy.png")}
             className={`scale-face lil-happy ${
               selected === "label-lil-happy" ? selected : null
             }`}
           />
           <input
-            className="lil-happy radio"
-            type="radio"
-            name="scale-choice"
+            className='lil-happy radio'
+            type='radio'
+            name='scale-choice'
             onClick={() => {
               setChoiceMade(true);
               getValue(4);
@@ -98,16 +96,16 @@ const Scale = (props) => {
         </label>
         <label>
           <img
-            alt="very happy face"
+            alt='very happy face'
             src={require("./icons/happy.png")}
             className={`scale-face ${
               selected === "label-happy" ? selected : null
             }`}
           />
           <input
-            className="happy radio"
-            type="radio"
-            name="scale-choice"
+            className='happy radio'
+            type='radio'
+            name='scale-choice'
             onClick={() => {
               setChoiceMade(true);
               getValue(5);
@@ -117,23 +115,17 @@ const Scale = (props) => {
         </label>
       </div>
       {choiceMade && (
-        <ThemeProvider theme={Theme}>
-          <div className="flex-container">
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => {
-                props.getView();
-              }}
-              style={{
-                color: "white",
-                textShadow: "0px 1px 5px rgba(0, 0, 0, 0.274)",
-              }}
-            >
-              Continue
-            </Button>
-          </div>
-        </ThemeProvider>
+        <div className='flex-container'>
+          <Button
+            variant='contained'
+            color='primary'
+            onClick={() => {
+              props.getView();
+            }}
+          >
+            Continue
+          </Button>
+        </div>
       )}
     </>
   );

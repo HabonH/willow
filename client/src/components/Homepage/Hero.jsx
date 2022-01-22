@@ -16,7 +16,7 @@ const Hero = () => {
           <Stack spacing={3} direction="row">
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               className="get-started-button"
             >
               {" "}
