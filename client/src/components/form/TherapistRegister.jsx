@@ -3,24 +3,25 @@ import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 
 import axios from "axios";
+import StepOne from "./StepOne";
+import StepTwo from "./StepTwo";
 
 function TherapistRegister(props) {
   const navigate = useNavigate();
   const [user, setUser] = useState({ type: "therapsit" });
   const [error, setError] = useState(false);
-  const [view, setView] = useState("step1");
+  const [view, setView] = useState("stepOne");
 
   const back = () => {
-    if (view === "step2") {
-      setView("step1");
-    }
+    setView("stepOne");
   };
 
   const getView = () => {
-    if (view === "step1") {
-      setView("step2");
+    if (view === "stepOne") {
+      setView("stepTwo");
     }
   };
+
   const auth = () => {
     axios
       .post("http://localhost:3002/register", {
@@ -108,70 +109,29 @@ function TherapistRegister(props) {
   };
 
   return (
-    <div className='form-container'>
-      <form onSubmit={submitHandler} className='login-form'>
-        {error && (
-          <p className='invalid-Register'>Please fill out all fields!</p>
-        )}
-        <input
-          placeholder='Name'
-          onChange={nameHandler}
-          type='name'
-          className='login-input'
+    <>
+      {view === "stepOne" && (
+        <StepOne
+          getView={getView}
+          nameHandler={nameHandler}
+          organizationHandler={organizationHandler}
+          titleHandler={titleHandler}
+          descriptionHandler={descriptionHandler}
+          profileHandler={profileHandler}
+          error={error}
         />
-        <input
-          placeholder='Organization'
-          onChange={organizationHandler}
-          type='organization'
-          className='login-input'
+      )}
+      {view === "stepTwo" && (
+        <StepTwo
+          phoneHandler={phoneHandler}
+          emailHandler={emailHandler}
+          passHandler={passHandler}
+          submitHandler={submitHandler}
+          back={back}
+          error={error}
         />
-        <input
-          placeholder='Title'
-          onChange={titleHandler}
-          type='title'
-          className='login-input'
-        />
-        {/* <input
-          placeholder='Description'
-          onChange={descriptionHandler}
-          type='description'
-          className='login-input'
-        /> */}
-        <textarea
-          type='description'
-          placeholder='Description'
-          onChange={descriptionHandler}
-          className='login-input'
-        />
-        <input
-          placeholder='Profile Picture URL'
-          onChange={profileHandler}
-          type='profile'
-          className='login-input'
-        />
-        <input
-          placeholder='Phone'
-          onChange={phoneHandler}
-          type='phone'
-          className='login-input'
-        />
-        <input
-          placeholder='Email'
-          onChange={emailHandler}
-          type='email'
-          className='login-input'
-        />
-        <input
-          placeholder='Password'
-          onChange={passHandler}
-          type='password'
-          className='login-input'
-        />
-        <Button variant='contained' color='primary' type='submit'>
-          Register
-        </Button>
-      </form>
-    </div>
+      )}
+    </>
   );
 }
 
