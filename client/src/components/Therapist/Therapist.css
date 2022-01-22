@@ -72,7 +72,7 @@ h3 {
   box-shadow: 0.5rem 0.5rem #fff8bb;
 }
 .therapist-card:hover {
-  transform: translateY(-1rem);
+  box-shadow: 0.5rem 0.5rem #36a893;
 }
 
 .therapist-show {

@@ -91,7 +91,7 @@
 
 div .card:hover {
   cursor: pointer;
-  transform: translateY(-1rem);
+  box-shadow: 0.5rem 0.5rem #36a893;
 }
 
 #journal-show {
