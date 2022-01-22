@@ -11,7 +11,7 @@ function StudentRegister(props) {
 
   const auth = () => {
     axios
-      .post("http://localhost:3002/login", {
+      .post("http://localhost:3002/register", {
         username: user.email,
         password: user.password,
         type: user.type,

@@ -6,26 +6,25 @@ import axios from "axios";
 
 function TherapistRegister(props) {
   const navigate = useNavigate();
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState({ type: "therapsit" });
+  const [error, setError] = useState(false);
 
-  const auth = async () => {
-    try {
-      const res = await axios.get("http://localhost:3002/login", {
-        auth: { username: user.email, password: user.password },
+  const auth = () => {
+    axios
+      .post("http://localhost:3002/register", {
+        email: user.email,
+        password: user.password,
+        type: user.type,
+      })
+      .then((res) => {
+        if (res.data === "invalid") {
+          setError(true);
+        } else {
+          localStorage.setItem("user", res.data.email);
+          localStorage.setItem("userID", res.data.id);
+          navigate("/main");
+        }
       });
-      // if user does not exist add them to database and set localStorage
-      if (!res) {
-        console.log(res.data);
-
-        //make post to students / post to therapist
-        // axios.post("http://localhost:3002/login", student);
-        localStorage.setItem("user", res.data.email);
-        localStorage.setItem("userID", res.data.id);
-        navigate("/main");
-      }
-    } catch (e) {
-      console.log(e);
-    }
   };
 
   const submitHandler = (e) => {
@@ -34,48 +33,56 @@ function TherapistRegister(props) {
   };
 
   const emailHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, email: e.target.value };
     });
   };
 
   const passHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, password: e.target.value };
     });
   };
 
   const nameHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, name: e.target.value };
     });
   };
 
   const organizationHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, organization: e.target.value };
     });
   };
 
   const titleHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, title: e.target.value };
     });
   };
 
   const descriptionHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, description: e.target.value };
     });
   };
 
   const profileHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, profile: e.target.value };
     });
   };
 
   const phoneHandler = (e) => {
+    setError(false);
     setUser((prev) => {
       return { ...prev, phone: e.target.value };
     });
@@ -84,6 +91,9 @@ function TherapistRegister(props) {
   return (
     <div className='form-container'>
       <form onSubmit={submitHandler} className='login-form'>
+        {error && (
+          <p className='invalid-Register'>Please fill out all fields!</p>
+        )}
         <input
           placeholder='Name'
           onChange={nameHandler}
