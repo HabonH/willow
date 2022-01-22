@@ -46,6 +46,7 @@ const Sidebar = (props) => {
   const confirmLogoutHandler = () => {
     localStorage.removeItem("userID");
     localStorage.removeItem("user");
+    localStorage.removeItem("userType");
     navigate("/");
   };
 

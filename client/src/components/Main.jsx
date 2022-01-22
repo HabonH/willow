@@ -9,8 +9,6 @@ import "./Main.css";
 const Main = () => {
   const [view, setView] = useState("home");
 
-  const userType = localStorage.getItem("userType");
-
   const getView = (view) => {
     setView(view);
   };
