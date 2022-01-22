@@ -8,28 +8,35 @@ function TherapistRegister(props) {
   const navigate = useNavigate();
   const [user, setUser] = useState({ type: "therapsit" });
   const [error, setError] = useState(false);
-  const [view, setView] = useState("add");
+  const [view, setView] = useState("step1");
 
   const back = () => {
     if (view === "step2") {
       setView("step1");
-    } 
+    }
   };
 
   const getView = () => {
     if (view === "step1") {
       setView("step2");
+    }
   };
-
   const auth = () => {
     axios
       .post("http://localhost:3002/register", {
         email: user.email,
         password: user.password,
         type: user.type,
+        name: user.name,
+        organization: user.organization,
+        title: user.title,
+        description: user.description,
+        profile: user.profile,
+        phone: user.phone,
       })
       .then((res) => {
-        if (res.data === "invalid") {
+        if (res.data === "user exists") {
+          console.log("RES___>", res.data);
           setError(true);
         } else {
           localStorage.setItem("user", res.data.email);
@@ -103,9 +110,9 @@ function TherapistRegister(props) {
   return (
     <div className='form-container'>
       <form onSubmit={submitHandler} className='login-form'>
-        {view === "step1" && ({error && (
+        {error && (
           <p className='invalid-Register'>Please fill out all fields!</p>
-        )} )}
+        )}
         <input
           placeholder='Name'
           onChange={nameHandler}
@@ -131,11 +138,11 @@ function TherapistRegister(props) {
           className='login-input'
         /> */}
         <textarea
-            type="text"
-            placeholder="Let it out."
-            onChange={descriptionHandler}
-            className='login-input'
-          />
+          type='description'
+          placeholder='Description'
+          onChange={descriptionHandler}
+          className='login-input'
+        />
         <input
           placeholder='Profile Picture URL'
           onChange={profileHandler}
