@@ -21,7 +21,7 @@ const registerRouter = (db) => {
         ($1, $2, $3);`
         : `INSERT INTO therapists (email, password, organization_name, name, img, phone, description, title)
         VALUES
-        ($1, $2, $3, $4, $5, $6, $8); `;
+        ($1, $2, $3, $4, $5, $6, $7, $8); `;
 
     console.log(req.body);
     console.log(queryString);
@@ -40,12 +40,10 @@ const registerRouter = (db) => {
       .then((data) => {
         console.log(data.rows);
         if (req.body.password === data.rows[0].password) {
-          res.send({ id: data.rows[0].id, email: data.rows[0].email });
-        } else {
-          res.send("invalid");
+          res.send("user exists");
         }
       })
-      .catch((err) => res.send("invalid"));
+      .catch(() => res.send("feilds"));
   });
 
   return router;
