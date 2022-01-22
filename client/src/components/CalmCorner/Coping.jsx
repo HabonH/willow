@@ -15,7 +15,7 @@ function Coping() {
           <h4>More Coping Mechanisms</h4>
           <div className="mechanisms-button">
             <Button
-              style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
               variant="contained"
               startIcon={<SelfImprovementIcon />}
               onClick={(e) => {
@@ -27,7 +27,7 @@ function Coping() {
               Meditation
             </Button>
             <Button
-              style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
               variant="contained"
               startIcon={<WbSunnyIcon />}
               onClick={(e) => {
@@ -39,7 +39,7 @@ function Coping() {
               Mindfulness
             </Button>
             <Button
-              style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
               variant="contained"
               startIcon={<SpaIcon />}
               onClick={(e) => {
@@ -51,7 +51,7 @@ function Coping() {
               Yoga
             </Button>
             <Button
-              style={{ backgroundColor: "#C9E4D7", color: "#FFFFFF", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", color: "#FFFFFF", margin: "0.5rem" }}
               variant="contained"
               startIcon={<CloudIcon />}
               onClick={(e) => {
