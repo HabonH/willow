@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { ThemeProvider } from "@mui/material/styles";
-import Theme from "../ThemeMUI/Theme";
 import Nav from "./Nav";
 import StudentRegister from "./StudentRegister";
 import TherapistRegister from "./TherapistRegister";
@@ -88,28 +86,26 @@ const RegisterForm = (props) => {
 
   return (
     <div className='form-page'>
-      <ThemeProvider theme={Theme}>
-        <Nav setShow={setShow} />
-        {show ? (
-          <StudentRegister
-            submitHandler={submitHandler}
-            emailHandler={emailHandler}
-            passHandler={passHandler}
-          />
-        ) : (
-          <TherapistRegister
-            submitHandler={submitHandler}
-            emailHandler={emailHandler}
-            passHandler={passHandler}
-            nameHandler={nameHandler}
-            organizationHandler={organizationHandler}
-            titleHandler={titleHandler}
-            descriptionHandler={descriptionHandler}
-            profileHandler={profileHandler}
-            phoneHandler={phoneHandler}
-          />
-        )}
-      </ThemeProvider>
+      <Nav setShow={setShow} />
+      {show ? (
+        <StudentRegister
+          submitHandler={submitHandler}
+          emailHandler={emailHandler}
+          passHandler={passHandler}
+        />
+      ) : (
+        <TherapistRegister
+          submitHandler={submitHandler}
+          emailHandler={emailHandler}
+          passHandler={passHandler}
+          nameHandler={nameHandler}
+          organizationHandler={organizationHandler}
+          titleHandler={titleHandler}
+          descriptionHandler={descriptionHandler}
+          profileHandler={profileHandler}
+          phoneHandler={phoneHandler}
+        />
+      )}
     </div>
   );
 };

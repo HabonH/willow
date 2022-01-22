@@ -2,8 +2,6 @@ import axios from "axios";
 
 import { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
-import { ThemeProvider } from "@mui/material/styles";
-import Theme from "../../ThemeMUI/Theme";
 
 import ChoiceItem from "./ChoiceItem";
 
@@ -41,32 +39,30 @@ const ChoiceList = (props) => {
 
   return (
     <>
-      <h3 className="choice-title">What made you feel that way?</h3>
+      <h3 className='choice-title'>What made you feel that way?</h3>
       <img
         src={require("./icons/arrow.png")}
-        className="back-arrow"
+        className='back-arrow'
         onClick={props.back}
-        alt="back button"
+        alt='back button'
       />
-      <div className="choice-grid">{mappedChoices}</div>
+      <div className='choice-grid'>{mappedChoices}</div>
       {choiceMade && (
-        <ThemeProvider theme={Theme}>
-          <div className="flex-container">
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={() => {
-                props.getView();
-              }}
-              style={{
-                color: "white",
-                textShadow: "0px 1px 5px rgba(0, 0, 0, 0.274)",
-              }}
-            >
-              Continue
-            </Button>
-          </div>
-        </ThemeProvider>
+        <div className='flex-container'>
+          <Button
+            variant='contained'
+            color='secondary'
+            onClick={() => {
+              props.getView();
+            }}
+            style={{
+              color: "white",
+              textShadow: "0px 1px 5px rgba(0, 0, 0, 0.274)",
+            }}
+          >
+            Continue
+          </Button>
+        </div>
       )}
     </>
   );
