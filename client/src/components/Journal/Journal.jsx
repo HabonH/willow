@@ -24,8 +24,8 @@ const JournalListItem = (props) => {
   };
 
   return (
-    <div className="main-journal-container">
-      <div className="journal-header">
+    <div className='main-journal-container'>
+      <div className='journal-header'>
         <AddJournal
           getJournalData={getJournalData}
           journalCount={journalCount}

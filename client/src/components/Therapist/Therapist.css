@@ -162,7 +162,7 @@ iframe {
 .therapist-holder::-webkit-scrollbar {
   display: none;
 }
-
+/* 
 .button {
   align-items: center;
   background: #b2cae2;
@@ -184,7 +184,7 @@ iframe {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
+} */
 
 .modal-close-button {
   margin-bottom: 1rem;

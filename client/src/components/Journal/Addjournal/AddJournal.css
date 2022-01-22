@@ -203,53 +203,59 @@ svg {
   display: none;
 }
 
+.sad {
+  border-radius: 50%;
+  background-color: rgba(96, 106, 148, 0.308);
+}
+
+.lil-sad {
+  border-radius: 50%;
+  background-color: rgba(165, 176, 223, 0.308);
+}
+
+.neutral {
+  border-radius: 50%;
+  background-color: rgba(158, 158, 158, 0.308);
+}
+
+.lil-happy {
+  border-radius: 50%;
+  background-color: rgba(130, 204, 167, 0.308);
+}
+
+.happy {
+  border-radius: 50%;
+  background-color: rgba(29, 197, 113, 0.61);
+}
+
 .label-sad {
-  background-color: #cff4d2;
-  border-radius: 100%;
-  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
-  width: max-content;
-  aspect-ratio: 1;
+  background-color: rgb(96, 106, 148);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .label-lil-sad {
-  background-color: #cff4d2;
-  border-radius: 50%;
-  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
-  width: max-content;
-  aspect-ratio: 1;
+  background-color: rgb(165, 176, 223);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .label-neutral {
-  border-radius: 50%;
-  background-color: #cff4d2;
-  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
-  width: max-content;
-  aspect-ratio: 1;
+  background-color: rgb(158, 158, 158);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .label-lil-happy {
-  background-color: #cff4d2;
-  border-radius: 50%;
-  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
-  width: max-content;
-  aspect-ratio: 1;
+  background-color: rgb(130, 204, 167);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .label-happy {
-  background-color: #cff4d2;
   border-radius: 50%;
-  box-shadow: 0 0 0.5rem 0 rgba(5, 3, 24, 0.514);
-  width: max-content;
-  aspect-ratio: 1;
+  background-color: rgb(29, 197, 113);
   display: flex;
   justify-content: center;
   align-items: center;
