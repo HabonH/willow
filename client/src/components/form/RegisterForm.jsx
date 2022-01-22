@@ -6,23 +6,17 @@ import Nav from "./Nav";
 import StudentRegister from "./StudentRegister";
 import TherapistRegister from "./TherapistRegister";
 
-import axios from "axios";
-
 const RegisterForm = (props) => {
   const [show, setShow] = useState(true);
 
-  const close = () => {
-    setShow(false);
+  const view = () => {
+    setShow(!show);
   };
   return (
     <div className='form-page'>
       <ThemeProvider theme={Theme}>
-        <Nav setShow={setShow} />
-        {show ? (
-          <StudentRegister close={close} />
-        ) : (
-          <TherapistRegister close={close} />
-        )}
+        <Nav view={view} />
+        {show ? <StudentRegister /> : <TherapistRegister />}
       </ThemeProvider>
     </div>
   );
