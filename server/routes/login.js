@@ -20,7 +20,11 @@ const loginRouter = (db) => {
       .then((data) => {
         console.log(data.rows);
         if (req.body.password === data.rows[0].password) {
-          res.send({ id: data.rows[0].id, email: data.rows[0].email });
+          res.send({
+            id: data.rows[0].id,
+            email: data.rows[0].email,
+            userType: req.body.type,
+          });
         } else {
           res.send("invalid");
         }

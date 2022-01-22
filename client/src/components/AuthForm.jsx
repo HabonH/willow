@@ -27,6 +27,7 @@ const AuthForm = (props) => {
         } else {
           localStorage.setItem("user", res.data.email);
           localStorage.setItem("userID", res.data.id);
+          localStorage.setItem("userType", res.data.userType);
           navigate("/main");
         }
       });
@@ -59,57 +60,57 @@ const AuthForm = (props) => {
   };
 
   return (
-    <div className='home-container'>
+    <div className="home-container">
       <Nav />
-      <div className='form-container'>
-        <form onSubmit={submitHandler} className='login-form'>
+      <div className="form-container">
+        <form onSubmit={submitHandler} className="login-form">
           {error === "invalid" && (
-            <p className='invalid-login'>
+            <p className="invalid-login">
               Sorry that username or password was incorrect!
             </p>
           )}
           {error === "no account" && (
-            <p className='invalid-login'>That account does not exist!</p>
+            <p className="invalid-login">That account does not exist!</p>
           )}
           <input
-            placeholder='Email'
+            placeholder="Email"
             onChange={emailHandler}
-            type='email'
-            className='login-input'
+            type="email"
+            className="login-input"
           />
           <input
-            placeholder='Password'
+            placeholder="Password"
             onChange={passHandler}
-            type='password'
-            className='login-input'
+            type="password"
+            className="login-input"
           />
-          <div className='login-radio-container'>
+          <div className="login-radio-container">
             <p>Account type: </p>
-            <label form='thearpist' className='radio-label'>
+            <label form="thearpist" className="radio-label">
               Therapist
               <input
-                id='therapist'
+                id="therapist"
                 onChange={loginTypeHandler}
-                type='radio'
-                value='therapist'
-                className='login-radio'
-                name='login-type'
+                type="radio"
+                value="therapist"
+                className="login-radio"
+                name="login-type"
                 required
               />
             </label>
-            <label form='student' className='radio-label'>
+            <label form="student" className="radio-label">
               Student
               <input
-                id='student'
+                id="student"
                 onChange={loginTypeHandler}
-                type='radio'
-                value='student'
-                className='login-radio'
-                name='login-type'
+                type="radio"
+                value="student"
+                className="login-radio"
+                name="login-type"
               />
             </label>
           </div>
-          <Button variant='contained' color='primary' type='submit'>
+          <Button variant="contained" color="primary" type="submit">
             Login
           </Button>
         </form>
