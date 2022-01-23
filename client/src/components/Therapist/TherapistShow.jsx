@@ -6,7 +6,7 @@ const TherapistShow = (props) => {
   const { name, phone, email, img, description, organization_name } =
     props.therapist[0];
   const [open, setOpen] = useState(false);
-  const [full, setFull] = useState(false);
+  const [full, setFull] = useState(true);
 
   const clickHandler = () => {
     setOpen(!open);

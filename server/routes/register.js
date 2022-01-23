@@ -1,8 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const Chance = require("chance");
 
 /* GET users listing. */
 const registerRouter = (db) => {
+  const chance = new Chance();
   router.post("/", function (req, res, next) {
     const userEmail = req.body.email;
     const userPassword = req.body.password;
@@ -13,21 +15,26 @@ const registerRouter = (db) => {
     const userDescription = req.body.description;
     const userTitle = req.body.title;
 
+    const username = `${chance.animal({
+      type: "forest",
+    })}${chance.integer({
+      min: 0,
+      max: 100,
+    })}`;
+
     // will check to see the type of login coming in and set the query accordingly
     const queryString =
       req.body.type === "student"
-        ? `INSERT INTO students (email, password, organization_name) 
+        ? `INSERT INTO students (email, password, organization_name, username) 
         VALUES 
-        ($1, $2, $3);`
+        ($1, $2, $3, $4);`
         : `INSERT INTO therapists (email, password, organization_name, name, img, phone, description, title)
         VALUES
         ($1, $2, $3, $4, $5, $6, $7, $8); `;
 
-    console.log(req.body);
-    console.log(queryString);
     const queryParams =
       req.body.type === "student"
-        ? [userEmail, userPassword, userOrg]
+        ? [userEmail, userPassword, userOrg, username]
         : [
             userEmail,
             userPassword,
@@ -41,12 +48,9 @@ const registerRouter = (db) => {
     return db
       .query(queryString, queryParams)
       .then((data) => {
-        console.log(data.rows);
-        if (req.body.password === data.rows[0].password) {
-          res.send("user exists");
-        }
+        res.send("saved");
       })
-      .catch(() => res.send("feilds"));
+      .catch(() => res.send("invalid"));
   });
 
   return router;

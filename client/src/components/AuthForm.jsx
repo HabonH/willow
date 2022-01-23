@@ -25,10 +25,11 @@ const AuthForm = (props) => {
           // change error message to include email doesn't exist
           setError("no account");
         } else {
-          localStorage.setItem("user", res.data.email);
-          localStorage.setItem("userID", res.data.id);
+          // localStorage.setItem("user", res.data.email);
+          // localStorage.setItem("userID", res.data.id);
           localStorage.setItem("userType", res.data.userType);
-
+          localStorage.setItem("accessToken", res.data.accessToken)
+          console.log(res.data);
           if (res.data.userType === "student") {
             navigate("/main");
           } else {

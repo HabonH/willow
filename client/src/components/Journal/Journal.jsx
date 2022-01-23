@@ -10,12 +10,15 @@ const JournalListItem = (props) => {
   const [journalCount, setJournalCount] = useState(null);
 
   useEffect(() => {
-    const userID = localStorage.getItem("userID");
+    const accessToken = localStorage.getItem("accessToken");
 
-    axios.get(`http://localhost:3002/journals-count/${userID}`).then((res) => {
-      setJournalCount(res.data[0].count);
-      console.log(res.data);
-    });
+    axios
+      .get("http://localhost:3002/journals-count", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
+      .then((res) => {
+        setJournalCount(res.data[0].count);
+      });
   }, []);
 
   const getJournalData = (data) => {

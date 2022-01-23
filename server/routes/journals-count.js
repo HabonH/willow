@@ -1,14 +1,16 @@
 const express = require("express");
 const router = express.Router();
+const { authenticateToken } = require('../Helper/authenticate') 
 
 /* GET users listing. */
 const journalCountRouter = (db) => {
-  router.get("/:userID", (req, res) => {
-    const userID = req.params.userID;
+  router.get("/", authenticateToken, (req, res) => {
+    // const userID = req.params.userID;
+    console.log("HERE ->", req.user.id);
 
     const queryString = `SELECT COUNT(*) FROM journals
     WHERE student_id = $1;`;
-    const queryParams = [userID];
+    const queryParams = [req.user.id];
 
     return db
       .query(queryString, queryParams)
