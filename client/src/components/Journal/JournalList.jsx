@@ -31,7 +31,7 @@ const JournalList = (props) => {
   };
   const parsedJournals = journals.map((journal) => {
     return (
-      <div className='card' key={journal.id}>
+      <div className="card" key={journal.id}>
         <JournalListItem
           key={journal.id}
           id={journal.id}
@@ -50,10 +50,10 @@ const JournalList = (props) => {
       {show ? (
         <div>
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
-          <div className='journal-holder'>{parsedJournals}</div>
+          <div className="journal-holder">{parsedJournals}</div>
         </div>
       ) : (
-        <div className='journal-holder'>{parsedJournals}</div>
+        <div className="journal-holder">{parsedJournals}</div>
       )}
     </>
   );
