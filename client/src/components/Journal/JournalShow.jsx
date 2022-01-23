@@ -18,7 +18,6 @@ const style = {
 };
 const JournalShow = (props) => {
   const { title, entry, date } = props.journal[0];
-  const [open, setOpen] = useState(true);
   const handleClose = () => {
     return props.exitShow();
   };
@@ -26,7 +25,7 @@ const JournalShow = (props) => {
   return (
     <section className='modal-journal-holder'>
       <Modal
-        open={open}
+        open={true}
         onClose={handleClose}
         aria-labelledby='modal-modal-title'
         aria-describedby='modal-modal-description'

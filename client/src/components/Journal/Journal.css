@@ -124,7 +124,7 @@ div .card:hover {
   overflow-y: scroll;
   -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 120%);
   margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 /* hide the scroll bar in journal view */
 .journal-entry::-webkit-scrollbar {
@@ -133,6 +133,7 @@ div .card:hover {
 
 .journal-entry p {
   font-size: 1.2rem;
+  margin-bottom: 6rem;
 }
 .journal-show-date {
   color: #fffde1;

@@ -1,7 +1,7 @@
 import moment from "moment";
 
 const JournalListItem = (props) => {
-  const { id, title, entry, image, date, getJournal } = props;
+  const { id, title, entry, scale, image, date, getJournal } = props;
 
   const clickHandler = () => {
     getJournal(id);
@@ -26,6 +26,7 @@ const JournalListItem = (props) => {
           <p>{moment(date).startOf("minute").fromNow()}</p>
           <p className='journal-arrow'>→</p>
         </section>
+        <p>{scale}</p>
       </section>
     </article>
   );

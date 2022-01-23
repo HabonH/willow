@@ -39,6 +39,7 @@ const JournalList = (props) => {
           entry={journal.entry}
           date={journal.date}
           image={journal.choice}
+          scale={journal.scale}
           getJournal={getJournal}
         />
       </div>
