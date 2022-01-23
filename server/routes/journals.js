@@ -1,16 +1,20 @@
 const express = require("express");
 const router = express.Router();
+const { authenticateToken } = require('../Helper/authenticate') 
 
 /* GET users listing. */
 const journalRouter = (db) => {
-  router.get("/user/:email", function (req, res, next) {
-    let studentEmail = req.params.email;
+  router.get("/", authenticateToken, function (req, res, next) {
+    // let studentEmail = req.params.email;
+    console.log("Here===>", req.user);
+
+
     // const studentEmail = req.signedCookies.name;
     const queryString = `SELECT journals.* FROM students
     JOIN journals ON journals.student_id = students.id
     WHERE students.email = $1
     ORDER BY journals.id DESC;`;
-    const queryParams = [studentEmail];
+    const queryParams = [req.user.email];
     return db
       .query(queryString, queryParams)
       .then((data) => {
