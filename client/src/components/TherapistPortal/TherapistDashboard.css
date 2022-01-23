@@ -74,8 +74,8 @@ li {
 }
 
 .therapist-profile-picture {
-  width: 10rem;
-  height: 10rem;
+  width: 30%;
+  height: auto;
   border-radius: 50%;
 }
 
