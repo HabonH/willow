@@ -5,19 +5,20 @@ import StudentRegister from "./StudentRegister";
 import TherapistRegister from "./TherapistRegister";
 
 const RegisterForm = (props) => {
-  const [show, setShow] = useState(true);
+  const [view, setView] = useState("student");
 
-  const view = () => {
-    setShow(!show);
+  const showTherapist = () => {
+    setView("therapist");
   };
+  const showStudent = () => {
+    setView("student");
+  };
+
   return (
     <div className='form-page'>
-      <Nav view={view} />
-      {show ? (
-        <StudentRegister view={view} />
-      ) : (
-        <TherapistRegister view={view} />
-      )}
+      <Nav showTherapist={showTherapist} showStudent={showStudent} />
+      {view === "student" && <StudentRegister />}
+      {view === "therapist" && <TherapistRegister />}
     </div>
   );
 };

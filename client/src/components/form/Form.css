@@ -9,7 +9,6 @@
 
 .form-navbar {
   width: 100%;
-  max-width: 100rem;
   height: 5rem;
   background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
   display: flex;
@@ -57,6 +56,11 @@
   border-right: 2px solid rgb(63, 63, 63);
   text-align: center;
   width: 100%;
+}
+
+.first-label:hover,
+.second-label:hover {
+  cursor: pointer;
 }
 
 .second-label {

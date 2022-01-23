@@ -37,7 +37,7 @@ const SectionBottom = () => {
 
             <div className="info-bubbles-container"></div>
             <div className="info-bubble-right">
-              <p>Gain access to local professionals in your area.</p>
+              <p>Gain access to certified professionals in one place!</p>
             </div>
             <div className="spacer"></div>
             <div className="info-bubble-left-bottom">

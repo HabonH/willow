@@ -27,7 +27,13 @@ const Nav = () => {
           >
             Login
           </Button>
-          <Button variant="contained" color="neutral">
+          <Button
+            variant="contained"
+            color="neutral"
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
             Register
           </Button>
         </Stack>

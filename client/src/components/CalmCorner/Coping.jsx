@@ -15,7 +15,7 @@ function Coping() {
           <h4>More Coping Mechanisms</h4>
           <div className="mechanisms-button">
             <Button
-              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
               variant="contained"
               startIcon={<SelfImprovementIcon />}
               onClick={(e) => {
@@ -28,7 +28,7 @@ function Coping() {
             </Button>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
               startIcon={<WbSunnyIcon />}
               onClick={(e) => {
                 e.preventDefault();
@@ -40,7 +40,7 @@ function Coping() {
             </Button>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
               startIcon={<SpaIcon />}
               onClick={(e) => {
                 e.preventDefault();
@@ -52,7 +52,7 @@ function Coping() {
             </Button>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#37a993", margin: "0.5rem" }}
+              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
               startIcon={<CloudIcon />}
               onClick={(e) => {
                 e.preventDefault();
