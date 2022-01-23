@@ -10,7 +10,7 @@ import StudentsList from "./StudentsList";
 const TherapistDashboard = () => {
   const [view, setView] = useState("profile");
   const [therapist, setTherapist] = useState({});
-  const [editData, setEditData] = useState(therapist);
+  const [editData, setEditData] = useState({});
 
   const getView = (view) => {
     setView(view);
@@ -23,6 +23,7 @@ const TherapistDashboard = () => {
       .get(`http://localhost:3002/therapists/profile/${userID}`)
       .then((res) => {
         setTherapist(res.data[0]);
+        setEditData(res.data[0]);
       });
   }, []);
 
@@ -42,6 +43,7 @@ const TherapistDashboard = () => {
         setEditData((prev) => {
           return { ...prev, title: data };
         });
+        break;
       case "email":
         setEditData((prev) => {
           return { ...prev, email: data };
@@ -60,7 +62,14 @@ const TherapistDashboard = () => {
     }
   };
 
-  const save = () => {};
+  const save = () => {
+    axios
+      .put(`http://localhost:3002/therapists/profile/${userID}`, {
+        editData,
+      })
+      .catch((err) => console.log(err));
+    setTherapist(editData);
+  };
 
   return (
     <div className="therapist-dashboard-container">

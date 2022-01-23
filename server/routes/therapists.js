@@ -23,6 +23,37 @@ const therapistsRouter = (db) => {
       })
       .catch((err) => console.error(err));
   });
+
+  router.put("/profile/:id", function (req, res, next) {
+    const data = req.body.editData;
+    console.log(data);
+    const userID = req.params.id;
+    const queryString = `UPDATE therapists
+    SET name = $1,
+        email = $2,
+        img = $3,
+        phone = $4,
+        description = $5,
+        title = $6,
+        organization_name = $7
+    WHERE therapists.id = $8;`;
+    const queryParams = [
+      data.name,
+      data.email,
+      data.img,
+      data.phone,
+      data.description,
+      data.title,
+      data.organization_name,
+      userID,
+    ];
+    return db
+      .query(queryString, queryParams)
+      .then((data) => {
+        res.send("saved");
+      })
+      .catch((err) => res.send("error"));
+  });
   return router;
 };
 module.exports = therapistsRouter;
