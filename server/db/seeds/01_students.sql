@@ -6,7 +6,7 @@ VALUES
 ('md23@gmail.com', 'password123', 'Spring Gardens School', 'Lion83'),
 ('julia123@gmail.com', 'pawsword123', 'Elk Creek Middle School', 'King Cobra27'),
 ('tina12@gmail.com', 'password123', 'Waterford Heights', 'Black Mamba24'),
-('studen2@gmail.com', 'password123', 'Waterford Heights', 'Pig99');
+('studen2@gmail.com', 'password123', 'Waterford Heights', 'Horse99');
 
 
 

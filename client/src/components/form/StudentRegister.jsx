@@ -29,6 +29,7 @@ function StudentRegister(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
     auth();
   };
 
@@ -47,24 +48,24 @@ function StudentRegister(props) {
   };
 
   return (
-    <div className='form-container'>
-      <form onSubmit={submitHandler} className='login-form'>
+    <div className="form-container">
+      <form onSubmit={submitHandler} className="login-form">
         {error && (
-          <p className='invalid-Register'>Sorry that email already exists!</p>
+          <p className="invalid-Register">Sorry that email already exists!</p>
         )}
         <input
-          placeholder='Email'
+          placeholder="Email"
           onChange={emailHandler}
-          type='email'
-          className='login-input'
+          type="email"
+          className="login-input"
         />
         <input
-          placeholder='Password'
+          placeholder="Password"
           onChange={passHandler}
-          type='password'
-          className='login-input'
+          type="password"
+          className="login-input"
         />
-        <Button variant='contained' color='primary' type='submit'>
+        <Button variant="contained" color="primary" type="submit">
           Register
         </Button>
       </form>

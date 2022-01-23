@@ -15,7 +15,9 @@ const registerRouter = (db) => {
     const userDescription = req.body.description;
     const userTitle = req.body.title;
 
-    const username = `${chance.animal()}${chance.integer({
+    const username = `${chance.animal({
+      type: "forest",
+    })}${chance.integer({
       min: 0,
       max: 100,
     })}`;
