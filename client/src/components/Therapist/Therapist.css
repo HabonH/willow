@@ -160,6 +160,13 @@ iframe {
 .therapist-holder::-webkit-scrollbar {
   display: none;
 }
+
+.therapist-show-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* 
 .button {
   align-items: center;
