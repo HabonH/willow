@@ -12,15 +12,17 @@ const TherapistDashboard = () => {
   const [therapist, setTherapist] = useState({});
   const [editData, setEditData] = useState({});
 
+  const accessToken = localStorage.getItem("accessToken");
+  
   const getView = (view) => {
     setView(view);
   };
 
-  const userID = localStorage.getItem("userID");
-
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/therapists/profile/${userID}`)
+      .get("http://localhost:3002/therapists/profile", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
       .then((res) => {
         setTherapist(res.data[0]);
         setEditData(res.data[0]);
@@ -64,8 +66,11 @@ const TherapistDashboard = () => {
 
   const save = () => {
     axios
-      .put(`http://localhost:3002/therapists/profile/${userID}`, {
+      .put("http://localhost:3002/therapists/profile", {
         editData,
+      },
+      {
+        headers: { authorization: `Bearer ${accessToken}` },
       })
       .catch((err) => console.log(err));
     setTherapist(editData);

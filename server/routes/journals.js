@@ -23,10 +23,11 @@ const journalRouter = (db) => {
       .catch((err) => console.error(err));
   });
 
-  router.post("/:userID", (req, res) => {
-    const userID = req.params.userID;
+  router.post("/", authenticateToken, (req, res) => {
+    const userID = req.user.id;
     const data = req.body;
 
+    console.log("REQQQQ-->", data);
     const queryString = `INSERT INTO journals (scale, title, entry, choice, student_id)
     VALUES
     ($1, $2, $3, $4, $5);`;

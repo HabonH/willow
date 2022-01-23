@@ -71,10 +71,16 @@ const AddJournal = (props) => {
   };
 
   const save = (data) => {
-    const userID = localStorage.getItem("userID");
-    console.log(userID);
+    const accessToken = localStorage.getItem("accessToken");
+
     axios
-      .post(`http://localhost:3002/journals/${userID}`, data)
+      .post(
+        "http://localhost:3002/journals",
+        data,
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
       .catch((err) => console.log(err));
     setView("final");
     props.getJournalData(data);
