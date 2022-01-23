@@ -6,6 +6,7 @@ const TherapistShow = (props) => {
   const { name, phone, email, img, description, organization_name } =
     props.therapist[0];
   const [open, setOpen] = useState(false);
+  const [full, setFull] = useState(false);
 
   const clickHandler = () => {
     setOpen(!open);
@@ -60,9 +61,23 @@ const TherapistShow = (props) => {
             </div>
           </div>
           <div>
-            <Button variant='contained' color='primary' onClick={clickHandler}>
-              <h4>Book</h4>
-            </Button>
+            {full ? (
+              <Button
+                variant='contained'
+                color='secondary'
+                onClick={clickHandler}
+              >
+                <h4>Full</h4>
+              </Button>
+            ) : (
+              <Button
+                variant='contained'
+                color='primary'
+                onClick={clickHandler}
+              >
+                <h4>Book</h4>
+              </Button>
+            )}
           </div>
         </div>
       )}
