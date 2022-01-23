@@ -6,15 +6,18 @@ const TherapistNav = (props) => {
   const { getView } = props;
 
   const [logout, setLogout] = useState(false);
+  const [selected, setSelected] = useState("profile");
 
   const navigate = useNavigate();
 
   const profileHandler = () => {
     getView("profile");
+    setSelected("profile");
   };
 
   const studentsHandler = () => {
     getView("students");
+    setSelected("students");
   };
 
   const logoutHandler = () => {
@@ -42,13 +45,26 @@ const TherapistNav = (props) => {
       )}
       <div className="therapist-nav-container">
         <ul className="therapist-nav-list">
-          <li className="therapist-nav-item" onClick={profileHandler}>
+          <li
+            className={`therapist-nav-item ${
+              selected === "profile" ? "therapist-nav-item-selected" : null
+            }`}
+            onClick={profileHandler}
+          >
             Profile
           </li>
-          <li className="therapist-nav-item" onClick={studentsHandler}>
+          <li
+            className={`therapist-nav-item ${
+              selected === "students" ? "therapist-nav-item-selected" : null
+            }`}
+            onClick={studentsHandler}
+          >
             Students
           </li>
-          <li className="therapist-nav-item logout-nav" onClick={logoutHandler}>
+          <li
+            className={`therapist-nav-item logout-nav`}
+            onClick={logoutHandler}
+          >
             Logout
           </li>
         </ul>

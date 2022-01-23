@@ -8,7 +8,6 @@
   width: 30%;
   height: 100%;
   background: linear-gradient(320deg, #6ed697 0.81%, #36a893 98.73%);
-
   box-shadow: 0.2rem 0 0.5rem 0rem rgba(53, 53, 53, 0.39);
   z-index: 1;
 }
@@ -34,6 +33,7 @@
   justify-content: center;
   padding: 0;
   width: 100%;
+  padding-left: 1rem;
 }
 
 .therapist-nav-item {
@@ -42,9 +42,11 @@
   padding: 1rem 2rem;
   width: 100%;
   color: #525f76;
+  margin-top: 0.1rem;
 }
 
-.therapist-nav-item:hover {
+.therapist-nav-item:hover,
+.therapist-nav-item-selected {
   background-color: white;
   border-radius: 0.75rem 0 0 0.75rem;
   cursor: pointer;
