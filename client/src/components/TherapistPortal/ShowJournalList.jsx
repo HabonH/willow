@@ -58,7 +58,7 @@ const ShowJournalList = (props) => {
         </div>
       ) : (
         [
-          <>
+          <div className='journal-list-holder'>
             <div
               className='close-button'
               onClick={() => {
@@ -84,7 +84,7 @@ const ShowJournalList = (props) => {
                 <h3 className='no-journal'>This student has no journals</h3>
               </>
             )}
-          </>,
+          </div>,
         ]
       )}
     </>
