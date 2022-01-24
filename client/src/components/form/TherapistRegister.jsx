@@ -8,7 +8,7 @@ import StepTwo from "./StepTwo";
 
 function TherapistRegister(props) {
   const navigate = useNavigate();
-  const [user, setUser] = useState({ type: "therapsit" });
+  const [user, setUser] = useState({ type: "therapist" });
   const [error, setError] = useState(false);
   const [view, setView] = useState("stepOne");
 
@@ -37,12 +37,11 @@ function TherapistRegister(props) {
       })
       .then((res) => {
         if (res.data === "user exists") {
-          console.log("RES___>", res.data);
           setError(true);
         } else {
-          localStorage.setItem("user", res.data.email);
-          localStorage.setItem("userID", res.data.id);
-          navigate("/main");
+          localStorage.setItem("accessToken", res.data.accessToken);
+          localStorage.setItem("userType", res.data.userType);
+          navigate("/therapist");
         }
       });
   };

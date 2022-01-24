@@ -20,8 +20,8 @@ function StudentRegister(props) {
         if (res.data === "invalid") {
           setError(true);
         } else {
-          localStorage.setItem("user", res.data.email);
-          localStorage.setItem("userID", res.data.id);
+          localStorage.setItem("accessToken", res.data.accessToken);
+          localStorage.setItem("userType", res.data.userType);
           navigate("/main");
         }
       });
