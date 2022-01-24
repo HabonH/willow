@@ -24,13 +24,7 @@
   background-color: white;
   color: #525f76;
   padding-left: 3rem;
-
 }
-
-/* .sound {
-  height: 100px;
-  padding: 1rem;
-} */
 
 .title {
   margin-bottom: 0.5rem;
@@ -57,16 +51,16 @@
   text-align: center;
 }
 
-@media (min-width: 390) and (max-width: 549px) {
+@media (min-width: 389px) and (max-width: 600px) {
   .audio-list {
     flex-direction: row;
     justify-content: space-between;
     padding-right: 3rem;
-    padding-left: 3rem;
+    padding-left: 5rem;
   }
 }
 
-@media (min-width: 550px) and (max-width: 830px) {
+@media (min-width: 601px) and (max-width: 1900px) {
   .audio-list {
     flex-direction: row;
     justify-content: space-between;
@@ -74,8 +68,3 @@
     padding-left: 3rem;
   }
 }
-/* @media (min-width: 700px) and (max-width: 830px) {
-  .audio-list {
-    padding-left: 3rem;
-  }
-} */

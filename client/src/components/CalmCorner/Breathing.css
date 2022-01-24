@@ -92,34 +92,11 @@
   display: flex;
   justify-content: center;
 }
-/* .button-play {
-  background: none;
-  width: 1px;
-  height: 1px;
-  border: solid 0px #fff;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999px;
-  box-shadow: 1px 1px 3px #999999;
-}
-.button-pause {
-  background: none;
-  width: 1px;
-  height: 1px;
-  border: solid 0px #fff;
-  border-radius: 50%;
-  position: relative;
-  text-indent: -9999px;
-  box-shadow: 1px 1px 3px #999999;
-} */
 
-@media (min-width: 550px) and (max-width: 830px) {
+@media (min-width: 389px) and (max-width: 1900px) {
   .instructions p {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     text-align: center;
   }
 }
-
-
-

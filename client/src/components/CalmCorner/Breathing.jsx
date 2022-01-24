@@ -9,7 +9,8 @@ function Breathing() {
   const [animation, setAnimation] = useState(false);
   const breatheClass = classNames("unanimated", { breathe: animation });
 
-  const handlePlay = () => {
+  // Click handler to allow animation to play and pause with Material UI icons
+  const onPlay = () => {
     if (animation === true) {
       setAnimation(false);
     } else {
@@ -22,30 +23,28 @@ function Breathing() {
       <Card className="breathe-card">
         <div className="instructions">
           <span>Breathing Exercise </span>
-          <p>Inhale slowly through the nose as the circle expands,
-          and breathe out through the mouth as it contracts.
-          Repeat as much as you need, to feel calm.</p>
+          <p>
+            Inhale slowly through the nose as the circle expands, and breathe
+            out through the mouth as it contracts. Repeat as much as you need,
+            to feel calm.
+          </p>
         </div>
         <div className="breathe-container">
           <div className={breatheClass}></div>
         </div>
         <div id="button">
           {animation === true ? (
-            // <button className="button play" onClick={handlePlay}>
             <PauseIcon
               style={{ color: "#525F76" }}
               className="button-play"
-              onClick={handlePlay}
+              onClick={onPlay}
             />
           ) : (
-            // </button>
-            // <button className="button pause" onClick={handlePlay}>
             <PlayArrowIcon
               style={{ color: "#525F76" }}
               className="button-pause"
-              onClick={handlePlay}
+              onClick={onPlay}
             />
-            // </button>
           )}
         </div>
       </Card>

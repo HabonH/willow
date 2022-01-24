@@ -4,11 +4,11 @@
   color: #525f76;
 }
 
-.coping-container .mechanisms-button{
+.coping-container .mechanisms-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.mechanisms-button{
+.mechanisms-button {
   flex-wrap: wrap;
 }

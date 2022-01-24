@@ -18,6 +18,14 @@
   border-radius: 0.75rem;
 }
 
+.right-carousel {
+  z-index: 100;
+}
+
+.left-carousel {
+  z-index: 100;
+}
+
 .carouselInner .left-carousel {
   flex: 5%;
   height: 100%;
@@ -26,6 +34,16 @@
   color: white;
   cursor: pointer;
   padding-left: 1rem;
+}
+
+.carouselInner .right-carousel {
+  flex: 5%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  cursor: pointer;
+  padding-right: 1rem;
 }
 
 .carouselInner .center-carousel {
@@ -45,22 +63,4 @@
   background-color: rgb(255, 255, 255, 0.5);
   padding: 20px;
   border-radius: 9px;
-}
-
-.carouselInner .right-carousel {
-  flex: 5%;
-  height: 100%;
-  display: grid;
-  place-items: center;
-  color: white;
-  cursor: pointer;
-  padding-right: 1rem;
-}
-
-.right-carousel {
-  z-index: 100;
-}
-
-.left-carousel {
-  z-index: 100;
 }

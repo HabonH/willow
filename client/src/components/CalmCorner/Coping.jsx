@@ -7,6 +7,8 @@ import CloudIcon from "@mui/icons-material/Cloud";
 import { Button } from "@material-ui/core";
 import "./Coping.css";
 
+// Illustrates buttons with an icon and redirects to a link
+
 function Coping() {
   return (
     <>
@@ -15,7 +17,11 @@ function Coping() {
           <h4>More Coping Mechanisms</h4>
           <div className="mechanisms-button">
             <Button
-              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
+              style={{
+                backgroundColor: "#37a993",
+                margin: "0.5rem",
+                color: "#FFFFFF",
+              }}
               variant="contained"
               startIcon={<SelfImprovementIcon />}
               onClick={(e) => {
@@ -28,7 +34,11 @@ function Coping() {
             </Button>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
+              style={{
+                backgroundColor: "#37a993",
+                margin: "0.5rem",
+                color: "#FFFFFF",
+              }}
               startIcon={<WbSunnyIcon />}
               onClick={(e) => {
                 e.preventDefault();
@@ -40,19 +50,27 @@ function Coping() {
             </Button>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
+              style={{
+                backgroundColor: "#37a993",
+                margin: "0.5rem",
+                color: "#FFFFFF",
+              }}
               startIcon={<SpaIcon />}
               onClick={(e) => {
                 e.preventDefault();
                 window.location.href =
-                  "https://www.youtube.com/watch?v=fTzXFPh6CPI";
+                  "https://www.youtube.com/watch?v=dF7O6-QabIo";
               }}
             >
               Yoga
             </Button>
             <Button
               variant="contained"
-              style={{ backgroundColor: "#37a993", margin: "0.5rem", color: '#FFFFFF' }}
+              style={{
+                backgroundColor: "#37a993",
+                margin: "0.5rem",
+                color: "#FFFFFF",
+              }}
               startIcon={<CloudIcon />}
               onClick={(e) => {
                 e.preventDefault();

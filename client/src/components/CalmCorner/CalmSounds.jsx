@@ -11,13 +11,14 @@ import FanNoise from "./audio/FanNoise.mp3";
 import Raindrops from "./audio/Raindrops.mp3";
 import CricketsAtNight from "./audio/CricketsAtNight.mp3";
 
+// Audios listed for component
 const audios = [
-  { audio: Waves, label: "Waves", playing: false },
-  { audio: Campfire, label: "Campfire", playing: false },
-  { audio: FanNoise, label: "Fan", playing: false },
-  { audio: Raindrops, label: "Raindrops", playing: false },
-  { audio: CricketsAtNight, label: "Crickets", playing: false },
-  { audio: WhiteNoise, label: "White", playing: false },
+  { audio: Waves, title: "Waves", playing: false },
+  { audio: Campfire, title: "Campfire", playing: false },
+  { audio: FanNoise, title: "Fan", playing: false },
+  { audio: Raindrops, title: "Raindrops", playing: false },
+  { audio: CricketsAtNight, title: "Crickets", playing: false },
+  { audio: WhiteNoise, title: "White", playing: false },
 ];
 
 function CalmSounds() {
@@ -27,11 +28,16 @@ function CalmSounds() {
     PlayIcon: PlayCircleOutlineSharpIcon,
     PauseIcon: PauseCircleOutlineSharpIcon,
   };
+
+  // Maps through audios with pseudo name sound and retrieves index
+  // Returns each audio with their respective titles and displays currentPlayer
+  // Returns Material UI Audio Player component with mapped audios
+
   const audioPlayers = sounds.map((sound, index) => {
     return (
       <div className="sounds-instructions" key={index}>
         <div id={index} className="title">
-          {sound.label}
+          {sound.title}
           {currentPlayer}
         </div>
         <div className="audio-button">
@@ -42,7 +48,6 @@ function CalmSounds() {
             icons={icons}
             width="100%"
             elevation={0}
-            // variation="default"
             spacing={0}
             rounded={1}
             order="standart"
@@ -56,9 +61,8 @@ function CalmSounds() {
       </div>
     );
   });
-  // console.log(audioPlayers[1].props.children[1].props.children) //Campfire
-  // console.log(audioPlayers[0].props.children[1].props.children) // Waves
 
+  // Displays on the front-end each audio and title which are now interactive
   return (
     <div className="sound-card">
       <div className="instructions">
