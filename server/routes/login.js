@@ -26,15 +26,9 @@ const loginRouter = (db) => {
             email: data.rows[0].email,
             userType: req.body.type,
           };
-          // res.send({
-          //   id: data.rows[0].id,
-          //   email: data.rows[0].email,
-          //   userType: req.body.type,
-          // });
           const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-          res.json({ accessToken: accessToken, userType: user.userType })
+          res.json({ accessToken: accessToken, userType: user.userType });
         } else {
-
           res.send("invalid");
         }
       })

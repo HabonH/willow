@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const jwt = require("jsonwebtoken");
 const Chance = require("chance");
 
 /* GET users listing. */
@@ -27,10 +28,12 @@ const registerRouter = (db) => {
       req.body.type === "student"
         ? `INSERT INTO students (email, password, organization_name, username) 
         VALUES 
-        ($1, $2, $3, $4);`
+        ($1, $2, $3, $4)
+        RETURNING *;`
         : `INSERT INTO therapists (email, password, organization_name, name, img, phone, description, title)
         VALUES
-        ($1, $2, $3, $4, $5, $6, $7, $8); `;
+        ($1, $2, $3, $4, $5, $6, $7, $8)
+        RETURNING *; `;
 
     const queryParams =
       req.body.type === "student"
@@ -48,9 +51,16 @@ const registerRouter = (db) => {
     return db
       .query(queryString, queryParams)
       .then((data) => {
-        res.send("saved");
+        const userData = data.rows[0];
+        const user = {
+          id: userData.id,
+          email: userData.email,
+          userType: req.body.type,
+        };
+        const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+        res.json({ accessToken: accessToken, userType: user.userType });
       })
-      .catch(() => res.send("invalid"));
+      .catch(() => res.send("user exists"));
   });
 
   return router;
