@@ -57,15 +57,27 @@ const ShowJournalList = (props) => {
           <div className='journal-holder'>{parsedJournals}</div>
         </div>
       ) : (
-        <div className='journal-holder'>
-          <div
-            className='close-button'
-            onClick={() => {
-              return props.exitShow();
-            }}
-          ></div>
-          {parsedJournals}
-        </div>
+        [
+          <>
+            <div
+              className='close-button'
+              onClick={() => {
+                return props.exitShow();
+              }}
+            ></div>
+            {parsedJournals.length > 1 ? (
+              <>
+                <div className='student-journal-header'></div>
+                <div className='journal-holder'>{parsedJournals}</div>
+              </>
+            ) : (
+              <>
+                <div className='student-journal-header'></div>
+                <h3 className='no-journal'>This student has no journals</h3>
+              </>
+            )}
+          </>,
+        ]
       )}
     </>
   );
