@@ -1,5 +1,7 @@
 import StudentListItem from "./StudentListItem";
-// import "./Student.css";
+import ShowJournalList from "./ShowJournalList";
+import { Button } from "@mui/material";
+import "./Student.css";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -10,9 +12,15 @@ const StudentsList = () => {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3002/therapists`).then((result) => {
-      setStudents(result.data);
-    });
+    const accessToken = localStorage.getItem("accessToken");
+
+    axios
+      .get("http://localhost:3002/students", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
+      .then((res) => {
+        setStudents(res.data);
+      });
   }, []);
 
   const getStudent = (id) => {
@@ -25,26 +33,34 @@ const StudentsList = () => {
     setShow(false);
   };
 
-  const parsedStudents = students.map((therapist) => {
+  const parsedStudents = students.map((student) => {
     return (
       <StudentListItem
-        key={therapist.id}
-        id={therapist.id}
-        name={therapist.name}
-        img={therapist.img}
-        getTherapist={getStudent}
-        title={therapist.title}
+        key={student.id}
+        id={student.id}
+        getStudent={getStudent}
+        username={student.username}
       />
     );
   });
 
   return (
     <>
-      {/* {show ? (
-        <StudentShow therapist={selectedStudent} exitShow={exitShow} />
+      {show ? (
+        <ShowJournalList student={selectedStudent} exitShow={exitShow} />
       ) : (
-        <div className='therapist-holder'>{parsedStudents}</div>
-      )} */}
+        <>
+          <Button
+            variant='contained'
+            color='primary'
+            type='submit'
+            className='full-button'
+          >
+            Full
+          </Button>
+          <div className='student-holder'>{parsedStudents}</div>
+        </>
+      )}
     </>
   );
 };
