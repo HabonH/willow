@@ -32,8 +32,7 @@ const TherapistNav = (props) => {
   };
 
   const confirmLogoutHandler = () => {
-    localStorage.removeItem("userID");
-    localStorage.removeItem("user");
+    localStorage.removeItem("accessToken");
     localStorage.removeItem("userType");
     navigate("/");
   };
