@@ -44,10 +44,15 @@ const TherapistList = () => {
 
   const removePrimaryTherapist = (id) => {
     const accessToken = localStorage.getItem("accessToken");
+    const data = { id: 0 };
     axios
-      .put("http://localhost:3002/students/set_therapist", {
-        headers: { authorization: `Bearer ${accessToken}` },
-      })
+      .put(
+        "http://localhost:3002/students/set_therapist",
+        { data },
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
       .catch((err) => console.log(err));
   };
 
