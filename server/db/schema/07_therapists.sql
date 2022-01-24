@@ -12,6 +12,7 @@ CREATE TABLE therapists (
   phone VARCHAR(15) NOT NULL,
   description TEXT NOT NULL,
   title VARCHAR(255) NOT NULL, 
-  organization_name VARCHAR(255)
+  organization_name VARCHAR(255),
+  full_capacity BOOLEAN DEFAULT FALSE
 );
 
