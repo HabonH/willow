@@ -1,30 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@mui/material";
-// import LinkWrapper from "./LinkWrapper";
+import axios from "axios";
 
 const TherapistShow = (props) => {
   const { id, name, phone, email, img, description, organization_name } =
     props.therapist[0];
-  console.log("therapist---->", props.therapist[0]);
-  console.log("PROPS", props);
-  const { setPrimaryTherapist } = props;
+  const { setPrimaryTherapist, removePrimaryTherapist } = props;
   const [open, setOpen] = useState(false);
   const [full, setFull] = useState(false);
 
-  const link = "https://calendly.com/final-therapist/therapy-sessions";
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+    axios
+      .get("http://localhost:3002/students/therapist", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
+      .then((res) => {
+        const studentTherapistId = res.data[0].therapist_id;
+        if (studentTherapistId === id) {
+          setFull(true);
+        }
+      });
+  }, []);
 
   const clickHandler = () => {
     setOpen(!open);
   };
 
   const removeTherapistHandler = () => {
-    //
+    removePrimaryTherapist(id);
+    setFull(false);
   };
 
   const setTherapistHandler = () => {
     setPrimaryTherapist(id);
+    setFull(true);
   };
 
+  const link = "https://calendly.com/final-therapist/therapy-sessions";
   return (
     <>
       {open ? (
