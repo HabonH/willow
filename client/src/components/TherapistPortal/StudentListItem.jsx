@@ -1,9 +1,8 @@
 import Button from "@mui/material/Button";
 
 function StudentListItem(props) {
-  const { id, email, getStudent } = props;
-
-  const profile = "https://imgur.com/u5CoNBr";
+  const { id, username, getStudent } = props;
+  const profile = "https://imgur.com/u5CoNBr.png";
   const clickHandler = () => {
     getStudent(id);
   };
@@ -14,7 +13,7 @@ function StudentListItem(props) {
       </div>
       <section className='student-content'>
         <div className='student-title-content'>
-          <h3>{email}</h3>
+          <h3>{username}</h3>
         </div>
 
         <Button
