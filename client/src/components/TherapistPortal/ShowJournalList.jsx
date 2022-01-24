@@ -67,12 +67,20 @@ const ShowJournalList = (props) => {
             ></div>
             {parsedJournals.length > 1 ? (
               <>
-                <div className='student-journal-header'></div>
+                <div className='student-journal-header'>
+                  <h3 className='journal-student-name'>
+                    {student[0].username}
+                  </h3>
+                </div>
                 <div className='journal-holder'>{parsedJournals}</div>
               </>
             ) : (
               <>
-                <div className='student-journal-header'></div>
+                <div className='student-journal-header'>
+                  <h3 className='journal-student-name'>
+                    {student[0].username}
+                  </h3>
+                </div>
                 <h3 className='no-journal'>This student has no journals</h3>
               </>
             )}
