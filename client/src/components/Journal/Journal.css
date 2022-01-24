@@ -23,7 +23,6 @@
 }
 
 .journal-list-holder {
-  height: 100%;
   overflow: hidden;
   overflow-y: scroll;
 }
@@ -178,7 +177,7 @@ div .card:hover {
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  height: 100%;
+  height: 90%;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
