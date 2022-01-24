@@ -28,15 +28,27 @@ const TherapistList = () => {
     setShow(false);
   };
 
-  const checkImage = (path) => {
+  const setPrimaryTherapist = (id) => {
+    const accessToken = localStorage.getItem("accessToken");
+    const data = { id };
     axios
-      .get(path)
-      .then(() => {
-        return true;
+      .put(
+        "http://localhost:3002/students/set_therapist",
+        { data },
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
+      .catch((err) => console.log(err));
+  };
+
+  const removePrimaryTherapist = (id) => {
+    const accessToken = localStorage.getItem("accessToken");
+    axios
+      .put("http://localhost:3002/students/set_therapist", {
+        headers: { authorization: `Bearer ${accessToken}` },
       })
-      .catch(() => {
-        return false;
-      });
+      .catch((err) => console.log(err));
   };
 
   const parsedTherapists = therapists.map((therapist) => {
@@ -55,7 +67,12 @@ const TherapistList = () => {
   return (
     <>
       {show ? (
-        <TherapistShow therapist={selectedTherapist} exitShow={exitShow} />
+        <TherapistShow
+          therapist={selectedTherapist}
+          exitShow={exitShow}
+          setPrimaryTherapist={setPrimaryTherapist}
+          removePrimaryTherapist={removePrimaryTherapist}
+        />
       ) : (
         <div className='therapist-holder'>{parsedTherapists}</div>
       )}
