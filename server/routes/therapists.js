@@ -55,6 +55,38 @@ const therapistsRouter = (db) => {
       })
       .catch((err) => res.send("error"));
   });
+  //set the full capcity to true of they therapist presses the full button in their profile
+  router.put("/full", authenticateToken, function (req, res, next) {
+    const data = req.body.data;
+    console.log(data);
+    const userID = req.user.id;
+    const queryString = `UPDATE therapists
+    SET full_capacity = true
+    WHERE therapists.id = $1;`;
+    const queryParams = [userID];
+    return db
+      .query(queryString, queryParams)
+      .then((data) => {
+        res.send("saved");
+      })
+      .catch((err) => res.send("error"));
+  });
+  //set the full capcity to false of they therapist presses the accept students button in their profile
+  router.put("/accept", authenticateToken, function (req, res, next) {
+    const data = req.body.data;
+    console.log(data);
+    const userID = req.user.id;
+    const queryString = `UPDATE therapists
+    SET full_capacity = false
+    WHERE therapists.id = $1;`;
+    const queryParams = [userID];
+    return db
+      .query(queryString, queryParams)
+      .then((data) => {
+        res.send("saved");
+      })
+      .catch((err) => res.send("error"));
+  });
   return router;
 };
 module.exports = therapistsRouter;
