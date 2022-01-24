@@ -8,6 +8,7 @@
   box-shadow: 0.5rem 0.5rem #fff8bb;
 }
 .full-button {
+  margin-top: 2rem;
   width: 75%;
 }
 .header-text {
@@ -19,7 +20,6 @@
   height: 100%;
   width: 100%;
   overflow-y: scroll;
-  margin-top: 1rem;
   padding-bottom: 5rem;
 }
 
