@@ -3,15 +3,27 @@ import { Button } from "@mui/material";
 // import LinkWrapper from "./LinkWrapper";
 
 const TherapistShow = (props) => {
-  const { name, phone, email, img, description, organization_name } =
+  const { id, name, phone, email, img, description, organization_name } =
     props.therapist[0];
+  console.log("therapist---->", props.therapist[0]);
+  console.log("PROPS", props);
+  const { setPrimaryTherapist } = props;
   const [open, setOpen] = useState(false);
-  const [full, setFull] = useState(true);
+  const [full, setFull] = useState(false);
+
+  const link = "https://calendly.com/final-therapist/therapy-sessions";
 
   const clickHandler = () => {
     setOpen(!open);
   };
-  const link = "https://calendly.com/final-therapist/therapy-sessions";
+
+  const removeTherapistHandler = () => {
+    //
+  };
+
+  const setTherapistHandler = () => {
+    setPrimaryTherapist(id);
+  };
 
   return (
     <>
@@ -68,15 +80,15 @@ const TherapistShow = (props) => {
               <Button
                 variant='contained'
                 color='secondary'
-                onClick={clickHandler}
+                onClick={removeTherapistHandler}
               >
-                <h4>Full</h4>
+                <h4>Remove Therapist</h4>
               </Button>
             ) : (
               <Button
                 variant='contained'
                 color='primary'
-                onClick={clickHandler}
+                onClick={setTherapistHandler}
               >
                 <h4>Set as Primary Therapist</h4>
               </Button>
