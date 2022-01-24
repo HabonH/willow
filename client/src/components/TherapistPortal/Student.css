@@ -34,6 +34,15 @@
 h3 {
   color: #525f76;
 }
+.student-content-entry {
+  color: #64748b;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.75rem;
+  height: 90%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
 
 .student-choice {
   width: 100%;
@@ -64,7 +73,7 @@ h3 {
 }
 
 .student-card {
-  background-color: #82e3c1;
+  background-color: #ffffff;
   height: 12rem;
   width: 85%;
   border-radius: 10px;

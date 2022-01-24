@@ -19,6 +19,13 @@
 
   padding: 1rem;
 }
+.therapist-dashboard-journal-right {
+  width: 70%;
+  height: 100%;
+  background-color: #cff4d2;
+
+  padding: 1rem;
+}
 
 .therapist-nav-container {
   display: flex;
