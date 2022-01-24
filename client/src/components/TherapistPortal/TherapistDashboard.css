@@ -2,15 +2,12 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  padding: 10%;
 }
 
 .therapist-dashboard-left {
   width: 30%;
   height: 100%;
   background: linear-gradient(320deg, #6ed697 0.81%, #36a893 98.73%);
-  border-radius: 0.75rem 0 0 0.75rem;
-  padding-left: 0.5rem;
   box-shadow: 0.2rem 0 0.5rem 0rem rgba(53, 53, 53, 0.39);
   z-index: 1;
 }
@@ -19,10 +16,46 @@
   width: 70%;
   height: 100%;
   background-color: white;
-  border-radius: 0 0.75rem 0.75rem 0;
+
   padding: 1rem;
 }
+.therapist-dashboard-journal-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  height: 100%;
+  background-color: #cff4d2;
+}
 
+.full-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30%;
+  height: max-content;
+  min-height: 20rem;
+  min-width: 20rem;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.75rem;
+  box-shadow: 0.5rem 0.5rem #fff8bb;
+}
+
+.full-backdrop {
+  width: 70%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.555);
+  position: absolute;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-text {
+  text-align: center;
+}
 .therapist-nav-container {
   display: flex;
   justify-content: center;
@@ -36,6 +69,7 @@
   justify-content: center;
   padding: 0;
   width: 100%;
+  padding-left: 1rem;
 }
 
 .therapist-nav-item {
@@ -44,9 +78,11 @@
   padding: 1rem 2rem;
   width: 100%;
   color: #525f76;
+  margin-top: 0.1rem;
 }
 
-.therapist-nav-item:hover {
+.therapist-nav-item:hover,
+.therapist-nav-item-selected {
   background-color: white;
   border-radius: 0.75rem 0 0 0.75rem;
   cursor: pointer;
@@ -74,8 +110,8 @@ li {
 }
 
 .therapist-profile-picture {
-  width: 10rem;
-  height: 10rem;
+  width: 30%;
+  height: auto;
   border-radius: 50%;
 }
 

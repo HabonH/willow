@@ -14,15 +14,19 @@ const Dashboard = () => {
   const [quote, setQuote] = useState({});
 
   useEffect(() => {
-    const userID = localStorage.getItem("userID");
+    const accessToken = localStorage.getItem("accessToken");
 
     const randomQuote =
       headerQuotes[Math.floor(Math.random() * headerQuotes.length)];
     setQuote(randomQuote);
 
-    axios.get(`http://localhost:3002/journals-count/${userID}`).then((res) => {
-      setJournalCount(res.data[0].count);
-    });
+    axios
+      .get("http://localhost:3002/journals-count", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
+      .then((res) => {
+        setJournalCount(res.data[0].count);
+      });
   }, []);
 
   const getJournalData = (data) => {

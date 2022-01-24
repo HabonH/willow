@@ -14,10 +14,15 @@ const JournalList = (props) => {
   const [journals, setJournals] = useState([]);
 
   useEffect(() => {
-    let email = localStorage.getItem("user");
-    axios.get(`http://localhost:3002/journals/user/${email}`).then((result) => {
-      setJournals(result.data);
-    });
+    // let email = localStorage.getItem("user");
+    const accessToken = localStorage.getItem("accessToken");
+    axios
+      .get("http://localhost:3002/journals", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
+      .then((result) => {
+        setJournals(result.data);
+      });
   }, [journalData]);
 
   const getJournal = (id) => {
@@ -31,7 +36,7 @@ const JournalList = (props) => {
   };
   const parsedJournals = journals.map((journal) => {
     return (
-      <div className='card' key={journal.id}>
+      <div className="card" key={journal.id}>
         <JournalListItem
           key={journal.id}
           id={journal.id}
@@ -51,10 +56,10 @@ const JournalList = (props) => {
       {show ? (
         <div>
           <JournalShow journal={selectedJournal} exitShow={exitShow} />
-          <div className='journal-holder'>{parsedJournals}</div>
+          <div className="journal-holder">{parsedJournals}</div>
         </div>
       ) : (
-        <div className='journal-holder'>{parsedJournals}</div>
+        <div className="journal-holder">{parsedJournals}</div>
       )}
     </>
   );

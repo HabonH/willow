@@ -12,15 +12,17 @@ const TherapistDashboard = () => {
   const [therapist, setTherapist] = useState({});
   const [editData, setEditData] = useState({});
 
+  const accessToken = localStorage.getItem("accessToken");
+
   const getView = (view) => {
     setView(view);
   };
 
-  const userID = localStorage.getItem("userID");
-
   useEffect(() => {
     axios
-      .get(`http://localhost:3002/therapists/profile/${userID}`)
+      .get("http://localhost:3002/therapists/profile", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
       .then((res) => {
         setTherapist(res.data[0]);
         setEditData(res.data[0]);
@@ -64,28 +66,40 @@ const TherapistDashboard = () => {
 
   const save = () => {
     axios
-      .put(`http://localhost:3002/therapists/profile/${userID}`, {
-        editData,
-      })
+      .put(
+        "http://localhost:3002/therapists/profile",
+        {
+          editData,
+        },
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
       .catch((err) => console.log(err));
     setTherapist(editData);
   };
 
   return (
-    <div className="therapist-dashboard-container">
-      <div className="therapist-dashboard-left">
+    <div className='therapist-dashboard-container'>
+      <div className='therapist-dashboard-left'>
         <TherapistNav getView={getView} />
       </div>
-      <div className="therapist-dashboard-right">
-        {view === "profile" && (
+
+      {view === "profile" && (
+        <div className='therapist-dashboard-right'>
           <Profile
             therapist={therapist}
             getTherapistEditData={getTherapistEditData}
             save={save}
           />
-        )}
-        {view === "students" && <StudentsList />}
-      </div>
+        </div>
+      )}
+      {view === "students" && (
+        <div className='therapist-dashboard-journal-right'>
+          {" "}
+          <StudentsList />{" "}
+        </div>
+      )}
     </div>
   );
 };

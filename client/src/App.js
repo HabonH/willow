@@ -12,7 +12,7 @@ import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
 function App() {
-  const user = localStorage.getItem("user");
+  const token = localStorage.getItem("accessToken");
   const userType = localStorage.getItem("userType");
   const navigate = useNavigate();
   return (
@@ -22,14 +22,14 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/user" element={<AuthForm />} />
           <Route path="/register" element={<RegisterForm />} />
-          {user && userType === "student" ? (
+          {token && userType === "student" ? (
             <>
               <Route path="/main" element={<Main />} />
             </>
           ) : (
             <Route path="/main" element={<Home />} />
           )}
-          {user && userType === "therapist" ? (
+          {token && userType === "therapist" ? (
             <>
               <Route path="/therapist" element={<TherapistDashboard />} />
             </>

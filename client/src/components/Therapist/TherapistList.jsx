@@ -27,6 +27,18 @@ const TherapistList = () => {
   const exitShow = () => {
     setShow(false);
   };
+
+  const checkImage = (path) => {
+    axios
+      .get(path)
+      .then(() => {
+        return true;
+      })
+      .catch(() => {
+        return false;
+      });
+  };
+
   const parsedTherapists = therapists.map((therapist) => {
     return (
       <TherapistListItem

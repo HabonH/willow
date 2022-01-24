@@ -1,0 +1,52 @@
+import moment from "moment";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
+const ShowJournal = (props) => {
+  const { title, entry, date } = props.journal[0];
+  const handleClose = () => {
+    return props.exitShow();
+  };
+
+  return (
+    <section className='modal-journal-holder'>
+      <Modal
+        open={true}
+        onClose={handleClose}
+        aria-labelledby='modal-modal-title'
+        aria-describedby='modal-modal-description'
+      >
+        <Box sx={style} id='journal-show'>
+          <div
+            className='close-button'
+            onClick={() => {
+              return props.exitShow();
+            }}
+          ></div>
+          <div className='journal-title'>
+            <h4>{title}</h4>
+          </div>
+          <div className='journal-entry'>
+            <p>{entry}</p>
+          </div>
+          <p className='journal-show-date'>
+            {moment(date).startOf("minute").fromNow()}
+          </p>
+        </Box>
+      </Modal>
+    </section>
+  );
+};
+
+export default ShowJournal;

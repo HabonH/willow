@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const jwt = require("jsonwebtoken");
 
 /* GET users listing. */
 const loginRouter = (db) => {
@@ -20,11 +21,13 @@ const loginRouter = (db) => {
       .then((data) => {
         console.log(data.rows);
         if (req.body.password === data.rows[0].password) {
-          res.send({
+          const user = {
             id: data.rows[0].id,
             email: data.rows[0].email,
             userType: req.body.type,
-          });
+          };
+          const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
+          res.json({ accessToken: accessToken, userType: user.userType });
         } else {
           res.send("invalid");
         }

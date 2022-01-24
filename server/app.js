@@ -23,8 +23,10 @@ const therapistsRouter = require("./routes/therapists");
 const choicesRouter = require("./routes/choices");
 const registerRouter = require("./routes/register");
 const loginRouter = require("./routes/login");
-const readCookieRouter = require("./routes/readCookie");
 const journalCountRouter = require("./routes/journals-count");
+const studentsRouter = require("./routes/students");
+const studentJournalsRouter = require("./routes/student_journals");
+const allJournalsRouter = require("./routes/all_journals");
 
 const app = express();
 
@@ -51,6 +53,8 @@ app.use("/therapists", therapistsRouter(db));
 app.use("/choices", choicesRouter(db));
 app.use("/register", registerRouter(db));
 app.use("/login", loginRouter(db));
-app.use("/readCookie", readCookieRouter());
+app.use("/students", studentsRouter(db));
+app.use("/student_journals", studentJournalsRouter(db));
+app.use("/all_journals", allJournalsRouter(db));
 module.exports = app;
 exports.db = db;

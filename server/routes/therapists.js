@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const { authenticateToken } = require("../Helper/authenticate");
 
 /* GET home page. */
 const therapistsRouter = (db) => {
@@ -11,8 +12,8 @@ const therapistsRouter = (db) => {
       .catch((err) => console.error(err));
   });
 
-  router.get("/profile/:id", function (req, res, next) {
-    const userID = req.params.id;
+  router.get("/profile", authenticateToken, function (req, res, next) {
+    const userID = req.user.id;
     const queryString = `SELECT * FROM therapists WHERE
     therapists.id = $1;`;
     const queryParams = [userID];
@@ -24,10 +25,10 @@ const therapistsRouter = (db) => {
       .catch((err) => console.error(err));
   });
 
-  router.put("/profile/:id", function (req, res, next) {
+  router.put("/profile", authenticateToken, function (req, res, next) {
     const data = req.body.editData;
     console.log(data);
-    const userID = req.params.id;
+    const userID = req.user.id;
     const queryString = `UPDATE therapists
     SET name = $1,
         email = $2,
@@ -47,6 +48,38 @@ const therapistsRouter = (db) => {
       data.organization_name,
       userID,
     ];
+    return db
+      .query(queryString, queryParams)
+      .then((data) => {
+        res.send("saved");
+      })
+      .catch((err) => res.send("error"));
+  });
+  //set the full capcity to true of they therapist presses the full button in their profile
+  router.put("/full", authenticateToken, function (req, res, next) {
+    const data = req.body.data;
+    console.log(data);
+    const userID = req.user.id;
+    const queryString = `UPDATE therapists
+    SET full_capacity = true
+    WHERE therapists.id = $1;`;
+    const queryParams = [userID];
+    return db
+      .query(queryString, queryParams)
+      .then((data) => {
+        res.send("saved");
+      })
+      .catch((err) => res.send("error"));
+  });
+  //set the full capcity to false of they therapist presses the accept students button in their profile
+  router.put("/accept", authenticateToken, function (req, res, next) {
+    const data = req.body.data;
+    console.log(data);
+    const userID = req.user.id;
+    const queryString = `UPDATE therapists
+    SET full_capacity = false
+    WHERE therapists.id = $1;`;
+    const queryParams = [userID];
     return db
       .query(queryString, queryParams)
       .then((data) => {

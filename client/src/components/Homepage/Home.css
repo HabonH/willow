@@ -202,7 +202,7 @@
 
 .iphone-mockup-middle {
   height: 80%;
-  background-image: url("./assets/mockup-home.png");
+  background-image: url("./assets/mockup-calm.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -213,7 +213,7 @@
 
 .iphone-mockup-bottom {
   height: 80%;
-  background-image: url("./assets/mockup-home.png");
+  background-image: url("./assets/mockup-therapist.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -326,7 +326,7 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: 0rem;
+  left: -1rem;
   bottom: 10rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
@@ -347,8 +347,8 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: 0rem;
-  top: 15rem;
+  left: -2rem;
+  top: 7rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
 .info-bubble-left-bottom2::after {
