@@ -5,7 +5,8 @@ import "./Therapist.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const TherapistList = () => {
+const TherapistList = (props) => {
+  const { getTherapistData } = props;
   const [show, setShow] = useState(false);
   const [selectedTherapist, setSelectedTherapist] = useState(null);
   const [therapists, setTherapists] = useState([]);
@@ -77,6 +78,7 @@ const TherapistList = () => {
           exitShow={exitShow}
           setPrimaryTherapist={setPrimaryTherapist}
           removePrimaryTherapist={removePrimaryTherapist}
+          getTherapistData={getTherapistData}
         />
       ) : (
         <div className='therapist-holder'>{parsedTherapists}</div>

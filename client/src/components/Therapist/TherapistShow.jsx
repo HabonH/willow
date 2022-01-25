@@ -5,7 +5,8 @@ import axios from "axios";
 const TherapistShow = (props) => {
   const { id, name, phone, email, img, description, organization_name } =
     props.selectedTherapist[0];
-  const { setPrimaryTherapist, removePrimaryTherapist } = props;
+  const { setPrimaryTherapist, removePrimaryTherapist, getTherapistData } =
+    props;
   const [open, setOpen] = useState(false);
   const [primary, setPrimary] = useState(false);
 
@@ -35,6 +36,7 @@ const TherapistShow = (props) => {
   const setTherapistHandler = () => {
     setPrimaryTherapist(id);
     setPrimary(true);
+    getTherapistData(true);
   };
 
   const link = "https://calendly.com/final-therapist/therapy-sessions";

@@ -5,6 +5,11 @@ import axios from "axios";
 
 const Therapist = (props) => {
   const [therapistName, setTherapistName] = useState(0);
+  const [therapistData, setTherapistData] = useState(false);
+
+  const getTherapistData = (data) => {
+    setTherapistData(data);
+  };
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
@@ -16,12 +21,12 @@ const Therapist = (props) => {
         const therapistInfo = res.data[0];
         setTherapistName(therapistInfo.name);
       });
-  }, [therapistName]);
+  }, [therapistData]);
 
   return (
     <div className='main-therapist-container'>
       <Header therapistName={therapistName} />
-      <TherapistList />
+      <TherapistList getTherapistData={getTherapistData} />
     </div>
   );
 };
