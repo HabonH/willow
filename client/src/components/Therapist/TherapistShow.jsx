@@ -36,7 +36,7 @@ const TherapistShow = (props) => {
   const setTherapistHandler = () => {
     setPrimaryTherapist(id);
     setPrimary(true);
-    getTherapistData(true);
+    getTherapistData();
   };
 
   const link = "https://calendly.com/final-therapist/therapy-sessions";

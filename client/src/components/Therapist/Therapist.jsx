@@ -7,8 +7,8 @@ const Therapist = (props) => {
   const [therapistName, setTherapistName] = useState(0);
   const [therapistData, setTherapistData] = useState(false);
 
-  const getTherapistData = (data) => {
-    setTherapistData(data);
+  const getTherapistData = () => {
+    setTherapistData(!therapistData);
   };
 
   useEffect(() => {
