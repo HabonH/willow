@@ -4,6 +4,7 @@
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0.5rem;
   border-radius: 0px 0px 10px 10px;
   box-shadow: 0.5rem 0.5rem #fff8bb;
   background-color: white;
@@ -90,11 +91,19 @@
   color: #64748b;
   padding-top: 1rem;
   font-size: 0.75rem;
-  margin-right: 1rem;
+  margin-right: auto;
+  margin-left: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
+.journal-card-header {
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .journal-arrow {
   /* margin-top: -3rem; */
   font-weight: bolder;

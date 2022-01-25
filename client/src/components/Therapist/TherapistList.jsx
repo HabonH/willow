@@ -73,7 +73,7 @@ const TherapistList = () => {
     <>
       {show ? (
         <TherapistShow
-          therapist={selectedTherapist}
+          selectedTherapist={selectedTherapist}
           exitShow={exitShow}
           setPrimaryTherapist={setPrimaryTherapist}
           removePrimaryTherapist={removePrimaryTherapist}
