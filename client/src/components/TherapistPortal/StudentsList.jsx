@@ -109,7 +109,7 @@ const StudentsList = () => {
                 variant='contained'
                 color='primary'
                 type='submit'
-                className='full-button'
+                id='full-button'
                 onClick={acceptHandler}
               >
                 Accept Students
@@ -119,7 +119,7 @@ const StudentsList = () => {
                 variant='contained'
                 color='primary'
                 type='submit'
-                className='full-button'
+                id='full-button'
                 onClick={fullHandler}
               >
                 Full

@@ -4,10 +4,10 @@ import axios from "axios";
 
 const TherapistShow = (props) => {
   const { id, name, phone, email, img, description, organization_name } =
-    props.therapist[0];
+    props.selectedTherapist[0];
   const { setPrimaryTherapist, removePrimaryTherapist } = props;
   const [open, setOpen] = useState(false);
-  const [full, setFull] = useState(false);
+  const [primary, setPrimary] = useState(false);
 
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
@@ -18,7 +18,7 @@ const TherapistShow = (props) => {
       .then((res) => {
         const studentTherapistId = res.data[0].therapist_id;
         if (studentTherapistId === id) {
-          setFull(true);
+          setPrimary(true);
         }
       });
   }, []);
@@ -29,12 +29,12 @@ const TherapistShow = (props) => {
 
   const removeTherapistHandler = () => {
     removePrimaryTherapist(id);
-    setFull(false);
+    setPrimary(false);
   };
 
   const setTherapistHandler = () => {
     setPrimaryTherapist(id);
-    setFull(true);
+    setPrimary(true);
   };
 
   const link = "https://calendly.com/final-therapist/therapy-sessions";
@@ -89,7 +89,7 @@ const TherapistShow = (props) => {
             <Button variant='contained' color='primary' onClick={clickHandler}>
               <h4>Book Session</h4>
             </Button>
-            {full ? (
+            {primary ? (
               <Button
                 variant='contained'
                 color='secondary'
