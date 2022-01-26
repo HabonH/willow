@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ConfirmLogout from "../Sidebar/ConfirmLogout";
 import { useNavigate } from "react-router-dom";
+import willowLogo from "../Homepage/assets/willow-logo.svg";
 
 const TherapistNav = (props) => {
   const { getView } = props;
@@ -44,6 +45,11 @@ const TherapistNav = (props) => {
       )}
       <div className="therapist-nav-container">
         <ul className="therapist-nav-list">
+          <img
+            src={willowLogo}
+            alt="willow logo"
+            className="willow-logo-therapist"
+          />
           <li
             className={`therapist-nav-item ${
               selected === "profile" ? "therapist-nav-item-selected" : null
