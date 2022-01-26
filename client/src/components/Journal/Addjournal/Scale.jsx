@@ -98,7 +98,7 @@ const Scale = (props) => {
           <img
             alt='very happy face'
             src={require("./icons/happy.png")}
-            className={`scale-face ${
+            className={`scale-face  happy ${
               selected === "label-happy" ? selected : null
             }`}
           />
