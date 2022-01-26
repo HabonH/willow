@@ -196,7 +196,7 @@ input.radio:last-child {
 }
 
 .scale-face:hover {
-  filter: drop-shadow(0.5px 0.5px 2px rgba(0, 0, 0, 0.438));
+  background-color: #cff4d2;
 }
 
 svg {
@@ -205,57 +205,57 @@ svg {
 
 .sad {
   border-radius: 50%;
-  background-color: rgba(96, 106, 148, 0.308);
+  background-color: #fff8bb73;
 }
 
 .lil-sad {
   border-radius: 50%;
-  background-color: rgba(165, 176, 223, 0.308);
+  background-color: #fff8bb73;
 }
 
 .neutral {
   border-radius: 50%;
-  background-color: rgba(158, 158, 158, 0.308);
+  background-color: #fff8bb73;
 }
 
 .lil-happy {
   border-radius: 50%;
-  background-color: rgba(130, 204, 167, 0.308);
+  background-color: #fff8bb73;
 }
 
 .happy {
   border-radius: 50%;
-  background-color: rgba(29, 197, 113, 0.61);
+  background-color: #fff8bb73;
 }
 
 .label-sad {
-  background-color: rgb(96, 106, 148);
+  background-color: #cff4d2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .label-lil-sad {
-  background-color: rgb(165, 176, 223);
+  background-color: #cff4d2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .label-neutral {
-  background-color: rgb(158, 158, 158);
+  background-color: #cff4d2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .label-lil-happy {
-  background-color: rgb(130, 204, 167);
+  background-color: #cff4d2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .label-happy {
   border-radius: 50%;
-  background-color: rgb(29, 197, 113);
+  background-color: #cff4d2;
   display: flex;
   justify-content: center;
   align-items: center;
