@@ -74,7 +74,7 @@ h3 {
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 3rem;
+  margin-top: 4rem;
   padding: 1rem;
   box-shadow: 0.5rem 0.5rem #fff8bb;
 }
@@ -142,11 +142,42 @@ iframe {
   width: 100%;
 }
 
+.full-backdrop-therapist {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.555);
+  position: absolute;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-text-therapist {
+  text-align: center;
+}
+
+.full-container-therapist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30%;
+  height: max-content;
+  min-height: 20rem;
+  min-width: 20rem;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.75rem;
+  box-shadow: 0.5rem 0.5rem #fff8bb;
+}
+
 .row-container:hover {
   -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
 }
 
 .main-therapist-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,10 +240,11 @@ iframe {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
 
   .main-therapist-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,34 +267,14 @@ iframe {
 }
 
 @media (min-width: 1280px) {
+  .therapist-holder {
+    justify-content: space-between;
+  }
   .therapist-card {
     width: 45%;
+    height: 30%;
+  }
+  .therapist-content {
+    margin-top: 4rem;
   }
 }
-
-/* 
-@media (min-width: 1360px) {
-  .therapist-holder {
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .main-therapist-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .therapist-card {
-    width: 30rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-} */
