@@ -6,6 +6,7 @@ import "./TherapistDashboard.css";
 import TherapistNav from "./TherapistNav";
 import Profile from "./Profile";
 import StudentsList from "./StudentsList";
+import Card from "../UI/Card";
 
 const TherapistDashboard = () => {
   const [view, setView] = useState("profile");
@@ -80,22 +81,24 @@ const TherapistDashboard = () => {
   };
 
   return (
-    <div className='therapist-dashboard-container'>
-      <div className='therapist-dashboard-left'>
+    <div className="therapist-dashboard-container">
+      <div className="therapist-dashboard-left">
         <TherapistNav getView={getView} />
       </div>
 
       {view === "profile" && (
-        <div className='therapist-dashboard-right'>
-          <Profile
-            therapist={therapist}
-            getTherapistEditData={getTherapistEditData}
-            save={save}
-          />
+        <div className="therapist-dashboard-right">
+          <Card>
+            <Profile
+              therapist={therapist}
+              getTherapistEditData={getTherapistEditData}
+              save={save}
+            />
+          </Card>
         </div>
       )}
       {view === "students" && (
-        <div className='therapist-dashboard-journal-right'>
+        <div className="therapist-dashboard-journal-right">
           {" "}
           <StudentsList />{" "}
         </div>

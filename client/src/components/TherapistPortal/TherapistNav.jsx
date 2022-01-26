@@ -41,7 +41,10 @@ const TherapistNav = (props) => {
   return (
     <>
       {logout && (
-        <ConfirmLogout getConfirmLogoutChoice={getConfirmLogoutChoice} />
+        <ConfirmLogout
+          getConfirmLogoutChoice={getConfirmLogoutChoice}
+          className="therapist-confirm-logout"
+        />
       )}
       <div className="therapist-nav-container">
         <ul className="therapist-nav-list">
