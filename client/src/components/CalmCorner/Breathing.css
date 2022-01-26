@@ -5,10 +5,11 @@
   border-left: 10px solid #c9e4d7;
   border-right: 10px solid #c9e4d7;
   border-radius: 0.75rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
   box-shadow: 0px 5px 10px 0.05px rgba(0, 0, 0, 0.274);
   padding: 2rem 0rem;
   background-color: white;
+
 }
 
 .instructions {
@@ -98,5 +99,8 @@
     margin-left: 1rem;
     margin-right: 1rem;
     text-align: center;
+  }
+  .card-default #breathe-card{
+    margin-top: 4rem;
   }
 }
