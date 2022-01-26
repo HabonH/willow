@@ -46,9 +46,10 @@
 
 .hero-title {
   font-size: 7rem;
-  line-height: 0.75;
+  line-height: 0.85;
   color: #525f76;
   margin-left: 3rem;
+  font-family: "Varela Round";
 }
 
 .hero-description {
@@ -113,7 +114,7 @@
 
 .app-info-section {
   background-color: #fff8bb;
-  padding: 3rem;
+  padding: 1rem 2rem;
   font-size: 3rem;
   text-align: center;
   color: #525f76;
@@ -126,11 +127,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
 }
 .app-info-section-middle {
   background-color: #cff4d2;
-  padding: 3rem;
+  padding: 1rem 2rem;
   font-size: 3rem;
   text-align: center;
   color: #525f76;
@@ -143,12 +144,12 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .app-info-section-bottom {
   background-color: #fff8bb;
-  padding: 3rem;
+  padding: 1rem 2rem;
   font-size: 3rem;
   text-align: center;
   color: #525f76;
@@ -157,10 +158,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   background-image: url("./assets/happy-student.png");
   background-repeat: no-repeat;
-  background-position-x: 0%;
+  background-position-x: 10%;
   background-size: contain;
 }
 
@@ -168,6 +169,8 @@
   font-size: 4rem;
   color: #525f76;
   margin-bottom: 2rem;
+  text-align: center;
+  width: 100%;
 }
 .info-section-list {
   display: none;
@@ -283,7 +286,7 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: -8rem;
+  left: -4rem;
   bottom: 6rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
@@ -304,7 +307,7 @@
   padding: 1.5rem;
   border-radius: 0.75rem;
   position: absolute;
-  left: -3rem;
+  left: 1rem;
   top: 15rem;
   box-shadow: 0 1rem 2rem 0.25rem rgba(42, 42, 42, 0.287);
 }
@@ -456,16 +459,6 @@
     position: relative;
   }
 
-  .hero-left-column::before {
-    height: 50%;
-    background: linear-gradient(0.77deg, #6ed697 0.81%, #36a893 98.73%);
-    margin: 0;
-    margin-inline: 2rem;
-    width: 60%;
-    min-width: 25rem;
-    border-radius: 0.75rem;
-  }
-
   .hero-button-container {
     display: flex;
     margin: 1rem;
@@ -478,6 +471,7 @@
   .hero-description {
     margin: 0;
     z-index: 10;
+    color: rgb(255, 255, 255);
   }
   .hero-title {
     font-size: 4rem;
@@ -558,7 +552,7 @@
     padding: 1rem 2rem;
     border-radius: 0.75rem;
     box-shadow: 0.5rem 0.5rem #cff4d2;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     position: relative;
     overflow: hidden;
   }
@@ -567,8 +561,8 @@
     background-color: white;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
+    margin-bottom: 2rem;
     box-shadow: -0.5rem 0.5rem #fff8bb;
-    margin-bottom: 1rem;
   }
 
   .info-card-title {

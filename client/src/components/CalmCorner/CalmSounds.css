@@ -3,8 +3,7 @@
   width: 85%;
   height: max-content;
   border-radius: 0.75rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
   padding: 2rem 1rem;
   background-color: white;
   box-shadow: 0.5rem 0.5rem #fff8bb;
@@ -56,7 +55,11 @@
     flex-direction: row;
     justify-content: space-between;
     padding-right: 3rem;
-    padding-left: 5rem;
+    padding-left: 3rem;
+  }
+
+  .sound-card {
+    margin-top: 3rem;
   }
 }
 
@@ -66,5 +69,8 @@
     justify-content: space-between;
     padding-right: 3rem;
     padding-left: 3rem;
+  }
+  .sound-card {
+    margin-top: 3rem;
   }
 }

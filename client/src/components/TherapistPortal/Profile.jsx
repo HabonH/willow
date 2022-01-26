@@ -56,6 +56,7 @@ const Profile = (props) => {
           color="primary"
           style={{ width: "100%" }}
           onClick={saveClickHandler}
+          style={{ width: "100%" }}
         >
           <CheckBoxOutlinedIcon
             color="disabled"
