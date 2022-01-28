@@ -34,6 +34,7 @@
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+  width: 100%;
 }
 h3 {
   color: #525f76;
@@ -50,11 +51,11 @@ h3 {
 }
 
 .therapist-plus {
-  margin-top: -3rem;
   width: 6rem;
   height: 6rem;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
+  top: -3rem;
+  left: 40%;
 }
 
 .therapist-title-content {
@@ -70,13 +71,17 @@ h3 {
 .therapist-card {
   background-color: white;
   height: 12rem;
-  width: 85%;
+  width: 100%;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 4rem;
   padding: 1rem;
   box-shadow: 0.5rem 0.5rem #fff8bb;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .therapist-card:hover {
   box-shadow: 0.5rem 0.5rem #36a893;
