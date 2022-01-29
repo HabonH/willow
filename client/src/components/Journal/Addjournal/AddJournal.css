@@ -145,7 +145,8 @@
   width: 1.5rem;
   position: absolute;
   left: 2rem;
-  bottom: 1rem;
+  top: 1rem;
+ 
 }
 .back-arrow:hover {
   cursor: pointer;

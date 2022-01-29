@@ -8,9 +8,9 @@ const Resources = () => {
         <h1 className="resources-title">Need Help Now?</h1>
         <section className="resources-info-container">
           <article className="resources-info-card">
-            <h3 className="resource-info-title">Suicide Prevention Line</h3>
+            <h3 className="resource-info-title">Self-harm Prevention Line</h3>
             <div className="resource-info-details">
-              <p>Speciality: Suicide Prevention</p>
+              <p>Speciality: Self-harm Prevention</p>
               <p>Phone: 1-833-456-4566</p>
               <div className="flex-container">
                 <Button> Visit Website </Button>

@@ -56,7 +56,7 @@ const ChoiceList = (props) => {
               props.getView();
             }}
             style={{
-              marginTop: "-1rem",
+              marginTop: "0.5rem",
             }}
           >
             Continue
