@@ -1,13 +1,11 @@
-const Header = () => {
+const Header = (props) => {
+  const { journalCount, quote } = props;
+
   return (
     <div className="header-dashboard">
       <div className="dashboard-content">
-        <h3 className="affirmation">
-          Another beautiful day! Keep up the great work.
-        </h3>
-        <h4>
-          Journal Entries: <strong>10</strong>
-        </h4>
+        <h3 className="header-affirmation">{quote.quote}</h3>
+        <p className="quote-author"> -{quote.author}</p>
       </div>
     </div>
   );

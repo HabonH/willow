@@ -2,15 +2,15 @@ const EmojiShow = (props) => {
   const { name, description, affirmation, icon } = props.emoji[0];
 
   return (
-    <div
-      className="emoji-show-card"
-      onClick={() => {
-        return props.exitShow();
-      }}
-    >
-      <div className="close-button"></div>
+    <div className="emoji-show-card">
+      <div
+        className="close-button"
+        onClick={() => {
+          return props.exitShow();
+        }}
+      ></div>
       <div className="emoji-show-header">
-        <h1 className="emoji-show-icon">{icon}</h1>
+        <img src={icon} alt={name} className="emoji-image-show" />
         <div className="emoji-show-header-content">
           <h2 className="emoji-show-name">{name}</h2>{" "}
           <p className="emoji-show-description">

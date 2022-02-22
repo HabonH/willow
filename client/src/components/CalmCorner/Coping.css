@@ -1,0 +1,14 @@
+.coping-container h4 {
+  padding-bottom: 2rem;
+  text-align: center;
+  color: #525f76;
+}
+
+.coping-container .mechanisms-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mechanisms-button {
+  flex-wrap: wrap;
+}

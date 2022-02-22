@@ -1,15 +1,19 @@
-import React from "react";
-import Carousel from "./Carousel";
-import Breathing from "./Breathing"
+import Breathing from "./Breathing";
 import "./CalmCorner.css";
 import CalmSounds from "./CalmSounds";
+import Carousel from "./Carousel";
+import Coping from "./Coping";
 
+// Collects all components under CalmCorner to be displayed in the front-end
 function CalmCorner() {
   return (
     <div className="CalmCorner">
-      <Carousel />
-      <Breathing />
-      <CalmSounds />
+      <div className="scrollable">
+        <Carousel />
+        <Breathing />
+        <CalmSounds />
+        <Coping />
+      </div>
     </div>
   );
 }

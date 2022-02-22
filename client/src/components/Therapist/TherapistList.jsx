@@ -5,7 +5,8 @@ import "./Therapist.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const TherapistList = () => {
+const TherapistList = (props) => {
+  const { getTherapistData } = props;
   const [show, setShow] = useState(false);
   const [selectedTherapist, setSelectedTherapist] = useState(null);
   const [therapists, setTherapists] = useState([]);
@@ -27,6 +28,35 @@ const TherapistList = () => {
   const exitShow = () => {
     setShow(false);
   };
+
+  const setPrimaryTherapist = (id) => {
+    const accessToken = localStorage.getItem("accessToken");
+    const data = { id };
+    axios
+      .put(
+        "http://localhost:3002/students/set_therapist",
+        { data },
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
+      .catch((err) => console.log(err));
+  };
+
+  const removePrimaryTherapist = (id) => {
+    const accessToken = localStorage.getItem("accessToken");
+    const data = { id: 0 };
+    axios
+      .put(
+        "http://localhost:3002/students/set_therapist",
+        { data },
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
+      .catch((err) => console.log(err));
+  };
+
   const parsedTherapists = therapists.map((therapist) => {
     return (
       <TherapistListItem
@@ -35,6 +65,7 @@ const TherapistList = () => {
         name={therapist.name}
         img={therapist.img}
         getTherapist={getTherapist}
+        title={therapist.title}
       />
     );
   });
@@ -42,9 +73,13 @@ const TherapistList = () => {
   return (
     <>
       {show ? (
-        <div>
-          <TherapistShow therapist={selectedTherapist} exitShow={exitShow} />
-        </div>
+        <TherapistShow
+          selectedTherapist={selectedTherapist}
+          exitShow={exitShow}
+          setPrimaryTherapist={setPrimaryTherapist}
+          removePrimaryTherapist={removePrimaryTherapist}
+          getTherapistData={getTherapistData}
+        />
       ) : (
         <div className='therapist-holder'>{parsedTherapists}</div>
       )}

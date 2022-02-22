@@ -1,22 +1,51 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+
 import EmojiList from "./EmojiList";
 import Header from "./Header";
 import AddJournal from "./Addjournal/AddJournal";
-import Card from "../UI/Card";
+import headerQuotes from "./headerQuotes";
+import Resources from "./Resources";
 
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const [journalCount, setJournalCount] = useState(null);
+  const [quote, setQuote] = useState({});
+
+  useEffect(() => {
+    const accessToken = localStorage.getItem("accessToken");
+
+    const randomQuote =
+      headerQuotes[Math.floor(Math.random() * headerQuotes.length)];
+    setQuote(randomQuote);
+
+    axios
+      .get("http://localhost:3002/journals-count", {
+        headers: { authorization: `Bearer ${accessToken}` },
+      })
+      .then((res) => {
+        setJournalCount(res.data[0].count);
+      });
+  }, []);
+
   const getJournalData = (data) => {
-    console.log(data);
+    // will use this for updating count
+    setJournalCount(Number(journalCount) + 1);
   };
 
   return (
-    <div className='dashboard-container'>
-      <Header />
+    <div className="dashboard-container">
+      <div className="journal-header">
+        <AddJournal
+          getJournalData={getJournalData}
+          journalCount={journalCount}
+        />
+      </div>
+      <Header journalCount={journalCount} quote={quote} />
       <EmojiList />
-      <Card>
-        <AddJournal getJournalData={getJournalData} />
-      </Card>
+      <Resources />
+      <div className="dashboard-spacer"></div>
     </div>
   );
 };

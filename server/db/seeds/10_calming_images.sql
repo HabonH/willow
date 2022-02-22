@@ -1,12 +1,12 @@
 INSERT INTO calming_images (img, affirmations)
 VALUES
-('https://images.unsplash.com/photo-1566044366987-6de6ca566441?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80', 'My failures do not define me, they are redirections.'),
-('https://images.unsplash.com/photo-1503803548695-c2a7b4a5b875?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80', 'I am in the right place, at the right time, doing the right thing.'),
-('https://images.unsplash.com/photo-1559080463-5c7eb3a52de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80', 'You are worthy for being who you are, just for existing.'),
-('https://images.unsplash.com/photo-1610436680827-e6e4846b5bee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80', 'You are valued even when you are not productive.'),
-('https://images.unsplash.com/photo-1622414477455-9a2032d736ef?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80', 'You have persevered and persevered and should celebrate your tenacity.'),
-('https://images.unsplash.com/photo-1567367378637-0bc5be04c616?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80', 'You are much more than your opinions of yourself.'),
-('https://images.unsplash.com/photo-1610673260676-dff9687173e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80', 'I am not defined by what I feel. This experience does not control me. This feeling does have to determine my whole day.'),
-('https://images.unsplash.com/photo-1609547640378-8595f7c8b3bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80', 'You are okay where you are right now.'),
-('https://images.unsplash.com/photo-1525838983331-f8bd3c000585?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80', 'I am in the process of positive change.'),
-('https://images.unsplash.com/photo-1499946981954-e7f4b234d7fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80', 'I am at home in my body.');
+('./img/dandelion.jpeg', 'My failures do not define me, they are redirections.'),
+('./img/field.jpeg', 'I am in the right place, at the right time, doing the right thing.'),
+('./img/flowers.jpeg', 'You are worthy for being who you are, just for existing.'),
+('./img/forest.jpeg', 'You are valued even when you are not productive.'),
+('./img/mountain-stars.jpeg', 'You have persevered and persevered and should celebrate your tenacity.'),
+('./img/mountains.jpeg', 'You are much more than your opinions of yourself.'),
+('./img/park.jpeg', 'I am not defined by what I feel. This experience does not control me. This feeling does have to determine my whole day.'),
+('./img/stargazing.jpeg', 'You are okay where you are right now.'),
+('./img/dandelion.jpeg', 'I am in the process of positive change.'),
+('./img/field.jpeg', 'I am at home in my body.');

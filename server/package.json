@@ -6,6 +6,7 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "chance": "^1.1.8",
     "cookie-parser": "~1.4.4",
     "cookie-session": "^2.0.0",
     "cors": "^2.8.5",

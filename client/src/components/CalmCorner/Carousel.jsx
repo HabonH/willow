@@ -1,50 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Carousel.css";
-import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
-import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
-import axios from "axios";
+import { images } from "./carouselData";
+import ArrowBackIosSharpIcon from "@mui/icons-material/ArrowBackIosSharp";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 
 function Carousel() {
-  const [index, setIndex] = useState(0);
-  const [data, setData] = useState([
-    { img: "./img1.jpeg", affirmations: "You have what it takes to succeed." },
-  ]);
+  const [currentIMG, setCurrentIMG] = useState(0);
 
-  const URL = "http://localhost:3002/calming_images";
-  useEffect(() => {
-    axios.get(URL).then((response) => {
-      setData(response.data.rows);
-    });
-  }, []);
+  // Click handler for left click
+  // Gets images and affirmation from carouselData.js for Carousel
+  const onLeftClick = () => {
+    if (currentIMG > 0 && setCurrentIMG(currentIMG - 1)) {
+    } else if (currentIMG === 0) {
+      setCurrentIMG(images.length - 1);
+    }
+  };
+
+  // Click handler for right click
+  const onRightClick = () => {
+    if (currentIMG === images.length - 1) {
+      setCurrentIMG(0);
+    } else {
+      setCurrentIMG(currentIMG + 1);
+    }
+  };
 
   return (
     <div className="carousel">
       <div
         className="carouselInner"
-        style={{ backgroundImage: `url(${data[index].img})` }}
+        style={{
+          backgroundImage: `url(${images[currentIMG].img})`,
+        }}
       >
-        <div
-          className="left"
-          onClick={() => {
-            index > 0 && setIndex(index - 1);
-          }}
-        >
-          <ArrowBackIosIcon style={{ fontSize: 30 }} />
+        <div className="left-carousel" onClick={() => onLeftClick()}>
+          <ArrowBackIosSharpIcon style={{ fontSize: 30 }} />
         </div>
-        <div className="center">
-          <h1 className="affirmation-text">{data[index].affirmations}</h1>
+        <div className="center-carousel">
+          <h1 className="affirmation-text">{images[currentIMG].affirmation}</h1>
         </div>
-        <div
-          className="right"
-          onClick={() => {
-            if (index === data.length - 1) {
-              setIndex(0);
-            } else {
-              setIndex(index + 1);
-            }
-          }}
-        >
-          <ArrowForwardIosIcon style={{ fontSize: 30 }} />
+        <div className="right-carousel" onClick={() => onRightClick()}>
+          <ArrowForwardIosSharpIcon style={{ fontSize: 30 }} />
         </div>
       </div>
     </div>

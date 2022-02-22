@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero">
       <section className="hero-left-column">
         <h2 className="hero-title">
-          Health & Wellness <br />
+          Health & <br /> Wellness <br />
           For Kids{" "}
         </h2>
         <p className="hero-description">
@@ -16,7 +16,7 @@ const Hero = () => {
           <Stack spacing={3} direction="row">
             <Button
               variant="contained"
-              color="secondary"
+              color="primary"
               className="get-started-button"
             >
               {" "}
@@ -26,7 +26,7 @@ const Hero = () => {
             <Button
               variant="contained"
               color="neutral"
-              className="get-started-button"
+              className="learn-more-button"
             >
               {" "}
               Learn More{" "}

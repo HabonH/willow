@@ -1,0 +1,234 @@
+.therapist-dashboard-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.therapist-dashboard-left {
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(320deg, #6ed697 0.81%, #36a893 98.73%);
+  box-shadow: 0.2rem 0 0.5rem 0rem rgba(53, 53, 53, 0.39);
+  z-index: 1;
+}
+
+.therapist-dashboard-right {
+  width: 100%;
+  height: 100%;
+  background-color: #cff4d2;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  overflow-y: scroll;
+}
+.therapist-dashboard-journal-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: #cff4d2;
+  overflow-y: scroll;
+}
+
+.full-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 30%;
+  height: max-content;
+  min-height: 20rem;
+  min-width: 20rem;
+  background-color: white;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.75rem;
+  box-shadow: 0.5rem 0.5rem #fff8bb;
+}
+
+.full-backdrop {
+  width: 70%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.555);
+  position: absolute;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.full-text {
+  text-align: center;
+}
+.therapist-nav-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.willow-logo-therapist {
+  width: 50%;
+  margin: 3rem auto;
+}
+
+.therapist-nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.therapist-nav-item {
+  font-family: "Roboto";
+  font-size: 1.75rem;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  color: #525f76;
+  margin-top: 0.1rem;
+  margin-inline: 0.25rem;
+}
+
+.therapist-nav-item:hover,
+.therapist-nav-item-selected {
+  background-color: white;
+  border-radius: 0.75rem 0 0 0.75rem;
+  cursor: pointer;
+}
+
+.logout-nav {
+  margin-top: auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+.therapist-profile-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.therapist-profile-name {
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.therapist-profile-picture {
+  width: 30%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.therapist-profile-body {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+}
+
+.information-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.therapist-profile-info {
+  font-size: 1.3rem;
+  margin: 0.5rem 0.5rem;
+  font-family: "Roboto";
+  color: #525f76;
+}
+
+.therapist-profile-data {
+  color: #525863;
+}
+
+input.therapist-profile-data {
+  font-family: "Mulish";
+  width: 50%;
+  border-radius: 0.25rem;
+  border: 1px solid gray;
+}
+
+textarea.therapist-profile-data {
+  font-family: "Mulish";
+  width: 90%;
+  height: 10rem;
+  resize: none;
+  border-radius: 0.25rem;
+  border: none;
+  border: 1px solid gray;
+}
+
+input.therapist-profile-data:focus,
+textarea.therapist-profile-data:focus {
+  outline: 3px solid #36a893;
+}
+
+.information-row-left {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.information-row-right {
+  width: 60%;
+}
+
+.edit-icon {
+  transition: color 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.edit-icon:hover {
+  color: #525863;
+  cursor: pointer;
+  transition: color 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (max-width: 800px) {
+  .therapist-dashboard-container {
+    flex-direction: column-reverse;
+  }
+  .therapist-dashboard-right {
+    width: 100%;
+    padding: 0;
+  }
+  .therapist-dashboard-left {
+    height: 10%;
+    width: 100%;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  .therapist-nav-list {
+    flex-direction: row;
+    align-items: center;
+    padding-inline: 1rem;
+  }
+
+  .therapist-nav-item {
+    text-align: center;
+  }
+
+  .therapist-nav-item:hover,
+  .therapist-nav-item-selected {
+    border-radius: 0.75rem;
+  }
+
+  .logout-nav {
+    margin-top: 0;
+  }
+
+  .willow-logo-therapist {
+    display: none;
+  }
+
+  .logout-backdrop {
+    top: 0;
+  }
+}

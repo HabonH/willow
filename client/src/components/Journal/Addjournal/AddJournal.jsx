@@ -14,7 +14,7 @@ const AddJournal = (props) => {
   const [data, setData] = useState({
     scale: null,
     choice: "",
-    title: "untitled",
+    title: "Untitled",
     description: "",
   });
 
@@ -51,28 +51,37 @@ const AddJournal = (props) => {
   };
 
   const getTextData = (textObj) => {
+    let saveData = {};
     if (!textObj.title) {
-      setData((prev) => {
-        return { ...prev, description: textObj.textArea };
-      });
+      console.log("MADE IT HERE");
+      saveData = {
+        ...data,
+        description: textObj.textArea,
+      };
+    } else {
+      saveData = {
+        ...data,
+        title: textObj.title,
+        description: textObj.textArea,
+      };
     }
-    const saveData = {
-      ...data,
-      title: textObj.title,
-      description: textObj.textArea,
-    };
     save(saveData);
   };
-
   const close = () => {
     setView("add");
   };
 
   const save = (data) => {
-    const userID = localStorage.getItem("userID");
-    console.log(userID);
+    const accessToken = localStorage.getItem("accessToken");
+
     axios
-      .post(`http://localhost:3002/journals/${userID}`, data)
+      .post(
+        "http://localhost:3002/journals",
+        data,
+        {
+          headers: { authorization: `Bearer ${accessToken}` },
+        }
+      )
       .catch((err) => console.log(err));
     setView("final");
     props.getJournalData(data);
@@ -82,9 +91,12 @@ const AddJournal = (props) => {
     <>
       {view === "add" && (
         <>
-          <h2 className='journal-title-card'>Write in Your Journal</h2>
-          <div className='plus'>
-            <button className='add-journal-button' onClick={getView}></button>
+          <h2 className="journal-title-card">Write in Your Journal</h2>
+          <div className="plus-header">
+            <button
+              className="add-journal-button-header"
+              onClick={getView}
+            ></button>
           </div>
         </>
       )}
@@ -101,7 +113,9 @@ const AddJournal = (props) => {
       {view === "journal" && (
         <JournalText getTextData={getTextData} back={back} />
       )}
-      {view === "final" && <FinalView close={close} />}
+      {view === "final" && (
+        <FinalView close={close} journalCount={props.journalCount} />
+      )}
     </>
   );
 };

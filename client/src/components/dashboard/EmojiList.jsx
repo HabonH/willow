@@ -4,6 +4,7 @@ import EmojiShow from "./EmojiShow";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../UI/Card";
+import getRandomEmojis from "../helpers/randomEmojis";
 
 const EmojiList = () => {
   const [emojis, setEmojis] = useState([]);
@@ -12,7 +13,7 @@ const EmojiList = () => {
 
   useEffect(() => {
     axios.get("http://localhost:3002/emojis").then((result) => {
-      setEmojis(result.data);
+      setEmojis(getRandomEmojis(result.data));
     });
   }, []);
 
@@ -30,6 +31,7 @@ const EmojiList = () => {
     return (
       <EmojiItem
         key={emoji.id}
+        name={emoji.name}
         id={emoji.id}
         icon={emoji.icon}
         getEmoji={getEmoji}
@@ -45,6 +47,10 @@ const EmojiList = () => {
         </Card>
       ) : (
         <Card>
+          <h3 className="emoji-emotions-title">Emoji Emotions</h3>
+          <p className="emoji-emotions-text">
+            Select an Emoji to learn about an emotion
+          </p>
           <div className="emoji-card-grid"> {parsedEmojis} </div>
         </Card>
       )}

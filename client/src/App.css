@@ -18,7 +18,6 @@ dl,
 dd {
   margin: 0;
 }
-
 h1,
 h2,
 h3,
@@ -87,5 +86,5 @@ select {
 }
 
 body {
-  background-color: #e0ecf8;
+  background-color: #fffeec;
 }

@@ -1,19 +1,30 @@
+import Button from "@mui/material/Button";
+
 const JournalListItem = (props) => {
-  const { id, name, img, getTherapist } = props;
+  const { id, name, img, title, getTherapist } = props;
 
   const clickHandler = () => {
     getTherapist(id);
   };
   return (
-    <article className='therapist-card '>
+    <article className='therapist-card'>
+      <div className='therapist-plus'>
+        <img className='therapist-choice' src={img} alt='profile' />
+      </div>
       <section className='therapist-content'>
-        <img className='therapist-profile-pic' src={img} alt='profile' />
-        <div className='therapist-title-content'>{name}</div>
-      </section>
-      <section>
-        <button className='exit-show details button' onClick={clickHandler}>
-          Details
-        </button>
+        <div className='therapist-title-content'>
+          <h3>{name}</h3>
+          <p className=''>{title}</p>
+        </div>
+
+        <Button
+          variant='contained'
+          color='primary'
+          className='button-right'
+          onClick={clickHandler}
+        >
+          <h4>Details</h4>
+        </Button>
       </section>
     </article>
   );
